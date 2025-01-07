@@ -1,0 +1,20 @@
+/* Ensure the body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex !important;
+    flex-direction: column !important; 
+}
+
+/* Main content fills the remaining space */
+main {
+    flex: 1 !important; 
+}
+
+/* Footer styling */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
