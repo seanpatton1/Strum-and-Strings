@@ -21,11 +21,6 @@ main {
     width: 100%; /* Ensure no overflow */
 }
 
-.container {
-    padding: 0 !important;
-    margin: 0 auto;
-}
-
 .hero {
     margin-bottom: 50px;
 }
@@ -59,6 +54,21 @@ header .navbar-nav .nav-link {
     margin: 0 10px;
 }
 
-header img {
-    height: 50px;
+.navbar-brand-container {
+    flex-grow: 1;
+    margin-left: 0;
+    padding-left: 10px;
+}
+
+/* Navbar Search Bar */
+.search-bar {
+    width: 50%; /* Adjust the width of the search bar */
+}
+
+.search-bar input {
+    width: 80%; /* Set the width of the input field */
+}
+
+.search-bar button {
+    white-space: nowrap;
 }

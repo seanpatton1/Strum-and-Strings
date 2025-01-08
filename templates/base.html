@@ -29,7 +29,6 @@
             <!-- Brand Section -->
             <div class="navbar-brand-container">
                 <a class="navbar-brand" href="#">
-                    <img src="#" alt="" height="40">
                     Strum & Strings
                 </a>
             </div>
@@ -39,8 +38,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
     
-            <!-- Navigation Links Section -->
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Centered Search Bar and Navigation -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <!-- Centered Search Bar -->
+                <form class="d-flex mx-auto search-bar" role="search" action="/search/" method="get">
+                    <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+    
+                <!-- Navigation Links -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Shop</a>
@@ -54,7 +60,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             Cart
-                            <span class="badge bg-warning text-dark">#</span>
+                            <span class="badge bg-warning text-dark">{{ cart_item_count }}</span>
                         </a>
                     </li>
                 </ul>
