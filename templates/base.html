@@ -40,11 +40,22 @@
     
             <!-- Centered Search Bar and Navigation -->
             <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-                <!-- Centered Search Bar -->
-                <form class="d-flex mx-auto search-bar" role="search" action="/search/" method="get">
-                    <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
+                <!-- Toggle Button  -->
+                <button id="toggleSearch" class="btn btn-outline-light me-3">Search</button>
+
+                <!-- Search Bar -->
+                <div id="searchContainer">
+                    <form class="d-flex mx-auto search-bar" role="search" action="/search/" method="get">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            name="q"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </div>
     
                 <!-- Navigation Links -->
                 <ul class="navbar-nav ms-auto">
