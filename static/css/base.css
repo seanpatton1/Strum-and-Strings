@@ -22,8 +22,7 @@ main {
 }
 
 .hero {
-    margin-bottom: 50px;
-    margin-top: -50px;
+    margin-bottom: 25px !important;
 }
 
 .product-categories {
@@ -87,46 +86,3 @@ header .navbar-nav .nav-link {
     flex: 1;
     max-width: 300px;
 }
-
-/* General Navbar Styles */
-.navbar-collapse {
-    transition: height 0.3s ease;
-}
-
-@media (max-width: 768px) {
-
-
-    .card-img-top {
-        display: none;
-      }
-    }
-  
-    footer .container {
-      text-align: center;
-    }
-  
-    footer .row > div {
-      margin-bottom: 1rem;
-    }
-
-    #searchContainer {
-        display: block !important; /* Always visible on larger screens */
-        position: static;
-        top: auto;
-    }
-
-    #toggleSearch {
-        display: none;
-    }
-
-    @media (min-width: 768px) and (max-width: 991px) {
-        #searchContainer {
-            display: flex !important; /* Force visibility for the search bar */
-            align-items: center; /* Vertically align content */
-            justify-content: flex-start; /* Align input and button properly */
-        }
-    
-        #toggleSearch {
-            display: none; /* Hide the toggle button on tablets */
-        }
-    }
