@@ -10,7 +10,6 @@
     <meta name="description" content="Strum & Strings is your one-stop shop for guitars, accessories, and more. Explore our wide range of musical instruments to find your perfect sound.">
     <meta name="keywords" content="guitars, musical instruments, guitar accessories, acoustic guitars, electric guitars, music gear">
     <meta name="author" content="Strum & Strings">
-    <meta name="robots" content="index, follow">
     {% endblock %}
 
     <title>{% block title %}Strum & Strings {% endblock %}</title>
@@ -33,30 +32,29 @@
         <nav class="navbar navbar-expand-lg navbar-dark container">
             <!-- Brand Section -->
             <div class="navbar-brand-container">
-                <a class="navbar-brand" href="#">
-                    Strum & Strings
-                </a>
+                <a class="navbar-brand" href="{% url 'home' %}">Strum & Strings</a>
             </div>
     
             <!-- Collapsible Navbar -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-left: 25px;">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+    
+            <!-- Search Form and Navigation Links -->
             <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-            <!-- Search Form in the Middle -->
-            <form class="d-flex mx-auto" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light" type="submit">Search</button>
-            </form>
+                <!-- Search Form in the Middle -->
+                <form class="d-flex mx-auto" role="search">
+                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit" id="search-one">Search</button>
+                </form>
     
                 <!-- Navigation Links -->
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto list-inline list-unstyled" id="nav-links-one">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Categories</a>
+                        <a class="nav-link" href="{% url 'categories_list' %}">Categories</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Account</a>
@@ -87,7 +85,7 @@
                     <h5>About Strum & Strings</h5>
                     <p>Your trusted store for guitars and accessories.</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 mb-3">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white">Home</a></li>

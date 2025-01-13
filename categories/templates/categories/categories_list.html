@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Categories - Strum & Strings{% endblock %}
+
+{% block content %}
+<main class="container mt-5">
+    <section class="text-center">
+        <h1 class="display-4">Categories</h1>
+        <p class="lead">Explore our wide selection of guitar types and accessories!</p>
+    </section>
+
+    <div class="row g-4 mt-4">
+        <!-- Acoustic Guitars -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="/static/images/acoustic-guitar-home.jpg" class="card-img-top" alt="Acoustic Guitars">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Acoustic Guitars</h5>
+                    <p class="card-text">Browse our collection of premium acoustic guitars.</p>
+                    <a href="#" class="btn btn-outline-primary">Shop Acoustic</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Electric Guitars -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="/static/images/electric-guitar-home.jpg" class="card-img-top" alt="Electric Guitars">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Electric Guitars</h5>
+                    <p class="card-text">Unleash your inner rockstar with our electric guitars.</p>
+                    <a href="#" class="btn btn-outline-primary">Shop Electric</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accessories -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="/static/images/accessories-home.jpg" class="card-img-top" alt="Accessories">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Accessories</h5>
+                    <p class="card-text">Everything you need to enhance your music experience.</p>
+                    <a href="#" class="btn btn-outline-primary">Shop Accessories</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
