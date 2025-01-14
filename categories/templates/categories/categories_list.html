@@ -1,17 +1,25 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'categories/css/categories.css' %}">
+{% endblock %}
+
 {% block title %}Categories - Strum & Strings{% endblock %}
 
 {% block content %}
 <main class="container mt-5">
+    <!-- Description Section -->
     <section class="text-center">
         <h1 class="display-4">Categories</h1>
         <p class="lead">Explore our wide selection of guitar types and accessories!</p>
     </section>
 
-    <div class="row g-4 mt-4">
+    <!-- Product Categories Section -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 mt-4">
         <!-- Acoustic Guitars -->
-        <div class="col-md-4">
+        <div class="col">
             <div class="card h-100">
                 <img src="/static/images/acoustic-guitar-home.jpg" class="card-img-top" alt="Acoustic Guitars">
                 <div class="card-body text-center">
@@ -23,9 +31,9 @@
         </div>
 
         <!-- Electric Guitars -->
-        <div class="col-md-4">
+        <div class="col">
             <div class="card h-100">
-                <img src="/static/images/electric-guitar-home.jpg" class="card-img-top" alt="Electric Guitars">
+                <img src="/static/images/electric-guitar-new.jpg" class="card-img-top"  alt="Electric Guitars">
                 <div class="card-body text-center">
                     <h5 class="card-title">Electric Guitars</h5>
                     <p class="card-text">Unleash your inner rockstar with our electric guitars.</p>
@@ -35,7 +43,7 @@
         </div>
 
         <!-- Accessories -->
-        <div class="col-md-4">
+        <div class="col">
             <div class="card h-100">
                 <img src="/static/images/accessories-home.jpg" class="card-img-top" alt="Accessories">
                 <div class="card-body text-center">

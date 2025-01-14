@@ -1,0 +1,51 @@
+/* Categories Page Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.categories-hero {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.categories-hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.categories-hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.categories-list .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.categories-list img {
+    object-fit: cover;
+    height: 200px;
+}
+
+.categories-list .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.categories-list .card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.categories-list .btn {
+    font-size: 1rem;
+}
+
+/* For Small Screens (smaller than 768px) */
+@media (max-width: 767.98px) {
+    .card-img-top {
+        height: 200px !important; /* Set a fixed height */
+        object-fit: cover !important; /* Ensure the image fills the container without distortion */
+    }
+ }
