@@ -10,6 +10,14 @@
 
 {% block content %}
 <main class="container mt-5">
+
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" id="breadcrumb-main">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Categories</li>
+        </ol>
+    </nav>
     <!-- Description Section -->
     <section class="text-center">
         <h1 class="display-4">Categories</h1>
@@ -33,7 +41,7 @@
         <!-- Electric Guitars -->
         <div class="col">
             <div class="card h-100">
-                <img src="/static/images/electric-guitar-new.jpg" class="card-img-top"  alt="Electric Guitars">
+                <img src="/static/images/electric-guitar-new.jpg" class="card-img-top" alt="Electric Guitars">
                 <div class="card-body text-center">
                     <h5 class="card-title">Electric Guitars</h5>
                     <p class="card-text">Unleash your inner rockstar with our electric guitars.</p>
@@ -43,7 +51,7 @@
         </div>
 
         <!-- Accessories -->
-        <div class="col">
+        <div class="col" id="bottom-img">
             <div class="card h-100">
                 <img src="/static/images/accessories-home.jpg" class="card-img-top" alt="Accessories">
                 <div class="card-body text-center">

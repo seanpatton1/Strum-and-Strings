@@ -1,0 +1,66 @@
+header {
+    background-color: #222;
+    color: #fff;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+header .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .navbar-nav .nav-link {
+    font-size: 1rem;
+    margin: 0 10px;
+}
+
+/* For Small Screens (smaller than 768px) */
+@media (max-width: 767.98px) {
+
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .breadcrumb-item a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    .breadcrumb-item a:hover {
+        text-decoration: underline;
+    }
+    
+    .breadcrumb-item.active {
+        color: #6c757d; 
+    }
+
+    #breadcrumb-main {
+        padding-top: 35px;
+    }
+
+    #bottom-img {
+        padding-bottom: 10px;
+    }
+
+    #footer-one {
+        padding-top: 60px !important;
+    }
+
+    footer .row {
+        text-align: center; /* Center-align text */
+    }
+
+    footer .col-md-6,
+    footer .col-md-3 {
+        text-align: center; /* Center-align text for all columns */
+        margin-bottom: 20px; /* Add spacing between columns */
+    }
+
+ }
