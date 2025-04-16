@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-tk!9gj5q5+sgeyt52xbv_#qqvh1=q_kzq2l=k_r78&^urs8pj_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-seanpatton1-strumandstr-s6cl2qumj8z.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-seanpatton1-strumandstr-s6cl2qumj8z.ws.codeinstitute-ide.net',
