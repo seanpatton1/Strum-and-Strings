@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'categories/css/categories.css' %}">
+{% endblock %}
+
+{% block title %}{{ category.name }} – Strum & Strings{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+  <div class="row">
+
+    <!-- Sidebar: Filter by Model -->
+    <aside class="col-12 col-md-3 mb-4">
+      <h5>Filter by model</h5>
+      <ul class="list-unstyled">
+        {% for m in models %}
+          <li>
+            <a href="?model={{ m|urlencode }}">{{ m }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </aside>
+
+    <!-- Products Grid -->
+    <section class="col-12 col-md-9">
+      <h1 class="mb-4">{{ category.name }}</h1>
+      <p class="lead">{{ category.description }}</p>
+
+      <div class="row g-4 mt-3">
+        {% for product in products %}
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100">
+              {% if product.image %}
+                <img src="{{ product.image.url }}"
+                     class="card-img-top"
+                     alt="{{ product.name }}">
+              {% endif %}
+              <div class="card-body text-center">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">{{ product.short_description }}</p>
+                <p class="h5">£{{ product.price }}</p>
+                <a href="{% url 'products:product_detail' product.pk %}"
+                   class="btn btn-primary">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+        {% empty %}
+          <div class="col-12">
+            <p class="text-muted">No products found in this category.</p>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+  </div>
+</main>
+{% endblock %}

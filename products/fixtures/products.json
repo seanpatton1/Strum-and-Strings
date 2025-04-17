@@ -1,0 +1,123 @@
+[
+    {
+      "model": "products.product",
+      "pk": 1,
+      "fields": {
+        "name": "Martin D-28",
+        "category": 1,
+        "model": "D-28",
+        "short_description": "A legendary dreadnought with rich bass, powerful projection, and classic tonewoods like Sitka spruce and East Indian rosewood. Ideal for professionals and serious enthusiasts.",
+        "price": "3199.00",
+        "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 2,
+      "fields": {
+        "name": "Taylor 214ce",
+        "category": 1,
+        "model": "214ce",
+        "short_description": "A Grand Auditorium acoustic-electric with layered rosewood back and sides, solid Sitka spruce top, and Taylor’s ES2 pickup system. Great for versatile playing styles.",
+        "price": "1199.00",
+        "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 3,
+      "fields": {
+        "name": "Yamaha FG800",
+        "category": 1,
+        "model": "FG800",
+        "short_description": "Known for its solid spruce top, strong build, and exceptional value. Great for beginners and intermediate players seeking quality on a budget.",
+        "price": "229.99",
+        "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 4,
+      "fields": {
+        "name": "Fender CD-60S",
+        "category": 1,
+        "model": "CD-60S",
+        "short_description": "A highly affordable dreadnought with a solid spruce top and easy-to-play neck. Perfect for beginners or those needing a reliable backup guitar.",
+        "price": "199.99",
+        "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 5,
+      "fields": {
+        "name": "Gibson J-45 Standard",
+        "category": 1,
+        "model": "J-45 Standard",
+        "short_description": "A historic round-shoulder dreadnought, praised for its warm tone and dynamic response. Premium quality with vintage vibe and modern playability.",
+        "price": "2999.00",
+        "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 6,
+      "fields": {
+        "name": "Epiphone Hummingbird Studio",
+        "category": 1,
+        "model": "Hummingbird Studio",
+        "short_description": "A budget-friendly version of the classic Gibson Hummingbird. Features a distinctive pickguard, spruce top, and built-in electronics for stage use.",
+        "price": "399.00",
+        "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 7,
+      "fields": {
+        "name": "Takamine GD30CE",
+        "category": 1,
+        "model": "GD30CE",
+        "short_description": "A stage-ready dreadnought with a solid spruce top, cutaway design, and Takamine TP-4TD preamp system. Great for live performers.",
+        "price": "499.99",
+        "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 8,
+      "fields": {
+        "name": "Breedlove Discovery Concert CE",
+        "category": 1,
+        "model": "Discovery Concert CE",
+        "short_description": "A stylish, eco-friendly acoustic-electric with a slim neck and bright, balanced tone. Great for fingerstyle and light strumming.",
+        "price": "449.00",
+        "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 9,
+      "fields": {
+        "name": "Seagull S6 Original",
+        "category": 1,
+        "model": "S6 Original",
+        "short_description": "Canadian-made with a pressure-tested cedar top and wild cherry back/sides. Offers rich midrange and great sustain at a mid-tier price.",
+        "price": "699.00",
+        "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 10,
+      "fields": {
+        "name": "Ibanez AW54CE",
+        "category": 1,
+        "model": "AW54CE",
+        "short_description": "A warm-sounding dreadnought with a solid mahogany top and Ibanez electronics. Perfect for earthy, natural tones and reliable performance.",
+        "price": "329.99",
+        "image": ""
+      }
+    }
+  ]
+  
