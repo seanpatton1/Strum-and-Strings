@@ -12,7 +12,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 56px);
+    min-height: calc(100vh - 10px);
     text-align: center;
     width: 100%;
 }
@@ -142,12 +142,8 @@ header .navbar-nav .nav-link {
         margin-bottom: 20px; /* Add spacing between columns */
     }
 
-    main {
-        margin-left: -23px !important;
-    }
-
-    #burger-one {
-        margin-left: 25px;
+    .burger-one {
+        margin-top: 5px;
     }
 
     #navbarNav form {
@@ -230,7 +226,6 @@ header .navbar-nav .nav-link {
 @media (min-width: 768px) and (max-width: 849px) {
 
     main {
-        margin-left: -23px !important;
         margin-right: 0px;
     }
 

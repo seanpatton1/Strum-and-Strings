@@ -3,16 +3,27 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'categories/css/categories.css' %}">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 {% endblock %}
 
 {% block title %}{{ category.name }} – Strum & Strings{% endblock %}
 
-{% block content %}
-<main class="container my-5">
-  <div class="row">
+{% block main_class %}container my-4{% endblock %}
 
-    <!-- Sidebar: Filter by Model -->
-    <aside class="col-12 col-md-3 mb-4">
+{% block content %}
+<div class="row">
+
+  <!-- Filter Toggle Button (mobile only) -->
+  <div class="d-md-none mb-2">
+    <button class="btn btn-outline-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse" aria-expanded="false" aria-controls="filterCollapse">
+      <i class="bi bi-sliders"></i> Filters
+    </button>
+  </div>
+
+  <!-- Sidebar: Filter by Model -->
+  <aside class="col-12 col-md-3 mb-4">
+    <div class="collapse d-md-block" id="filterCollapse">
       <h5>Filter by model</h5>
       <ul class="list-unstyled">
         {% for m in models %}
@@ -26,43 +37,43 @@
           <li>No models to filter</li>
         {% endfor %}
       </ul>
-    </aside>
+    </div>
+  </aside>
 
-    <!-- Products Grid -->
-    <section class="col-12 col-md-9">
-      <h1 class="mb-4">{{ category.name }}</h1>
-      <p class="lead">{{ category.description }}</p>
+  <!-- Products Grid -->
+  <section class="col-12 col-md-9">
+    <h1 class="mb-4">{{ category.name }}</h1>
+    <p class="lead">{{ category.description }}</p>
 
-      <div class="row g-4 mt-3">
-        {% for product in products %}
-          <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card h-100">
-              {% if product.image %}
-                <img src="{{ product.image.url }}"
-                     class="card-img-top"
-                     alt="{{ product.name }}">
+    <div class="row g-4 mt-3">
+      {% for product in products %}
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            {% if product.image %}
+              <img src="{{ product.image.url }}"
+                   class="card-img-top"
+                   alt="{{ product.name }}">
+            {% endif %}
+            <div class="card-body text-center">
+              <h5 class="card-title">{{ product.name }}</h5>
+              {% if product.short_description %}
+                <p class="card-text">{{ product.short_description }}</p>
               {% endif %}
-              <div class="card-body text-center">
-                <h5 class="card-title">{{ product.name }}</h5>
-                {% if product.short_description %}
-                  <p class="card-text">{{ product.short_description }}</p>
-                {% endif %}
-                <p class="h5">£{{ product.price }}</p>
-                <a href="{% url 'products:product_detail' product.pk %}"
-                   class="btn btn-primary">
-                  View Details
-                </a>
-              </div>
+              <p class="h5">£{{ product.price }}</p>
+              <a href="{% url 'products:product_detail' product.pk %}"
+                 class="btn btn-primary">
+                View Details
+              </a>
             </div>
           </div>
-        {% empty %}
-          <div class="col-12">
-            <p class="text-muted text-center">No products found in this category.</p>
-          </div>
-        {% endfor %}
-      </div>
-    </section>
+        </div>
+      {% empty %}
+        <div class="col-12">
+          <p class="text-muted text-center">No products found in this category.</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
 
-  </div>
-</main>
+</div>
 {% endblock %}

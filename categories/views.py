@@ -27,3 +27,13 @@ def category_detail(request, pk):
         'products': products,
         'models': models,
     })
+
+
+def product_detail(request, pk):
+    """
+    Display a single Product’s details.
+    """
+    product = get_object_or_404(Product, pk=pk)
+    return render(request, 'products/product_detail.html', {
+        'product': product
+    })

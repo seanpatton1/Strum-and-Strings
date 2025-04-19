@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link
+  rel="stylesheet"
+  href="{% static 'products/products.css' %}"
+>
+{% endblock %}
+
+{% block title %}{{ product.name }} – Strum & Strings{% endblock %}
+
+{% block content %}
+<main class="container my-5 product-detail">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+      <li class="breadcrumb-item">
+        <a href="{% url 'categories:category_detail' product.category.pk %}">
+          {{ product.category.name }}
+        </a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
+    </ol>
+  </nav>
+
+  <div class="row g-5">
+    <!-- Product Image -->
+    <div class="col-12 col-md-6">
+      {% if product.image %}
+        <img
+          src="{{ product.image.url }}"
+          alt="{{ product.name }}"
+          class="img-fluid w-100 rounded shadow-sm"
+        >
+      {% endif %}
+    </div>
+
+    <!-- Product Info -->
+    <div class="col-12 col-md-6">
+      <h1 class="mb-3">{{ product.name }}</h1>
+      <p class="h4 text-primary mb-3">£{{ product.price }}</p>
+      <p class="mb-2"><strong>Model:</strong> {{ product.model }}</p>
+      {% if product.short_description %}
+        <p class="mb-4">{{ product.short_description }}</p>
+      {% endif %}
+      <a href="#" class="btn btn-lg btn-primary">Add to Cart</a>
+    </div>
+  </div>
+</main>
+{% endblock %}
