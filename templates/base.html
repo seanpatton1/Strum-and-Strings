@@ -15,10 +15,8 @@
       content="guitars, musical instruments, accessories, acoustic, electric, music gear"
     />
     <meta name="author" content="Strum & Strings" />
-    {% endblock %}
-
-    {% block canonical %}
-    <link rel="canonical" href="{{ request.build_absolute_uri }}">
+    {% endblock %} {% block canonical %}
+    <link rel="canonical" href="{{ request.build_absolute_uri }}" />
     {% endblock %}
 
     <title>{% block title %}Strum & Strings{% endblock %}</title>
@@ -75,7 +73,9 @@
               id="nav-links-one"
             >
               <li class="nav-item">
-                <a class="nav-link" href="#">Shop</a>
+                <a class="nav-link" href="{% url 'products:products_list' %}"
+                  >Shop</a
+                >
               </li>
               <li class="nav-item">
                 <a

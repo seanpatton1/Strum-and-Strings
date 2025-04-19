@@ -1,16 +1,20 @@
-{% extends 'base.html' %}
-
-{% block title %}Home - Strum & Strings{% endblock %}
-
+{% extends 'base.html' %} {% block title %}Home – Strum & Strings{% endblock %}
 {% block content %}
 <main class="container h-100 main-picture">
-    <div class="container">
-        <!-- Hero Section -->
-        <section class="hero home-hero text-center my-auto">
-            <h1 class="display-4">Welcome to Strum & Strings</h1>
-            <p class="lead">Explore our wide range of guitars, accessories, and more!</p>
-            <a href="#" class="btn btn-primary btn-lg mt-3">Shop Now</a>
-        </section>
-    </div>
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero home-hero text-center my-auto">
+      <h1 class="display-4">Welcome to Strum & Strings</h1>
+      <p class="lead">
+        Explore our wide range of guitars, accessories, and more!
+      </p>
+      <a
+        href="{% url 'products:products_list' %}"
+        class="btn btn-primary btn-lg mt-3"
+      >
+        Shop Now
+      </a>
+    </section>
+  </div>
 </main>
 {% endblock %}
