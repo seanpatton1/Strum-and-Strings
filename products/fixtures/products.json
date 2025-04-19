@@ -1,123 +1,328 @@
 [
-    {
-      "model": "products.product",
-      "pk": 1,
-      "fields": {
-        "name": "Martin D-28",
-        "category": 1,
-        "model": "D-28",
-        "short_description": "A legendary dreadnought with rich bass, powerful projection, and classic tonewoods like Sitka spruce and East Indian rosewood. Ideal for professionals and serious enthusiasts.",
-        "price": "3199.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 2,
-      "fields": {
-        "name": "Taylor 214ce",
-        "category": 1,
-        "model": "214ce",
-        "short_description": "A Grand Auditorium acoustic-electric with layered rosewood back and sides, solid Sitka spruce top, and Taylor’s ES2 pickup system. Great for versatile playing styles.",
-        "price": "1199.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 3,
-      "fields": {
-        "name": "Yamaha FG800",
-        "category": 1,
-        "model": "FG800",
-        "short_description": "Known for its solid spruce top, strong build, and exceptional value. Great for beginners and intermediate players seeking quality on a budget.",
-        "price": "229.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 4,
-      "fields": {
-        "name": "Fender CD-60S",
-        "category": 1,
-        "model": "CD-60S",
-        "short_description": "A highly affordable dreadnought with a solid spruce top and easy-to-play neck. Perfect for beginners or those needing a reliable backup guitar.",
-        "price": "199.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 5,
-      "fields": {
-        "name": "Gibson J-45 Standard",
-        "category": 1,
-        "model": "J-45 Standard",
-        "short_description": "A historic round-shoulder dreadnought, praised for its warm tone and dynamic response. Premium quality with vintage vibe and modern playability.",
-        "price": "2999.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 6,
-      "fields": {
-        "name": "Epiphone Hummingbird Studio",
-        "category": 1,
-        "model": "Hummingbird Studio",
-        "short_description": "A budget-friendly version of the classic Gibson Hummingbird. Features a distinctive pickguard, spruce top, and built-in electronics for stage use.",
-        "price": "399.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 7,
-      "fields": {
-        "name": "Takamine GD30CE",
-        "category": 1,
-        "model": "GD30CE",
-        "short_description": "A stage-ready dreadnought with a solid spruce top, cutaway design, and Takamine TP-4TD preamp system. Great for live performers.",
-        "price": "499.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 8,
-      "fields": {
-        "name": "Breedlove Discovery Concert CE",
-        "category": 1,
-        "model": "Discovery Concert CE",
-        "short_description": "A stylish, eco-friendly acoustic-electric with a slim neck and bright, balanced tone. Great for fingerstyle and light strumming.",
-        "price": "449.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 9,
-      "fields": {
-        "name": "Seagull S6 Original",
-        "category": 1,
-        "model": "S6 Original",
-        "short_description": "Canadian-made with a pressure-tested cedar top and wild cherry back/sides. Offers rich midrange and great sustain at a mid-tier price.",
-        "price": "699.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 10,
-      "fields": {
-        "name": "Ibanez AW54CE",
-        "category": 1,
-        "model": "AW54CE",
-        "short_description": "A warm-sounding dreadnought with a solid mahogany top and Ibanez electronics. Perfect for earthy, natural tones and reliable performance.",
-        "price": "329.99",
-        "image": ""
-      }
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Martin D-28",
+      "brand": "Martin",
+      "category": 1,
+      "model": "D-28",
+      "short_description": "A legendary dreadnought with rich bass, powerful projection, and classic tonewoods like Sitka spruce and East Indian rosewood. Ideal for professionals and serious enthusiasts.",
+      "price": "3199.00",
+      "image": ""
     }
-  ]
-  
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Taylor 214ce",
+      "brand": "Taylor",
+      "category": 1,
+      "model": "214ce",
+      "short_description": "A Grand Auditorium acoustic-electric with layered rosewood back and sides, solid Sitka spruce top, and Taylor’s ES2 pickup system. Great for versatile playing styles.",
+      "price": "1199.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "name": "Yamaha FG800",
+      "brand": "Yamaha",
+      "category": 1,
+      "model": "FG800",
+      "short_description": "Solid spruce top, nato back/sides and scalloped bracing make this a perfect first serious acoustic.",
+      "price": "229.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "name": "Fender CD-60S",
+      "brand": "Fender",
+      "category": 1,
+      "model": "CD-60S",
+      "short_description": "Affordable dreadnought with a solid spruce top and a warm, balanced tone. Great for beginners.",
+      "price": "199.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "name": "Gibson J-45 Standard",
+      "brand": "Gibson",
+      "category": 1,
+      "model": "J-45 Standard",
+      "short_description": "The iconic round-shoulder dreadnought known for its deep bass and warm mids.",
+      "price": "2999.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "name": "Epiphone Hummingbird Studio",
+      "brand": "Epiphone",
+      "category": 1,
+      "model": "Hummingbird Studio",
+      "short_description": "A stylish and affordable tribute to the classic Gibson Hummingbird. Features onboard electronics.",
+      "price": "399.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "name": "Takamine GD30CE",
+      "brand": "Takamine",
+      "category": 1,
+      "model": "GD30CE",
+      "short_description": "Solid spruce top with mahogany back and sides, cutaway and onboard preamp system.",
+      "price": "499.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "name": "Breedlove Discovery Concert CE",
+      "brand": "Breedlove",
+      "category": 1,
+      "model": "Discovery Concert CE",
+      "short_description": "Eco-friendly design with a comfortable neck and great tone for light strumming and fingerstyle.",
+      "price": "449.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "name": "Seagull S6 Original",
+      "brand": "Seagull",
+      "category": 1,
+      "model": "S6 Original",
+      "short_description": "Made in Canada with a cedar top and wild cherry back and sides, offering rich, mellow tone.",
+      "price": "699.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "name": "Ibanez AW54CE",
+      "brand": "Ibanez",
+      "category": 1,
+      "model": "AW54CE",
+      "short_description": "Solid mahogany top dreadnought with a warm, earthy tone. Cutaway and electronics included.",
+      "price": "329.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "name": "Martin LX1 Little Martin",
+      "brand": "Martin",
+      "category": 1,
+      "model": "LX1",
+      "short_description": "Compact and travel-friendly with a solid spruce top and HPL body. A perfect couch or travel guitar.",
+      "price": "349.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "name": "Taylor GS Mini Mahogany",
+      "brand": "Taylor",
+      "category": 1,
+      "model": "GS Mini Mahogany",
+      "short_description": "A portable and playable guitar with great tone, thanks to its solid mahogany top.",
+      "price": "599.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+      "name": "Yamaha APX600",
+      "brand": "Yamaha",
+      "category": 1,
+      "model": "APX600",
+      "short_description": "Thin-line body with cutaway and ART pickup. Ideal for players who perform live.",
+      "price": "329.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+      "name": "Fender FA-125",
+      "brand": "Fender",
+      "category": 1,
+      "model": "FA-125",
+      "short_description": "An ultra-budget-friendly acoustic that still delivers dependable tone and feel.",
+      "price": "179.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+      "name": "Gibson G-45 Studio",
+      "brand": "Gibson",
+      "category": 1,
+      "model": "G-45 Studio",
+      "short_description": "American-made solid wood guitar that brings modern tone and comfort to a classic body.",
+      "price": "999.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+      "name": "Epiphone DR-100",
+      "brand": "Epiphone",
+      "category": 1,
+      "model": "DR-100",
+      "short_description": "A classic Epiphone dreadnought with great projection and a very approachable price.",
+      "price": "169.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+      "name": "Takamine GN93CE",
+      "brand": "Takamine",
+      "category": 1,
+      "model": "GN93CE",
+      "short_description": "Beautifully crafted guitar with solid top and 3-piece back design, great for stage and studio.",
+      "price": "799.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+      "name": "Breedlove Pursuit Exotic Concert CE",
+      "brand": "Breedlove",
+      "category": 1,
+      "model": "Pursuit Exotic Concert CE",
+      "short_description": "Exotic wood choices and onboard electronics for stage-ready tones.",
+      "price": "799.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+      "name": "Seagull Entourage Rustic",
+      "brand": "Seagull",
+      "category": 1,
+      "model": "Entourage Rustic",
+      "short_description": "Canadian-built, cedar top, and wild cherry back for a warm and vintage-inspired voice.",
+      "price": "499.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+      "name": "Ibanez PF15",
+      "brand": "Ibanez",
+      "category": 1,
+      "model": "PF15",
+      "short_description": "Solid starter dreadnought with great playability and construction for the price.",
+      "price": "149.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+      "name": "Guild D-55",
+      "brand": "Guild",
+      "category": 1,
+      "model": "D-55",
+      "short_description": "High-end dreadnought with solid tonewoods and powerful voice. A pro-level instrument.",
+      "price": "4299.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 22,
+    "fields": {
+      "name": "Washburn WD7S",
+      "brand": "Washburn",
+      "category": 1,
+      "model": "WD7S",
+      "short_description": "Affordable solid-top dreadnought with smooth playability and classic tone.",
+      "price": "259.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 23,
+    "fields": {
+      "name": "Larrivée D-40R",
+      "brand": "Larrivée",
+      "category": 1,
+      "model": "D-40R",
+      "short_description": "Handcrafted quality with all-solid wood construction and pristine tone.",
+      "price": "1749.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+      "name": "Faith Neptune",
+      "brand": "Faith",
+      "category": 1,
+      "model": "Neptune",
+      "short_description": "Mid-sized body with solid wood tone and British hand-crafted design.",
+      "price": "899.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 25,
+    "fields": {
+      "name": "Blueridge BR-143",
+      "brand": "Blueridge",
+      "category": 1,
+      "model": "BR-143",
+      "short_description": "Vintage styling and tone. Perfect for folk and bluegrass lovers seeking authenticity.",
+      "price": "899.00",
+      "image": ""
+    }
+  }
+]
+

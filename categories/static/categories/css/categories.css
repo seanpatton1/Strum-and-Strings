@@ -64,3 +64,46 @@ header .navbar-nav .nav-link {
     }
 
  }
+
+/* category_details styles */
+
+/* Prevent header from covering content */
+body {
+    padding-top: 80px;
+  }
+  
+  
+  .sidebar {
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.25rem;
+    background-color: #fafafa;
+  }
+  
+  /* Remove default list styling & space out items */
+  .sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .sidebar li + li {
+    margin-top: 0.5rem;
+  }
+  
+  /* Make sidebar sticky under the navbar */
+  .sidebar.sticky-top {
+    position: sticky;
+    top: 80px; 
+  }
+  
+  /* Highlight the currently‐active filter */
+  .sidebar a.fw-bold {
+    text-decoration: underline;
+  }
+  
+  /* Hide the sidebar on small screens */
+  @media (max-width: 767.98px) {
+    .sidebar {
+      display: none;
+    }
+  }

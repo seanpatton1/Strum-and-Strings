@@ -4,6 +4,11 @@ from categories.models import Category
 
 class Product(models.Model):
     name = models.CharField(max_length=200)
+    brand = models.CharField(
+        max_length=100,
+        help_text="e.g. Gibson, Martin, Yamaha, Fender, etc.",
+        default="Unknown",
+    )
     category = models.ForeignKey(
         Category,
         on_delete=models.CASCADE,
@@ -19,11 +24,9 @@ class Product(models.Model):
         null=True
     )
     short_description = models.TextField(blank=True)
-
-    # ← Add this field
     price = models.DecimalField(
-        max_digits=8,      # e.g. up to 999,999.99
-        decimal_places=2,  # two decimal places for pence
+        max_digits=8,
+        decimal_places=2,
         default=0.00,
         help_text="Price in GBP (e.g. 499.99)"
     )
