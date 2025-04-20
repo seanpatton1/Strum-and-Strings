@@ -1,8 +1,51 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}My Profile – Strum & Strings{% endblock %}
+{% block main_class %}container py-5{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'accounts/css/profile.css' %}">
+{% endblock %}
 
 {% block content %}
-  <div class="container">
-    <h1>My Account</h1>
-    <p>Welcome, {{ user.username }}!</p>
-  </div>
+<div class="profile-page-container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-sm p-4">
+                <h2 class="mb-4 text-center">My Profile</h2>
+
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <div class="d-grid mt-3">
+                        <button type="submit" class="btn btn-primary btn-block">Update Profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+            <h3 class="mb-4 text-center">My Orders</h3>
+            {% if orders %}
+                <div class="list-group">
+                    {% for order in orders %}
+                        <div class="list-group-item">
+                            <h5>Order #{{ order.id }} - {{ order.status }}</h5>
+                            <p><strong>Placed on:</strong> {{ order.order_date }}</p>
+                            <p><strong>Total:</strong> £{{ order.total_price }}</p>
+                            <a href="{% url 'orders:order_detail' order.id %}" class="btn btn-secondary">View Order</a>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="text-center">You have no orders yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
 {% endblock %}
