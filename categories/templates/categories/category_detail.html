@@ -8,11 +8,11 @@
 {% endblock %}
 
 {% block title %}{{ category.name }} – Strum & Strings{% endblock %}
-{% block main_class %}container-fluid pt-4{% endblock %}
+{% block main_class %}container-fluid pt-4 my-5{% endblock %}
 
 {% block content %}
 <div class="row">
-  <aside class="col-12 col-md-3 mb-4">
+  <aside class="sticky-top col-12 col-md-3 mb-4">
     <div class="collapse d-md-block" id="filterCollapse">
       <h5>Filter by brand</h5>
       <ul class="list-unstyled">
@@ -68,7 +68,7 @@
     </div>
   </aside>
 
-  <section class="col-12 col-md-9">
+  <section class="container col-12 col-md-9">
     <h1 class="mb-4">{{ category.name }}</h1>
     <p class="lead">{{ category.description }}</p>
 
