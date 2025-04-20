@@ -1,3 +1,4 @@
+from decimal import Decimal
 from django.shortcuts import render, get_object_or_404
 from .models import Product
 from categories.models import Category
@@ -14,34 +15,43 @@ def product_detail(request, pk):
 
 
 def products_list(request):
-    """
-    Show all Products, with optional filtering by category or model.
-    """
-    qs = Product.objects.select_related('category').all()
+    products = Product.objects.all()
+    category_filter = request.GET.get('category')
+    brand_filter = request.GET.get('brand')
+    price_filter = request.GET.get('price')
 
-    # Filter by category if provided
-    category_id = request.GET.get('category')
-    if category_id:
-        qs = qs.filter(category_id=category_id)
+    if category_filter:
+        products = products.filter(category__pk=category_filter)
+    if brand_filter:
+        products = products.filter(brand=brand_filter)
 
-    # Filter by model if provided
-    model = request.GET.get('model')
-    if model:
-        qs = qs.filter(model=model)
+    price_ranges = {
+        'under200': (None, Decimal('200.00')),
+        '200-500': (Decimal('200.00'), Decimal('500.00')),
+        '500-1000': (Decimal('500.00'), Decimal('1000.00')),
+        'over1000': (Decimal('1000.00'), None),
+    }
+    if price_filter in price_ranges:
+        lower, upper = price_ranges[price_filter]
+        if lower is not None:
+            products = products.filter(price__gte=lower)
+        if upper is not None:
+            products = products.filter(price__lte=upper)
 
-    # For sidebar controls
     categories = Category.objects.all()
-    models = (
+    brands = (
         Product.objects
-               .values_list('model', flat=True)
-               .distinct()
-               .order_by('model')
+        .values_list('brand', flat=True)
+        .distinct()
+        .order_by('brand')
     )
 
-    return render(request, 'products/products_list.html', {
-        'products': qs,
+    context = {
+        'products': products,
         'categories': categories,
-        'models': models,
-        'selected_category': category_id,
-        'selected_model': model,
-    })
+        'brands': brands,
+        'selected_category': category_filter,
+        'selected_brand': brand_filter,
+        'price_filter': price_filter,
+    }
+    return render(request, 'products/products_list.html', context)

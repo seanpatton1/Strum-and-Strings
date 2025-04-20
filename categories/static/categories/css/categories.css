@@ -107,3 +107,12 @@ body {
       display: none;
     }
   }
+
+  @media (min-width: 768px) {
+    #filterCollapse {
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+  }

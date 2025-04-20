@@ -1,0 +1,977 @@
+[
+  {
+    "model": "products.product",
+    "pk": 26,
+    "fields": {
+      "name": "Martin OM-21",
+      "brand": "Martin",
+      "category": 1,
+      "model": "OM-21",
+      "short_description": "Orchestra model with solid mahogany back and sides, great for fingerstyle.",
+      "price": "2499.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 27,
+    "fields": {
+      "name": "Martin 000-28",
+      "brand": "Martin",
+      "category": 1,
+      "model": "000-28",
+      "short_description": "Orchestra model dreadnought with rosewood back and Sitka spruce top.",
+      "price": "2999.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 28,
+    "fields": {
+      "name": "Martin D-18",
+      "brand": "Martin",
+      "category": 1,
+      "model": "D-18",
+      "short_description": "Classic dreadnought with mahogany back and Sitka spruce top.",
+      "price": "2499.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 29,
+    "fields": {
+      "name": "Martin HD-28",
+      "brand": "Martin",
+      "category": 1,
+      "model": "HD-28",
+      "short_description": "Vintage-style dreadnought with scalloped bracing and aged tonewoods.",
+      "price": "3299.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 30,
+    "fields": {
+      "name": "Martin GPC-16E",
+      "brand": "Martin",
+      "category": 1,
+      "model": "GPC-16E",
+      "short_description": "Grand Performance cutaway with HPL back/sides and Fishman electronics.",
+      "price": "2999.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 31,
+    "fields": {
+      "name": "Taylor 314ce",
+      "brand": "Taylor",
+      "category": 1,
+      "model": "314ce",
+      "short_description": "Grand Auditorium with rosewood back and Sitka spruce top.",
+      "price": "2399.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 32,
+    "fields": {
+      "name": "Taylor GS Mini Maple",
+      "brand": "Taylor",
+      "category": 1,
+      "model": "GS Mini Maple",
+      "short_description": "Maple back and Sitka spruce top in a travel‑friendly Mini body.",
+      "price": "599.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 33,
+    "fields": {
+      "name": "Taylor 322ce",
+      "brand": "Taylor",
+      "category": 1,
+      "model": "322ce",
+      "short_description": "Grand Symphony with layered rosewood back and spruce top.",
+      "price": "2199.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 34,
+    "fields": {
+      "name": "Taylor 214ce-K DLX",
+      "brand": "Taylor",
+      "category": 1,
+      "model": "214ce-K DLX",
+      "short_description": "Layered rosewood back with Koa veneer and ES2 electronics.",
+      "price": "1199.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 35,
+    "fields": {
+      "name": "Taylor 110e",
+      "brand": "Taylor",
+      "category": 1,
+      "model": "110e",
+      "short_description": "Dreadnought with Sitka spruce top and layered walnut back.",
+      "price": "699.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 36,
+    "fields": {
+      "name": "Yamaha LL16",
+      "brand": "Yamaha",
+      "category": 1,
+      "model": "LL16",
+      "short_description": "L series dreadnought with rosewood back and Sitka spruce top.",
+      "price": "1199.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 37,
+    "fields": {
+      "name": "Yamaha FG830",
+      "brand": "Yamaha",
+      "category": 1,
+      "model": "FG830",
+      "short_description": "Solid spruce top and rosewood back/sides with scalloped bracing.",
+      "price": "299.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 38,
+    "fields": {
+      "name": "Yamaha FS800",
+      "brand": "Yamaha",
+      "category": 1,
+      "model": "FS800",
+      "short_description": "Concert body shape with solid spruce top and nato back/sides.",
+      "price": "299.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 39,
+    "fields": {
+      "name": "Yamaha FGX800C",
+      "brand": "Yamaha",
+      "category": 1,
+      "model": "FGX800C",
+      "short_description": "Cutaway with SRT pickup system, ideal for live performance.",
+      "price": "329.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 40,
+    "fields": {
+      "name": "Yamaha LL6",
+      "brand": "Yamaha",
+      "category": 1,
+      "model": "LL6",
+      "short_description": "L series with solid rosewood back/sides and spruce top.",
+      "price": "1399.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 41,
+    "fields": {
+      "name": "Fender CD-140SSE",
+      "brand": "Fender",
+      "category": 1,
+      "model": "CD-140SSE",
+      "short_description": "Electro‑acoustic with solid spruce top and Fishman preamp.",
+      "price": "229.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 42,
+    "fields": {
+      "name": "Fender FA-345CE",
+      "brand": "Fender",
+      "category": 1,
+      "model": "FA-345CE",
+      "short_description": "Thin‑line body with Fishman electronics.",
+      "price": "579.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 43,
+    "fields": {
+      "name": "Fender CC-60S",
+      "brand": "Fender",
+      "category": 1,
+      "model": "CC-60S",
+      "short_description": "Concert size dreadnought with solid spruce top.",
+      "price": "229.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 44,
+    "fields": {
+      "name": "Fender PM-1 Standard",
+      "brand": "Fender",
+      "category": 1,
+      "model": "PM-1 Standard",
+      "short_description": "Grand auditorium with solid spruce top.",
+      "price": "649.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 45,
+    "fields": {
+      "name": "Fender CD-60SCE",
+      "brand": "Fender",
+      "category": 1,
+      "model": "CD-60SCE",
+      "short_description": "Cutaway dreadnought with spruce top.",
+      "price": "199.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 46,
+    "fields": {
+      "name": "Gibson Hummingbird",
+      "brand": "Gibson",
+      "category": 1,
+      "model": "Hummingbird",
+      "short_description": "Square shoulder dreadnought with Sitka spruce top.",
+      "price": "3299.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 47,
+    "fields": {
+      "name": "Gibson J-200",
+      "brand": "Gibson",
+      "category": 1,
+      "model": "J-200",
+      "short_description": "Large jumbo with signature mustache bridge.",
+      "price": "3799.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 48,
+    "fields": {
+      "name": "Gibson SJ-200",
+      "brand": "Gibson",
+      "category": 1,
+      "model": "SJ-200",
+      "short_description": "Premium version of J-200 with deluxe appointments.",
+      "price": "4299.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 49,
+    "fields": {
+      "name": "Gibson Les Paul Acoustic",
+      "brand": "Gibson",
+      "category": 1,
+      "model": "Les Paul Acoustic",
+      "short_description": "Semi-hollow acoustic with Les Paul styling.",
+      "price": "1799.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 50,
+    "fields": {
+      "name": "Gibson Songwriter Authentic",
+      "brand": "Gibson",
+      "category": 1,
+      "model": "Songwriter Authentic",
+      "short_description": "Premium series with Adirondack spruce top.",
+      "price": "3499.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 51,
+    "fields": {
+      "name": "Epiphone EJ-200CE",
+      "brand": "Epiphone",
+      "category": 1,
+      "model": "EJ-200CE",
+      "short_description": "Classic jumbo acoustic-electric with Fishman electronics.",
+      "price": "649.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 52,
+    "fields": {
+      "name": "Epiphone Dove Pro",
+      "brand": "Epiphone",
+      "category": 1,
+      "model": "Dove Pro",
+      "short_description": "Jumbo with solid spruce top and maple back.",
+      "price": "799.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 53,
+    "fields": {
+      "name": "Epiphone Les Paul Special VE",
+      "brand": "Epiphone",
+      "category": 1,
+      "model": "Les Paul Special VE",
+      "short_description": "Mahogany body acoustic-electric with onboard preamp.",
+      "price": "349.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 54,
+    "fields": {
+      "name": "Epiphone Masterbilt AJ-220S",
+      "brand": "Epiphone",
+      "category": 1,
+      "model": "AJ-220S",
+      "short_description": "All-solid auditorium with scalloped bracing.",
+      "price": "999.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 55,
+    "fields": {
+      "name": "Epiphone Texan PT",
+      "brand": "Epiphone",
+      "category": 1,
+      "model": "Texan PT",
+      "short_description": "Historic dreadnought reissue with electronics.",
+      "price": "1099.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 56,
+    "fields": {
+      "name": "Takamine GY93CE",
+      "brand": "Takamine",
+      "category": 1,
+      "model": "GY93CE",
+      "short_description": "Concert cutaway with rosewood back and spruce top.",
+      "price": "599.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 57,
+    "fields": {
+      "name": "Takamine EF341SC",
+      "brand": "Takamine",
+      "category": 1,
+      "model": "EF341SC",
+      "short_description": "Stage-ready dreadnought with solid koa top and TP-4TD preamp.",
+      "price": "799.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 58,
+    "fields": {
+      "name": "Takamine DMP751",
+      "brand": "Takamine",
+      "category": 1,
+      "model": "DMP751",
+      "short_description": "All-solid mahogany dreadnought with onboard preamp.",
+      "price": "999.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 59,
+    "fields": {
+      "name": "Takamine GD30CE-NAT",
+      "brand": "Takamine",
+      "category": 1,
+      "model": "GD30CE-NAT",
+      "short_description": "Cutaway dreadnought with spruce top and natural finish.",
+      "price": "499.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 60,
+    "fields": {
+      "name": "Takamine P3DC",
+      "brand": "Takamine",
+      "category": 1,
+      "model": "P3DC",
+      "short_description": "Parlor cutaway with onboard preamp and spruce top.",
+      "price": "649.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 61,
+    "fields": {
+      "name": "Breedlove Atlas Exotic Concert",
+      "brand": "Breedlove",
+      "category": 1,
+      "model": "Atlas Exotic Concert",
+      "short_description": "Macassar ebony back and spruce top with pickup.",
+      "price": "1799.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 62,
+    "fields": {
+      "name": "Breedlove Eco Concerto",
+      "brand": "Breedlove",
+      "category": 1,
+      "model": "Eco Concerto",
+      "short_description": "Eco-friendly woods with electronics.",
+      "price": "849.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 63,
+    "fields": {
+      "name": "Breedlove Discovery S Concert",
+      "brand": "Breedlove",
+      "category": 1,
+      "model": "Discovery S Concert",
+      "short_description": "Layered rosewood back and spruce top.",
+      "price": "449.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 64,
+    "fields": {
+      "name": "Breedlove Premier S Concert",
+      "brand": "Breedlove",
+      "category": 1,
+      "model": "Premier S Concert",
+      "short_description": "Solid spruce top and mahogany body.",
+      "price": "799.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 65,
+    "fields": {
+      "name": "Breedlove Pursuit Exotic Concert",
+      "brand": "Breedlove",
+      "category": 1,
+      "model": "Pursuit Exotic Concert",
+      "short_description": "Sapele back and spruce top with pickup.",
+      "price": "799.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 66,
+    "fields": {
+      "name": "Seagull Maritime SWS",
+      "brand": "Seagull",
+      "category": 1,
+      "model": "Maritime SWS",
+      "short_description": "Solid spruce top and maple body.",
+      "price": "549.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 67,
+    "fields": {
+      "name": "Seagull Performer CW Mini",
+      "brand": "Seagull",
+      "category": 1,
+      "model": "Performer CW Mini",
+      "short_description": "Cutaway mini dreadnought with all-maple body.",
+      "price": "499.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 68,
+    "fields": {
+      "name": "Seagull Coastline S6 Slim",
+      "brand": "Seagull",
+      "category": 1,
+      "model": "Coastline S6 Slim",
+      "short_description": "Slim body with cedar top and cutaway.",
+      "price": "749.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 69,
+    "fields": {
+      "name": "Seagull Entourage Folk",
+      "brand": "Seagull",
+      "category": 1,
+      "model": "Entourage Folk",
+      "short_description": "Folk shape with cedar top and cherry sides.",
+      "price": "499.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 70,
+    "fields": {
+      "name": "Seagull S6 Original Slim",
+      "brand": "Seagull",
+      "category": 1,
+      "model": "S6 Original Slim",
+      "short_description": "Slimmed-down version of the S6 Original.",
+      "price": "699.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 71,
+    "fields": {
+      "name": "Ibanez PF15ECE",
+      "brand": "Ibanez",
+      "category": 1,
+      "model": "PF15ECE",
+      "short_description": "Dreadnought cutaway with electronics.",
+      "price": "349.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 72,
+    "fields": {
+      "name": "Ibanez AEG10NII",
+      "brand": "Ibanez",
+      "category": 1,
+      "model": "AEG10NII",
+      "short_description": "Thin‑body acoustic-electric with preamp.",
+      "price": "299.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 73,
+    "fields": {
+      "name": "Ibanez AW300",
+      "brand": "Ibanez",
+      "category": 1,
+      "model": "AW300",
+      "short_description": "Artwood dreadnought with mahogany top.",
+      "price": "549.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 74,
+    "fields": {
+      "name": "Ibanez AW400CE",
+      "brand": "Ibanez",
+      "category": 1,
+      "model": "AW400CE",
+      "short_description": "Cutaway dreadnought with preamp.",
+      "price": "599.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 75,
+    "fields": {
+      "name": "Ibanez V50NJP",
+      "brand": "Ibanez",
+      "category": 1,
+      "model": "V50NJP",
+      "short_description": "Starter dreadnought package.",
+      "price": "199.99",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 76,
+    "fields": {
+      "name": "Guild M-20",
+      "brand": "Guild",
+      "category": 1,
+      "model": "M-20",
+      "short_description": "Orchestra model with walnut sides.",
+      "price": "1099.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 77,
+    "fields": {
+      "name": "Guild OMC-CTE",
+      "brand": "Guild",
+      "category": 1,
+      "model": "OMC-CTE",
+      "short_description": "Cutaway electro with spruce top.",
+      "price": "1299.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 78,
+    "fields": {
+      "name": "Guild F-512E",
+      "brand": "Guild",
+      "category": 1,
+      "model": "F-512E",
+      "short_description": "12-string jumbo acoustic-electric.",
+      "price": "1999.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 79,
+    "fields": {
+      "name": "Guild Starfire ST-95",
+      "brand": "Guild",
+      "category": 1,
+      "model": "Starfire ST-95",
+      "short_description": "Parlor style acoustic-electric.",
+      "price": "599.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 80,
+    "fields": {
+      "name": "Guild Jumbo Junior",
+      "brand": "Guild",
+      "category": 1,
+      "model": "Jumbo Junior",
+      "short_description": "Compact jumbo with spruce top.",
+      "price": "499.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 81,
+    "fields": {
+      "name": "Washburn N4 Signature",
+      "brand": "Washburn",
+      "category": 1,
+      "model": "N4",
+      "short_description": "Signature acoustic by Nuno Bettencourt.",
+      "price": "999.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 82,
+    "fields": {
+      "name": "Washburn Legacy",
+      "brand": "Washburn",
+      "category": 1,
+      "model": "Legacy",
+      "short_description": "Vintage dreadnought reissue.",
+      "price": "1099.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 83,
+    "fields": {
+      "name": "Washburn HG30SCE",
+      "brand": "Washburn",
+      "category": 1,
+      "model": "HG30SCE",
+      "short_description": "Concert cutaway with Fishman preamp.",
+      "price": "399.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 84,
+    "fields": {
+      "name": "Washburn R310",
+      "brand": "Washburn",
+      "category": 1,
+      "model": "R310",
+      "short_description": "Budget dreadnought with laminated spruce.",
+      "price": "179.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 85,
+    "fields": {
+      "name": "Washburn WD10SCE",
+      "brand": "Washburn",
+      "category": 1,
+      "model": "WD10SCE",
+      "short_description": "Electro-acoustic dreadnought.",
+      "price": "399.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 86,
+    "fields": {
+      "name": "Larrivée OM-28",
+      "brand": "Larrivée",
+      "category": 1,
+      "model": "OM-28",
+      "short_description": "Orchestra model with rosewood back.",
+      "price": "2999.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 87,
+    "fields": {
+      "name": "Larrivée D-03",
+      "brand": "Larrivée",
+      "category": 1,
+      "model": "D-03",
+      "short_description": "Dreadnought with Sitka spruce top.",
+      "price": "1749.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 88,
+    "fields": {
+      "name": "Larrivée LV-03",
+      "brand": "Larrivée",
+      "category": 1,
+      "model": "LV-03",
+      "short_description": "V-bracing ladder style parlor.",
+      "price": "1899.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 89,
+    "fields": {
+      "name": "Larrivée P-03",
+      "brand": "Larrivée",
+      "category": 1,
+      "model": "P-03",
+      "short_description": "Parlor body with mahogany back.",
+      "price": "1649.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 90,
+    "fields": {
+      "name": "Larrivée OM-03",
+      "brand": "Larrivée",
+      "category": 1,
+      "model": "OM-03",
+      "short_description": "Orchestra model with scalloped bracing.",
+      "price": "1799.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 91,
+    "fields": {
+      "name": "Faith Venus",
+      "brand": "Faith",
+      "category": 1,
+      "model": "Venus",
+      "short_description": "Native hardwood acoustic with raw resonance.",
+      "price": "1249.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 92,
+    "fields": {
+      "name": "Faith Neptune",
+      "brand": "Faith",
+      "category": 1,
+      "model": "Neptune",
+      "short_description": "Handcrafted British tone with molded back.",
+      "price": "899.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 93,
+    "fields": {
+      "name": "Faith Panacea",
+      "brand": "Faith",
+      "category": 1,
+      "model": "Panacea",
+      "short_description": "Sitka spruce top with mild projection.",
+      "price": "1049.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 94,
+    "fields": {
+      "name": "Faith Naked Venus",
+      "brand": "Faith",
+      "category": 1,
+      "model": "Naked Venus",
+      "short_description": "Unfinished native wood body.",
+      "price": "1199.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 95,
+    "fields": {
+      "name": "Faith Aurelian NZ Kauri",
+      "brand": "Faith",
+      "category": 1,
+      "model": "Aurelian NZ Kauri",
+      "short_description": "Premium Kauri body for depth and sustain.",
+      "price": "1499.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 96,
+    "fields": {
+      "name": "Blueridge BR-45",
+      "brand": "Blueridge",
+      "category": 1,
+      "model": "BR-45",
+      "short_description": "Vintage Dreadnought style with spruce top.",
+      "price": "999.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 97,
+    "fields": {
+      "name": "Blueridge BR-143",  
+      "brand": "Blueridge",  
+      "category": 1,  
+      "model": "BR-143",  
+      "short_description": "Sweetgrass series with cedar top.",  
+      "price": "899.00",  
+      "image": ""  
+    }  
+  },  
+  {  
+    "model": "products.product",  
+    "pk": 98,  
+    "fields": {  
+      "name": "Blueridge BR-341",  
+      "brand": "Blueridge",  
+      "category": 1,  
+      "model": "BR-341",  
+      "short_description": "Premium series with mahogany back.",  
+      "price": "1249.00",  
+      "image": ""  
+    }  
+  },  
+  {  
+    "model": "products.product",  
+    "pk": 99,  
+    "fields": {  
+      "name": "Blueridge BR-163CE V2",  
+      "brand": "Blueridge",  
+      "category": 1,  
+      "model": "BR-163CE V2",  
+      "short_description": "All-mahogany cutaway with electronics.",  
+      "price": "1099.00",  
+      "image": ""  
+    }  
+  },  
+  {  
+    "model": "products.product",  
+    "pk": 100,  
+    "fields": {  
+      "name": "Blueridge BR-180A R",  
+      "brand": "Blueridge",  
+      "category": 1,  
+      "model": "BR-180A R",  
+      "short_description": "Red spruce top with rounded shoulders.",  
+      "price": "1199.00",  
+      "image": ""  
+    }  
+  }  
+]

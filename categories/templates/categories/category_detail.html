@@ -1,42 +1,70 @@
+{# categories/templates/categories/category_detail.html #}
 {% extends 'base.html' %}
 {% load static %}
 
 {% block extra_css %}
-{{ block.super }}
-<link rel="stylesheet" href="{% static 'categories/css/categories.css' %}">
-<!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'categories/css/categories.css' %}">
 {% endblock %}
 
-{% block title %}{{ category.name }} – Strum & Strings{% endblock %}
-
-{% block main_class %}container my-4{% endblock %}
+{% block title %}{{ category.name }} – Strum & Strings{% endblock %}
+{% block main_class %}container-fluid pt-4{% endblock %}
 
 {% block content %}
 <div class="row">
-
-  <!-- Filter Toggle Button (mobile only) -->
-  <div class="d-md-none mb-2">
-    <button class="btn btn-outline-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse" aria-expanded="false" aria-controls="filterCollapse">
-      <i class="bi bi-sliders"></i> Filters
-    </button>
-  </div>
-
-  <!-- Sidebar: Filter by Model -->
+  <!-- Sidebar -->
   <aside class="col-12 col-md-3 mb-4">
     <div class="collapse d-md-block" id="filterCollapse">
-      <h5>Filter by model</h5>
+      <h5>Filter by brand</h5>
       <ul class="list-unstyled">
-        {% for m in models %}
+        <li>
+          <a href="?{% if price_filter %}price={{ price_filter }}{% endif %}"
+             class="{% if not brand_filter %}fw-bold text-primary{% endif %}">
+            All
+          </a>
+        </li>
+        {% for b in brands %}
           <li>
-            <a href="?model={{ m|urlencode }}"
-               class="{% if m == model_filter %}fw-bold text-primary{% endif %}">
-              {{ m }}
+            <a href="?brand={{ b|urlencode }}{% if price_filter %}&price={{ price_filter }}{% endif %}"
+               class="{% if b == brand_filter %}fw-bold text-primary{% endif %}">
+              {{ b }}
             </a>
           </li>
-        {% empty %}
-          <li>No models to filter</li>
         {% endfor %}
+      </ul>
+
+      <h5 class="mt-4">Price</h5>
+      <ul class="list-unstyled">
+        <li>
+          <a href="?{% if brand_filter %}brand={{ brand_filter }}{% endif %}"
+             class="{% if not price_filter %}fw-bold text-primary{% endif %}">
+            All
+          </a>
+        </li>
+        <li>
+          <a href="?price=under200"
+             class="{% if price_filter == 'under200' %}fw-bold text-primary{% endif %}">
+            Under £200
+          </a>
+        </li>
+        <li>
+          <a href="?price=200-500"
+             class="{% if price_filter == '200-500' %}fw-bold text-primary{% endif %}">
+            £200 – £500
+          </a>
+        </li>
+        <li>
+          <a href="?price=500-1000"
+             class="{% if price_filter == '500-1000' %}fw-bold text-primary{% endif %}">
+            £500 – £1 000
+          </a>
+        </li>
+        <li>
+          <a href="?price=over1000"
+             class="{% if price_filter == 'over1000' %}fw-bold text-primary{% endif %}">
+            Over £1 000
+          </a>
+        </li>
       </ul>
     </div>
   </aside>
@@ -54,15 +82,19 @@
               <img src="{{ product.image.url }}"
                    class="card-img-top"
                    alt="{{ product.name }}">
+            {% else %}
+              <img src="{% static 'images/placeholder.png' %}"
+                   class="card-img-top"
+                   alt="Placeholder">
             {% endif %}
             <div class="card-body text-center">
               <h5 class="card-title">{{ product.name }}</h5>
               {% if product.short_description %}
                 <p class="card-text">{{ product.short_description }}</p>
               {% endif %}
-              <p class="h5">£{{ product.price }}</p>
+              <p class="h5 mb-3">£{{ product.price }}</p>
               <a href="{% url 'products:product_detail' product.pk %}"
-                 class="btn btn-outline-primary">
+                 class="btn btn-primary">
                 View Details
               </a>
             </div>
@@ -70,11 +102,10 @@
         </div>
       {% empty %}
         <div class="col-12">
-          <p class="text-muted text-center">No products found in this category.</p>
+          <p class="text-muted">No products found.</p>
         </div>
       {% endfor %}
     </div>
   </section>
-
 </div>
 {% endblock %}
