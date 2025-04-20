@@ -29,86 +29,74 @@
       <h5>Filter by Category</h5>
       <ul class="list-unstyled">
         <li>
-          <a
-            href="{% url 'products:products_list' %}"
-            class="{% if not selected_category %}fw-bold text-primary{% endif %}">
+          <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}{% if selected_brand %}brand={{ selected_brand }}{% endif %}{% if price_filter %}&price={{ price_filter }}{% endif %}"
+             class="{% if not selected_category %}fw-bold text-primary{% endif %}">
             All
           </a>
         </li>
         {% for c in categories %}
         <li>
-          <a
-            href="?category={{ c.pk }}"
-            class="{% if c.pk|stringformat:'s' == selected_category %}fw-bold text-primary{% endif %}">
+          <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}category={{ c.pk }}{% if selected_brand %}&brand={{ selected_brand }}{% endif %}{% if price_filter %}&price={{ price_filter }}{% endif %}"
+             class="{% if c.pk|stringformat:'s' == selected_category %}fw-bold text-primary{% endif %}">
             {{ c.name }}
           </a>
         </li>
         {% endfor %}
       </ul>
-  
+
       <h5 class="mt-4">Filter by Brand</h5>
       <ul class="list-unstyled">
         <li>
-          <a
-            href="{% url 'products:products_list' %}"
-            class="{% if not selected_brand %}fw-bold text-primary{% endif %}">
+          <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}{% if selected_category %}category={{ selected_category }}{% endif %}{% if price_filter %}&price={{ price_filter }}{% endif %}"
+             class="{% if not selected_brand %}fw-bold text-primary{% endif %}">
             All
           </a>
         </li>
         {% for b in brands %}
         <li>
-          <a
-            href="?brand={{ b|urlencode }}"
-            class="{% if b == selected_brand %}fw-bold text-primary{% endif %}">
+          <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}brand={{ b|urlencode }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if price_filter %}&price={{ price_filter }}{% endif %}"
+             class="{% if b == selected_brand %}fw-bold text-primary{% endif %}">
             {{ b }}
           </a>
         </li>
         {% endfor %}
       </ul>
-  
+
       <h5 class="mt-4">Filter by Price</h5>
       <ul class="list-unstyled">
         <li>
-          <a
-            href="{% url 'products:products_list' %}"
-            class="{% if not price_filter %}fw-bold text-primary{% endif %}">
+          <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}{% if selected_category %}category={{ selected_category }}{% endif %}{% if selected_brand %}&brand={{ selected_brand }}{% endif %}"
+             class="{% if not price_filter %}fw-bold text-primary{% endif %}">
             All
           </a>
         </li>
         <li>
-          <a
-            href="?price=under200"
-            class="{% if price_filter == 'under200' %}fw-bold text-primary{% endif %}">
-            Under £200
+          <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}price=under200{% if selected_category %}&category={{ selected_category }}{% endif %}{% if selected_brand %}&brand={{ selected_brand }}{% endif %}"
+             class="{% if price_filter == 'under200' %}fw-bold text-primary{% endif %}">
+            Under £200
           </a>
         </li>
         <li>
-          <a
-            href="?price=200-500"
-            class="{% if price_filter == '200-500' %}fw-bold text-primary{% endif %}">
+          <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}price=200-500{% if selected_category %}&category={{ selected_category }}{% endif %}{% if selected_brand %}&brand={{ selected_brand }}{% endif %}"
+             class="{% if price_filter == '200-500' %}fw-bold text-primary{% endif %}">
             £200 – £500
           </a>
         </li>
         <li>
-          <a
-            href="?price=500-1000"
-            class="{% if price_filter == '500-1000' %}fw-bold text-primary{% endif %}">
+          <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}price=500-1000{% if selected_category %}&category={{ selected_category }}{% endif %}{% if selected_brand %}&brand={{ selected_brand }}{% endif %}"
+             class="{% if price_filter == '500-1000' %}fw-bold text-primary{% endif %}">
             £500 – £1 000
           </a>
         </li>
         <li>
-          <a
-            href="?price=over1000"
-            class="{% if price_filter == 'over1000' %}fw-bold text-primary{% endif %}">
-            Over £1 000
+          <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}price=over1000{% if selected_category %}&category={{ selected_category }}{% endif %}{% if selected_brand %}&brand={{ selected_brand }}{% endif %}"
+             class="{% if price_filter == 'over1000' %}fw-bold text-primary{% endif %}">
+            Over £1 000
           </a>
         </li>
       </ul>
     </div>
   </aside>
-  
-  
-  
 
   <section class="col-12 col-md-9">
     <h1 class="mb-4">All Products</h1>

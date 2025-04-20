@@ -56,17 +56,20 @@
             class="collapse navbar-collapse justify-content-between burger-one"
             id="navbarNav"
           >
-            <form class="d-flex mx-auto" role="search">
-              <input
-                class="form-control me-2 w-100"
-                type="text"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-light" type="submit">
-                Search
-              </button>
-            </form>
+          <form class="d-flex mx-auto" method="get" action="{% url 'products:products_list' %}">
+            <input
+              class="form-control me-2 w-100"
+              type="search"
+              name="q"
+              placeholder="Search"
+              aria-label="Search"
+              value="{{ query|default:'' }}"
+            />
+            <button class="btn btn-outline-light" type="submit">
+              Search
+            </button>
+          </form>
+          
 
             <ul
               class="navbar-nav ms-auto list-inline list-unstyled"

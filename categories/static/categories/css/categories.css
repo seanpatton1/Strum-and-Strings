@@ -18,6 +18,18 @@ header .navbar-nav .nav-link {
     margin: 0 10px;
 }
 
+main {
+  display: block !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  min-height: auto !important;
+  text-align: left;
+}
+
+.container.mt-2 {
+  padding-bottom: 2rem;
+}
+
 /* For Small Screens (smaller than 768px) */
 @media (max-width: 767.98px) {
 
