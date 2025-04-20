@@ -1,4 +1,5 @@
 from django.db import models
+from django.templatetags.static import static
 from categories.models import Category
 
 
@@ -33,3 +34,13 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def image_url(self):
+        """
+        Returns the uploaded image URL, or a placeholder if none exists.
+        """
+        if self.image and hasattr(self.image, 'url'):
+            return self.image.url
+        # Adjust the path here if you placed your placeholder elsewhere
+        return static('images/placeholder.jpg')

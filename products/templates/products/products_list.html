@@ -5,17 +5,15 @@
   {{ block.super }}
   <link
     rel="stylesheet"
-    href="{% static 'products/products_list.css' %}"
+    href="{% static 'products/css/products_list.css' %}"
   >
 {% endblock %}
 
+{% block title %}Shop All – Strum & Strings{% endblock %}
 
-{% block title %}Shop All – Strum & Strings{% endblock %}
-
-{% block main_class %}container my-5{% endblock %}
+{% block main_class %}container-fluid pt-5 my-5{% endblock %}
 
 {% block content %}
-<div class="container my-5">
   <div class="row">
 
     <!-- Sidebar Filters -->
@@ -60,7 +58,7 @@
     <!-- Products Grid -->
     <section class="col-12 col-md-9">
       <h1 class="mb-4">All Products</h1>
-      <div class="row g-4">
+      <div class="row g-5">
         {% for product in products %}
           <div class="col-6 col-lg-4">
             <div class="card h-100">
@@ -70,10 +68,23 @@
                   class="card-img-top"
                   alt="{{ product.name }}"
                 >
+              {% else %}
+                <img
+                  src="{% static 'images/placeholder.png' %}"
+                  class="card-img-top"
+                  alt="Placeholder"
+                >
               {% endif %}
+
               <div class="card-body text-center">
                 <h5 class="card-title">{{ product.name }}</h5>
-                <p class="h6 mb-2">£{{ product.price }}</p>
+
+                {% if product.short_description %}
+                  <p class="card-text">{{ product.short_description }}</p>
+                {% endif %}
+
+                <p class="h5 mb-2">£{{ product.price }}</p>
+
                 <a
                   href="{% url 'products:product_detail' product.pk %}"
                   class="btn btn-outline-primary btn-sm"
@@ -90,5 +101,5 @@
     </section>
 
   </div>
-</div>
 {% endblock %}
+
