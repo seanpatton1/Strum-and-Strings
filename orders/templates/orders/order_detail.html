@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Order #{{ order.id }} – Strum & Strings{% endblock %}
+
+{% block main_class %}container py-5{% endblock %}
+
+{% block content %}
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="mb-4 text-center">Order #{{ order.id }}</h2>
+      <ul class="list-group mb-4">
+        <li class="list-group-item"><strong>Status:</strong> {{ order.status }}</li>
+        <li class="list-group-item"><strong>Order Date:</strong> {{ order.order_date }}</li>
+        <li class="list-group-item"><strong>Product:</strong> {{ order.product.name }}</li>
+        <li class="list-group-item"><strong>Quantity:</strong> {{ order.quantity }}</li>
+        <li class="list-group-item"><strong>Total:</strong> £{{ order.total_price }}</li>
+      </ul>
+      <a href="{% url 'accounts:profile' %}" class="btn btn-secondary">Back to Profile</a>
+    </div>
+  </div>
+{% endblock %}

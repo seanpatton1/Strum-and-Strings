@@ -12,18 +12,3 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
-
-
-class Order(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='orders')
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    quantity = models.PositiveIntegerField()
-    order_date = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=100, choices=[
-        ('Pending', 'Pending'),
-        ('Shipped', 'Shipped'),
-        ('Delivered', 'Delivered'),
-    ])
-
-    def __str__(self):
-        return f"Order {self.id} - {self.user.username} - {self.status}"

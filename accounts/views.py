@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import ProfileForm
+from orders.models import Order
+
 
 @login_required
 def profile(request):

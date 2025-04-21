@@ -36,6 +36,8 @@
                     {% for order in orders %}
                         <div class="list-group-item">
                             <h5>Order #{{ order.id }} - {{ order.status }}</h5>
+                            <p><strong>Product:</strong> {{ order.product.name }}</p>
+                            <p><strong>Quantity:</strong> {{ order.quantity }}</p>
                             <p><strong>Placed on:</strong> {{ order.order_date }}</p>
                             <p><strong>Total:</strong> £{{ order.total_price }}</p>
                             <a href="{% url 'orders:order_detail' order.id %}" class="btn btn-secondary">View Order</a>
