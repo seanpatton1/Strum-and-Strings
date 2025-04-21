@@ -47,7 +47,11 @@
       {% if product.short_description %}
         <p class="mb-4">{{ product.short_description }}</p>
       {% endif %}
-      <a href="#" class="btn btn-lg btn-primary">Add to Cart</a>
+    
+      <form action="{% url 'cart:add_to_cart' product.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-lg btn-primary">Add to Cart</button>
+      </form>
     </div>
   </div>
 </main>
