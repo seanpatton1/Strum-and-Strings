@@ -121,6 +121,10 @@
         {% block content %}{% endblock %}
       </main>
 
+      <button id="back-to-top" class="btn btn-primary" title="Go to top">
+        ↑
+      </button>
+
       <footer class="bg-dark text-white py-4" id="footer-one">
         <div class="container">
           <div class="row">
@@ -162,6 +166,9 @@
       src="https://kit.fontawesome.com/17fadc6c88.js"
       crossorigin="anonymous"
     ></script>
-    {% block postloadjs %}{% endblock %}
+    {% block postloadjs %}
+    <script src="{% static 'js/back_to_top.js' %}"></script>
+    {% endblock %}
+
   </body>
 </html>

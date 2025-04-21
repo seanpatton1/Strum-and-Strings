@@ -120,6 +120,30 @@ header .navbar-nav .nav-link {
     margin-left: -24px !important;
 }
 
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+  }
+  
+  #back-to-top:hover {
+    background-color: #0b5ed7;
+  }
 
 /* For Small Screens (smaller than 768px) */
 @media (max-width: 767.98px) {

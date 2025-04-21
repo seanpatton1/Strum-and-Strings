@@ -15,6 +15,7 @@ def add_to_cart(request, product_id):
     if not created:
         cart_item.quantity += 1
         cart_item.save()
+
     return redirect(request.META.get('HTTP_REFERER', 'products:products_list'))
 
 
