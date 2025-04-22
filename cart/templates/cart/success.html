@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}Order Successful – Strum & Strings{% endblock %}
+{% block main_class %}container py-5 mt-5{% endblock %}
+
+{% block content %}
+  <div class="text-center mb-5">
+    <h2>Thank You for Your Order!</h2>
+    <p class="lead">Your payment was successful.</p>
+  </div>
+
+  <div class="card mx-auto" style="max-width: 700px;">
+    <div class="card-body">
+      <h5 class="card-title">Order #{{ order.id }}</h5>
+      <p><strong>Name:</strong> {{ order.full_name }}</p>
+      <p><strong>Email:</strong> {{ order.email }}</p>
+      <p><strong>Date:</strong> {{ order.created_at|date:"F j, Y, g:i a" }}</p>
+
+      <div class="mb-3">
+        <h6 class="mb-1">Delivery Address</h6>
+        <address class="mb-0">
+          {{ order.street_address1 }}<br>
+          {% if order.street_address2 %}
+            {{ order.street_address2 }}<br>
+          {% endif %}
+          {{ order.town_or_city }}, {{ order.postal_code }}<br>
+          {{ order.country }}
+        </address>
+      </div>
+
+      <hr>
+
+      <h6>Items:</h6>
+      <ul class="list-group mb-3">
+        {% for item in order.items.all %}
+        <li class="list-group-item d-flex justify-content-between">
+          <span>{{ item.product.name }} (x{{ item.quantity }})</span>
+          <span>£{{ item.total_price|floatformat:2 }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Subtotal:</span>
+          <strong>£{{ order.order_total|floatformat:2 }}</strong>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Delivery:</span>
+          <span>£{{ order.delivery_fee|floatformat:2 }}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Grand Total:</span>
+          <strong>£{{ order.grand_total|floatformat:2 }}</strong>
+        </li>
+      </ul>
+
+      <div class="text-center mt-4">
+        <a href="{% url 'products:products_list' %}" class="btn btn-primary">Continue Shopping</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

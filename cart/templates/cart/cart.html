@@ -43,6 +43,9 @@
   <div class="text-end">
     <h4>Total: <strong>£{{ total|floatformat:2 }}</strong></h4>
   </div>
+  <div class="text-end">
+    <a href="{% url 'cart:checkout' %}" class="btn btn-success btn-lg mt-3">Proceed to Checkout</a>
+  </div>
 {% else %}
   <p class="text-center">Your cart is empty.</p>
 {% endif %}

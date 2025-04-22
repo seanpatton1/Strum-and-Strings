@@ -26,9 +26,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
-    {% endblock %} {% block extra_css %}
+    {% endblock %} 
+    
+    {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% endblock %}
+
+    {% block corejs %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/17fadc6c88.js" crossorigin="anonymous"></script>
+    <!-- Stripe JS -->
+    <script src="https://js.stripe.com/basil/stripe.js"></script>
+    {% endblock %}
+
   </head>
   <body>
     <div class="wrapper d-flex flex-column">
@@ -167,6 +177,8 @@
       crossorigin="anonymous"
     ></script>
     {% block postloadjs %}
+    {{ block.super }}
+    <script src="{% static 'js/checkout.js' %}"></script>
     <script src="{% static 'js/back_to_top.js' %}"></script>
     {% endblock %}
 
