@@ -71,7 +71,7 @@ def checkout(request):
 
     grand_total = total + delivery_fee
 
-    # ✅ Handle form submission (POST)
+    # Handle form submission (POST)
     if request.method == 'POST':
         request.session['checkout_data'] = {
             'full_name': request.POST.get('full_name'),
