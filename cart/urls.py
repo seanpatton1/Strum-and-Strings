@@ -1,4 +1,5 @@
 from django.urls import path
+from .webhook import webhook
 from . import views
 
 app_name = 'cart'
@@ -10,4 +11,5 @@ urlpatterns = [
     path('remove/<int:item_id>/', views.remove_from_cart, name='remove_from_cart'),
     path('create-checkout-session/', views.create_checkout_session, name='create_checkout_session'),
     path('success/', views.success, name='success'),
+    path('wh/', webhook, name='webhook'),
 ]

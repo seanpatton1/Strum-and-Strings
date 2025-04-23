@@ -5,7 +5,8 @@ from django.http import JsonResponse
 from products.models import Product
 from .models import CartItem
 from decimal import Decimal
-from orders.models import Order, OrderItem
+from django.contrib import messages
+from orders.models import Order
 from django.views.decorators.http import require_POST
 import stripe
 import json
@@ -73,7 +74,7 @@ def checkout(request):
 
     # Handle form submission (POST)
     if request.method == 'POST':
-        request.session['checkout_data'] = {
+        request.session.pop['checkout_data'] = {
             'full_name': request.POST.get('full_name'),
             'email': request.POST.get('email'),
             'phone': request.POST.get('phone'),
@@ -141,9 +142,21 @@ def create_checkout_session(request):
             payment_method_types=['card'],
             line_items=line_items,
             mode='payment',
-            success_url='http://127.0.0.1:8000/cart/success/',
+            success_url='http://127.0.0.1:8000/cart/success/?session_id={CHECKOUT_SESSION_ID}',
             cancel_url='http://127.0.0.1:8000/cart/',
+            metadata={
+                        'username': request.user.username,
+                        'full_name': data.get('full_name'),
+                        'email': data.get('email'),
+                        'phone': data.get('phone'),
+                        'street_address1': data.get('street_address1'),
+                        'street_address2': data.get('street_address2'),
+                        'country': data.get('country'),
+                        'postal_code': data.get('postal_code'),
+                        'town_or_city': data.get('town_or_city'), }
         )
+
+        print("Metadata being sent:", session.metadata)
 
         return JsonResponse({'id': session.id})
 
@@ -153,50 +166,16 @@ def create_checkout_session(request):
 
 @login_required
 def success(request):
-    # Get cart items
-    cart_items = CartItem.objects.filter(user=request.user)
-    if not cart_items.exists():
+    session_id = request.GET.get('session_id')
+
+    if not session_id:
+        messages.error(request, "No session ID provided.")
         return redirect('products:products_list')
 
-    # Load session form data
-    checkout_data = request.session.get('checkout_data', {})
-
-    # Calculate totals
-    total = sum(item.product.price * item.quantity for item in cart_items)
-    free_delivery_threshold = Decimal('50.00')
-    delivery_fee = Decimal('0.00') if total >= free_delivery_threshold else Decimal('4.95')
-    grand_total = total + delivery_fee
-
-    # Create Order with real user input
-    order = Order.objects.create(
-        user=request.user,
-        full_name=checkout_data.get('full_name'),
-        email=checkout_data.get('email'),
-        phone=checkout_data.get('phone'),
-        street_address1=checkout_data.get('street_address1'),
-        street_address2=checkout_data.get('street_address2'),
-        country=checkout_data.get('country'),
-        postal_code=checkout_data.get('postal_code'),
-        town_or_city=checkout_data.get('town_or_city'),
-        delivery_fee=delivery_fee,
-        order_total=total,
-        grand_total=grand_total,
-        status='processing'
-    )
-
-    # Create OrderItems
-    for item in cart_items:
-        OrderItem.objects.create(
-            order=order,
-            product=item.product,
-            quantity=item.quantity,
-            price=item.product.price
-        )
-
-    # Clear cart
-    cart_items.delete()
-
-    # Clear session form data
-    request.session.pop('checkout_data', None)
+    try:
+        order = Order.objects.get(stripe_session_id=session_id, user=request.user)
+    except Order.DoesNotExist:
+        messages.error(request, "Order not found.")
+        return redirect('products:products_list')
 
     return render(request, 'cart/success.html', {'order': order})
