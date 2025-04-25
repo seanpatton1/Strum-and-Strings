@@ -1,0 +1,1 @@
+web: gunicorn strum_and_strings.wsgi:application
