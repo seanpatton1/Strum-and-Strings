@@ -1,3 +1,4 @@
+import os
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
@@ -136,12 +137,14 @@ def create_checkout_session(request):
 
         stripe.api_key = settings.STRIPE_SECRET_KEY
 
+        domain = 'https://strum-and-strings-e5017bc28566.herokuapp.com'
+
         session = stripe.checkout.Session.create(
             payment_method_types=['card'],
             line_items=line_items,
             mode='payment',
-            success_url='http://127.0.0.1:8000/cart/success/?session_id={CHECKOUT_SESSION_ID}',
-            cancel_url='http://127.0.0.1:8000/cart/',
+            success_url=f'{domain}/cart/success/?session_id={{CHECKOUT_SESSION_ID}}',
+            cancel_url=f'{domain}/cart/',
             metadata={
                 'username': request.user.username,
                 'full_name': data.get('full_name'),
