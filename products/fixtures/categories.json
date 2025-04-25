@@ -1,0 +1,24 @@
+[
+    {
+      "model": "categories.category",
+      "pk": 1,
+      "fields": {
+        "name": "Acoustic"
+      }
+    },
+    {
+      "model": "categories.category",
+      "pk": 2,
+      "fields": {
+        "name": "Electric"
+      }
+    },
+    {
+      "model": "categories.category",
+      "pk": 3,
+      "fields": {
+        "name": "Accessories"
+      }
+    }
+  ]
+  

@@ -100,11 +100,9 @@ def checkout(request):
 def create_checkout_session(request):
     try:
         data = json.loads(request.body)
-
         request.session['checkout_data'] = data
 
         cart_items = CartItem.objects.filter(user=request.user)
-
         line_items = []
         total = Decimal('0.00')
 
@@ -145,18 +143,17 @@ def create_checkout_session(request):
             success_url='http://127.0.0.1:8000/cart/success/?session_id={CHECKOUT_SESSION_ID}',
             cancel_url='http://127.0.0.1:8000/cart/',
             metadata={
-                        'username': request.user.username,
-                        'full_name': data.get('full_name'),
-                        'email': data.get('email'),
-                        'phone': data.get('phone'),
-                        'street_address1': data.get('street_address1'),
-                        'street_address2': data.get('street_address2'),
-                        'country': data.get('country'),
-                        'postal_code': data.get('postal_code'),
-                        'town_or_city': data.get('town_or_city'), }
+                'username': request.user.username,
+                'full_name': data.get('full_name'),
+                'email': data.get('email'),
+                'phone': data.get('phone'),
+                'street_address1': data.get('street_address1'),
+                'street_address2': data.get('street_address2'),
+                'country': data.get('country'),
+                'postal_code': data.get('postal_code'),
+                'town_or_city': data.get('town_or_city'),
+            }
         )
-
-        print("Metadata being sent:", session.metadata)
 
         return JsonResponse({'id': session.id})
 
