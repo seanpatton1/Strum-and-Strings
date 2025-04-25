@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'strum-and-strings-e5017bc28566.herokuapp.com/']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-seanpatton1-strumandstr-s6cl2qumj8z.ws.codeinstitute-ide.net',
