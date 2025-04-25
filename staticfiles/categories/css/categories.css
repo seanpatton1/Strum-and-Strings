@@ -1,0 +1,130 @@
+header {
+    background-color: #222;
+    color: #fff;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+header .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .navbar-nav .nav-link {
+    font-size: 1rem;
+    margin: 0 10px;
+}
+
+main {
+  display: block !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  min-height: auto !important;
+  text-align: left;
+}
+
+.container.mt-2 {
+  padding-bottom: 2rem;
+}
+
+/* For Small Screens (smaller than 768px) */
+@media (max-width: 767.98px) {
+
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .breadcrumb-item a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    .breadcrumb-item a:hover {
+        text-decoration: underline;
+    }
+    
+    .breadcrumb-item.active {
+        color: #6c757d; 
+    }
+
+    #breadcrumb-main {
+        padding-top: 5px;
+    }
+
+    #bottom-img {
+        padding-bottom: 10px;
+    }
+
+    #footer-one {
+        padding-top: 60px !important;
+    }
+
+    footer .row {
+        text-align: center; /* Center-align text */
+    }
+
+    footer .col-md-6,
+    footer .col-md-3 {
+        text-align: center; /* Center-align text for all columns */
+        margin-bottom: 20px; /* Add spacing between columns */
+    }
+
+ }
+
+/* category_details styles */
+
+/* Prevent header from covering content */
+body {
+    padding-top: 80px;
+  }
+  
+  
+  .sidebar {
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.25rem;
+    background-color: #fafafa;
+  }
+  
+  /* Remove default list styling & space out items */
+  .sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .sidebar li + li {
+    margin-top: 0.5rem;
+  }
+  
+  /* Make sidebar sticky under the navbar */
+  .sidebar.sticky-top {
+    position: sticky;
+    top: 80px; 
+  }
+  
+  /* Highlight the currently‐active filter */
+  .sidebar a.fw-bold {
+    text-decoration: underline;
+  }
+  
+  /* Hide the sidebar on small screens */
+  @media (max-width: 767.98px) {
+    .sidebar {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #filterCollapse {
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+  }

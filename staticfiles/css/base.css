@@ -1,0 +1,316 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+main {
+    flex: 1;
+    min-height: calc(100vh - 10px);
+    text-align: center;
+    width: 100%;
+}
+
+.home-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-categories {
+    margin-top: 50px;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+header .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .navbar-nav .nav-link {
+    font-size: 1rem;
+    margin: 0 10px;
+}
+
+.navbar-brand-container {
+    flex-grow: 1;
+    margin-left: 0;
+    padding-left: 10px;
+}
+
+
+.search-bar {
+    width: 50%;
+}
+
+.search-bar input {
+    width: 600px;
+}
+
+.search-bar button {
+    white-space: nowrap;
+}
+
+
+.product-categories .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.product-categories .card {
+    flex: 1;
+    max-width: 300px;
+}
+
+.home-hero {
+    background-image: url("/static/images/stratocaster-home-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-hero h1, .home-hero p, .home-hero a {
+    position: relative; /* Keep text above the background */
+    z-index: 1;
+}
+
+.home-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0;
+}
+
+.main-picture {
+    margin-left: -24px !important;
+}
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+  }
+  
+  #back-to-top:hover {
+    background-color: #0b5ed7;
+  }
+
+/* For Small Screens (smaller than 768px) */
+@media (max-width: 767.98px) {
+    .option-container {
+        display: none;
+    }
+
+    #footer-one {
+        padding-top: 60px !important;
+    }
+
+    footer .row {
+        text-align: center; /* Center-align text */
+    }
+
+    footer .col-md-6,
+    footer .col-md-3 {
+        text-align: center; /* Center-align text for all columns */
+        margin-bottom: 20px; /* Add spacing between columns */
+    }
+
+    .burger-one {
+        margin-top: 5px;
+    }
+
+    #navbarNav form {
+        margin-top: 10px;
+    }
+
+    #navbarNav ul.navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbarNav ul.navbar-nav li.nav-item {
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #navbarNav ul.navbar-nav li.nav-item a.nav-link {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #nav-links-one {
+        margin-top: 10px;
+    }
+
+    /* Hero Section Full-Screen Background */
+    .home-hero {
+        background-image: url("/static/images/stratocaster-home-image.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Full screen height */
+        color: #fff; /* Ensure text is readable */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -25px !important;
+        margin: 0; 
+        padding: 0;
+        width: 100vw;
+        overflow: hidden;
+
+    }
+
+    .home-hero h1, .home-hero p, .home-hero a {
+        position: relative; /* Keep text above the background */
+        z-index: 1;
+    }
+
+    .home-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        z-index: 0;
+    }
+
+    .home-hero .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Body and HTML Fix for Horizontal Overflow */
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 849px) {
+
+    main {
+        margin-right: 0px;
+    }
+
+    #navbarNav ul.navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    #navbarNav ul.navbar-nav li.nav-item {
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 10px;
+        width: 80%;
+        text-align: center;
+    }
+
+    #navbarNav ul.navbar-nav li.nav-item a.nav-link {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #search-one {
+        margin-top: 10px;
+    }
+
+    .home-hero {
+        background-image: url("/static/images/stratocaster-home-image.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+    }
+
+    .home-hero h1, .home-hero p, .home-hero a {
+        position: relative;
+        z-index: 1;
+    }
+
+    .home-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        z-index: 0;
+    }
+
+
+    .option-container {
+        display: none;
+    }
+}
