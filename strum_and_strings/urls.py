@@ -19,6 +19,7 @@ from django.urls import path, include
 from home import views
 from django.conf import settings
 from django.conf.urls.static import static
+from cart.webhook import webhook
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,6 +30,7 @@ urlpatterns = [
     path('orders/', include('orders.urls')),
     path('cart/', include('cart.urls')),
     path('accounts/', include('allauth.urls')),
+    path('stripe/webhook/', webhook, name='stripe_webhook'),
 ]
 
 
