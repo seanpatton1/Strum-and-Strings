@@ -20,6 +20,12 @@ from home import views
 from django.conf import settings
 from django.conf.urls.static import static
 from cart.webhook import webhook
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import ProductSitemap
+
+sitemaps = {
+    'products': ProductSitemap,
+}
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,6 +37,7 @@ urlpatterns = [
     path('cart/', include('cart.urls')),
     path('accounts/', include('allauth.urls')),
     path('stripe/webhook/', webhook, name='stripe_webhook'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
 
 

@@ -1,3 +1,18 @@
-.profile-page-container {
-    margin-top: 100px; /* Adjust this value as needed */
+/* Center the orders inside the orders card */
+.orders-card {
+    /* max-height: 600px; */
+    /* overflow-y: auto; */
+    margin: 0 auto; 
+    max-width: 800px;
+}
+
+/* Set a max width for each individual order item */
+.order-item {
+    width: 100%;
+    max-width: 500px;
+}
+
+.profile-card {
+    position: sticky;
+    top: 100px;
 }

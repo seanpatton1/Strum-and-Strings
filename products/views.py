@@ -3,15 +3,23 @@ from django.shortcuts import render, get_object_or_404
 from .models import Product
 from categories.models import Category
 from django.db.models import Q
+from random import sample
 
 
 def product_detail(request, pk):
-    """
-    View to display a single Product’s details.
-    """
     product = get_object_or_404(Product, pk=pk)
+
+    # Get related products from the same category (excluding current product)
+    related_products = Product.objects.filter(
+        category=product.category
+    ).exclude(id=product.id)
+
+    # Randomly pick up to 4 related products
+    related_products = sample(list(related_products), min(len(related_products), 4))
+
     return render(request, 'products/product_details.html', {
-        'product': product
+        'product': product,
+        'related_products': related_products,
     })
 
 

@@ -57,6 +57,56 @@
           Add to Cart
         </button>
       </form>
+      <section class="mt-5">
+        <h3 class="text-center mb-4">You May Also Like</h3>
+    
+        {% if related_products %}
+        <div id="relatedProductsCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            {% for product in related_products %}
+            {% if forloop.counter0|divisibleby:3 %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+              <div class="row justify-content-center">
+            {% endif %}
+    
+                <div class="col-10 col-md-4 mb-3">
+                  <div class="card h-100">
+                    {% if product.image %}
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                    {% else %}
+                    <img src="{% static 'images/placeholder.png' %}" class="card-img-top" alt="Placeholder">
+                    {% endif %}
+                    <div class="card-body text-center">
+                      <h5 class="card-title">{{ product.name }}</h5>
+                      <p class="h6 mb-2">£{{ product.price }}</p>
+                      <a href="{% url 'products:product_detail' product.id %}" class="btn btn-outline-primary btn-sm">
+                        View Product
+                      </a>
+                    </div>
+                  </div>
+                </div>
+    
+            {% if forloop.counter|divisibleby:3 or forloop.last %}
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+    
+          <!-- Carousel controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#relatedProductsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#relatedProductsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        {% else %}
+        <p class="text-center">No related products found.</p>
+        {% endif %}
+      </section>
     </div>
   </div>
 </div>
