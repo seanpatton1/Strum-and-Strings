@@ -105,10 +105,18 @@
         <div class="col-6 col-lg-4">
           <div class="card h-100">
             {% if product.image %}
-              <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
-            {% else %}
-              <img src="{% static 'images/placeholder.png' %}" class="card-img-top" alt="Placeholder">
-            {% endif %}
+            <img
+              src="{{ product.image.url }}"
+              alt="{{ product.name }}"
+              class="img-fluid w-100 rounded shadow-sm"
+            >
+          {% else %}
+            <img
+              src="{% static 'images/placeholder.png' %}"
+              alt="Placeholder"
+              class="img-fluid w-100 rounded shadow-sm"
+            >
+          {% endif %}
             <div class="card-body text-center">
               <h5 class="card-title">{{ product.name }}</h5>
               {% if product.short_description %}

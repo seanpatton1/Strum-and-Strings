@@ -36,10 +36,15 @@
                     {% for order in orders %}
                         <div class="list-group-item">
                             <h5>Order #{{ order.id }} - {{ order.status }}</h5>
-                            <p><strong>Product:</strong> {{ order.product.name }}</p>
-                            <p><strong>Quantity:</strong> {{ order.quantity }}</p>
-                            <p><strong>Placed on:</strong> {{ order.order_date }}</p>
-                            <p><strong>Total:</strong> £{{ order.total_price }}</p>
+
+                            {% for item in order.items.all %}
+                                <p><strong>Product:</strong> {{ item.product.name }}</p>
+                                <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+                            {% endfor %}
+
+                            <p><strong>Placed on:</strong> {{ order.created_at|date:"F j, Y, g:i a" }}</p>
+                            <p><strong>Total:</strong> £{{ order.grand_total|floatformat:2 }}</p>
+
                             <a href="{% url 'orders:order_detail' order.id %}" class="btn btn-secondary">View Order</a>
                         </div>
                     {% endfor %}

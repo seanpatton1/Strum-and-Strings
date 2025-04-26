@@ -3,6 +3,10 @@ from django.contrib.auth.models import User
 from decimal import Decimal
 from .models import CartItem
 from orders.models import Order, OrderItem
+import logging
+
+
+logger = logging.getLogger(__name__)
 
 
 class StripeWH_Handler:
@@ -21,6 +25,7 @@ class StripeWH_Handler:
 
         username = metadata.get('username')
         if not username:
+            logger.warning("Webhook received but no username in metadata.")
             return HttpResponse(content="Webhook received with no username metadata.", status=200)
 
         try:
@@ -62,4 +67,5 @@ class StripeWH_Handler:
             return HttpResponse(content="Order created via webhook.", status=200)
 
         except Exception as e:
-            return HttpResponse(content=f"Webhook order creation failed: {str(e)}", status=500)
+            logger.error(f"Error creating order from webhook: {str(e)}", exc_info=True)
+            return HttpResponse(content="Webhook received but error occurred.", status=200)

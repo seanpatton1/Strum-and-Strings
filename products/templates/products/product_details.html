@@ -3,17 +3,14 @@
 
 {% block extra_css %}
 {{ block.super }}
-<link
-  rel="stylesheet"
-  href="{% static 'products/products.css' %}"
->
+<link rel="stylesheet" href="{% static 'products/products.css' %}">
 {% endblock %}
 
 {% block title %}{{ product.name }} – Strum & Strings{% endblock %}
+{% block main_class %}container-fluid pt-3 my-4{% endblock %}
 
 {% block content %}
-<main class="container my-5 product-detail">
-
+<div class="product-detail">
   <!-- Breadcrumb -->
   <nav aria-label="breadcrumb" class="mb-4">
     <ol class="breadcrumb">
@@ -34,7 +31,13 @@
         <img
           src="{{ product.image.url }}"
           alt="{{ product.name }}"
-          class="img-fluid w-100 rounded shadow-sm"
+          class="img-fluid rounded shadow-sm"
+        >
+      {% else %}
+        <img
+          src="{% static 'images/placeholder.png' %}"
+          alt="Placeholder"
+          class="img-fluid rounded shadow-sm"
         >
       {% endif %}
     </div>
@@ -47,15 +50,14 @@
       {% if product.short_description %}
         <p class="mb-4">{{ product.short_description }}</p>
       {% endif %}
-    
+
       <form action="{% url 'cart:add_to_cart' product.id %}" method="post">
         {% csrf_token %}
         <button type="submit" class="btn btn-lg btn-primary">
           Add to Cart
         </button>
       </form>
-      
     </div>
   </div>
-</main>
+</div>
 {% endblock %}

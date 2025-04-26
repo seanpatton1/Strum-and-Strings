@@ -7,7 +7,7 @@ from products.models import Product
 from .models import CartItem
 from decimal import Decimal
 from django.contrib import messages
-from orders.models import Order
+from orders.models import Order, OrderItem
 from django.views.decorators.http import require_POST
 import stripe
 import json
@@ -75,7 +75,7 @@ def checkout(request):
 
     # Handle form submission (POST)
     if request.method == 'POST':
-        request.session.pop['checkout_data'] = {
+        request.session['checkout_data'] = {
             'full_name': request.POST.get('full_name'),
             'email': request.POST.get('email'),
             'phone': request.POST.get('phone'),
@@ -137,7 +137,10 @@ def create_checkout_session(request):
 
         stripe.api_key = settings.STRIPE_SECRET_KEY
 
-        domain = 'https://strum-and-strings-e5017bc28566.herokuapp.com'
+        if settings.DEBUG:
+            domain = 'http://127.0.0.1:8000'
+        else:
+            domain = 'https://strum-and-strings-e5017bc28566.herokuapp.com'
 
         session = stripe.checkout.Session.create(
             payment_method_types=['card'],
@@ -164,7 +167,6 @@ def create_checkout_session(request):
         return JsonResponse({'error': str(e)}, status=400)
 
 
-@login_required
 def success(request):
     session_id = request.GET.get('session_id')
 
@@ -173,9 +175,21 @@ def success(request):
         return redirect('products:products_list')
 
     try:
-        order = Order.objects.get(stripe_session_id=session_id, user=request.user)
+        # Find order by session_id
+        order = Order.objects.get(stripe_session_id=session_id)
+
+        if request.user.is_authenticated and order.user != request.user:
+            messages.error(request, "You are not authorized to view this order.")
+            return redirect('products:products_list')
+
+        # Clear the cart (only if the user is authenticated)
+        if request.user.is_authenticated:
+            CartItem.objects.filter(user=request.user).delete()
+            
+        order_items = order.items.all()
+
     except Order.DoesNotExist:
         messages.error(request, "Order not found.")
         return redirect('products:products_list')
 
-    return render(request, 'cart/success.html', {'order': order})
+    return render(request, 'cart/success.html', {'order': order, 'order_items': order_items, })
