@@ -1,0 +1,26 @@
+.order-detail-card {
+    padding: 20px;
+    background-color: #f9f7f3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-detail-card h2 {
+    color: #5a4231;
+    font-weight: bold;
+  }
+  
+  .order-detail-card .list-group-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .order-detail-card .btn-secondary {
+    background-color: #c99b3b;
+    color: white;
+  }
+  
+  .order-detail-card .btn-secondary:hover {
+    background-color: #b58932;
+  }
+  

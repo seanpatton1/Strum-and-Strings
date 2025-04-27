@@ -22,7 +22,7 @@
                     {% csrf_token %}
                     {{ form|crispy }}
                     <div class="d-grid mt-3">
-                        <button type="submit" class="btn btn-primary btn-block">Update Profile</button>
+                        <button type="submit" class="btn btn-custom w-100">Update Profile</button>
                     </div>
                 </form>
             </div>
@@ -48,7 +48,7 @@
                                     <p><strong>Placed on:</strong> {{ order.created_at|date:"F j, Y, g:i a" }}</p>
                                     <p><strong>Total:</strong> £{{ order.grand_total|floatformat:2 }}</p>
         
-                                    <a href="{% url 'orders:order_detail' order.id %}" class="btn btn-secondary mt-2">View Order</a>
+                                    <a href="{% url 'orders:order_detail' order.id %}" class="btn btn-custom mt-2">View Order</a>
                                 </div>
                             </div>
                         {% endfor %}

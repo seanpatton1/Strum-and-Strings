@@ -1,5 +1,6 @@
 from django import forms
 from .models import UserProfile
+from .models import NewsletterSubscriber
 
 
 class ProfileForm(forms.ModelForm):
@@ -43,3 +44,15 @@ class ProfileForm(forms.ModelForm):
             user.save()
             profile.save()
         return profile
+
+
+class NewsletterSignupForm(forms.ModelForm):
+    class Meta:
+        model = NewsletterSubscriber
+        fields = ['email']
+        widgets = {
+            'email': forms.EmailInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Enter your email address'
+            }),
+        }

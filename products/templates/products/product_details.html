@@ -45,7 +45,7 @@
     <!-- Product Info -->
     <div class="col-12 col-md-6">
       <h1 class="mb-3">{{ product.name }}</h1>
-      <p class="h4 text-primary mb-3">£{{ product.price }}</p>
+      <p class="h4 mb-3">£{{ product.price }}</p>
       <p class="mb-2"><strong>Model:</strong> {{ product.model }}</p>
       {% if product.short_description %}
         <p class="mb-4">{{ product.short_description }}</p>
@@ -59,53 +59,97 @@
       </form>
       <section class="mt-5">
         <h3 class="text-center mb-4">You May Also Like</h3>
-    
-        {% if related_products %}
-        <div id="relatedProductsCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            {% for product in related_products %}
-            {% if forloop.counter0|divisibleby:3 %}
-            <div class="carousel-item {% if forloop.first %}active{% endif %}">
-              <div class="row justify-content-center">
-            {% endif %}
-    
-                <div class="col-10 col-md-4 mb-3">
-                  <div class="card h-100">
-                    {% if product.image %}
-                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
-                    {% else %}
-                    <img src="{% static 'images/placeholder.png' %}" class="card-img-top" alt="Placeholder">
-                    {% endif %}
-                    <div class="card-body text-center">
-                      <h5 class="card-title">{{ product.name }}</h5>
-                      <p class="h6 mb-2">£{{ product.price }}</p>
-                      <a href="{% url 'products:product_detail' product.id %}" class="btn btn-outline-primary btn-sm">
-                        View Product
-                      </a>
+      
+        <!-- Desktop / Tablet Carousel -->
+        <div id="carouselWrapper" class="d-none d-md-block">
+          {% if related_products %}
+          <div id="relatedProductsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              {% for product in related_products %}
+              {% if forloop.counter0|divisibleby:3 %}
+              <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="row justify-content-center">
+              {% endif %}
+      
+                  <div class="col-10 col-md-4 mb-3">
+                    <div class="card h-100">
+                      {% if product.image %}
+                      <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                      {% else %}
+                      <img src="{% static 'images/placeholder.png' %}" class="card-img-top" alt="Placeholder">
+                      {% endif %}
+                      <div class="card-body text-center">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="h6 mb-2">£{{ product.price }}</p>
+                        <a href="{% url 'products:product_detail' product.id %}" class="btn btn-outline-primary btn-sm">
+                          View Product
+                        </a>
+                      </div>
                     </div>
                   </div>
+      
+              {% if forloop.counter|divisibleby:3 or forloop.last %}
                 </div>
-    
-            {% if forloop.counter|divisibleby:3 or forloop.last %}
+              </div>
+              {% endif %}
+              {% endfor %}
+            </div>
+      
+            <!-- Carousel controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#relatedProductsCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#relatedProductsCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          {% else %}
+          <p class="text-center">No related products found.</p>
+          {% endif %}
+        </div>
+      
+        <!-- Mobile Collapsible Accordion -->
+        <div id="mobileCollapseWrapper" class="d-block d-md-none">
+          {% if related_products %}
+          <div class="accordion" id="relatedProductsAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProducts" aria-expanded="false" aria-controls="collapseProducts">
+                  Related Products
+                </button>
+              </h2>
+              <div id="collapseProducts" class="accordion-collapse collapse" aria-labelledby="headingOne">
+                <div class="accordion-body">
+                  <div class="row">
+                    {% for product in related_products %}
+                    <div class="col-12 mb-3">
+                      <div class="card">
+                        {% if product.image %}
+                        <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                        {% else %}
+                        <img src="{% static 'images/placeholder.png' %}" class="card-img-top" alt="Placeholder">
+                        {% endif %}
+                        <div class="card-body text-center">
+                          <h5 class="card-title">{{ product.name }}</h5>
+                          <p class="h6 mb-2">£{{ product.price }}</p>
+                          <a href="{% url 'products:product_detail' product.id %}" class="btn btn-outline-primary btn-sm">
+                            View Product
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
               </div>
             </div>
-            {% endif %}
-            {% endfor %}
           </div>
-    
-          <!-- Carousel controls -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#relatedProductsCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#relatedProductsCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+          {% else %}
+          <p class="text-center">No related products found.</p>
+          {% endif %}
         </div>
-        {% else %}
-        <p class="text-center">No related products found.</p>
-        {% endif %}
       </section>
     </div>
   </div>

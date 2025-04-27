@@ -1,3 +1,7 @@
+body {
+    background-color: #f9f7f3;
+  }
+
 /* Center the orders inside the orders card */
 .orders-card {
     /* max-height: 600px; */
@@ -15,4 +19,180 @@
 .profile-card {
     position: sticky;
     top: 100px;
+}
+
+.btn-custom {
+    background-color: #D6A84F;
+    color: #4B3832;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-custom:hover {
+    background-color: #C08C3D;
+    color: #fff;
+  }
+  
+  .btn-custom-outline {
+    background-color: transparent;
+    color: #4B3832;
+    border: 2px solid #D6A84F;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-custom-outline:hover {
+    background-color: #D6A84F;
+    color: #fff;
+  }
+
+  .profile-card,
+.orders-card {
+  background-color: #f9f7f3;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.profile-card:hover,
+.orders-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card h2,
+.orders-card h3 {
+  color: #4B3832;
+  font-weight: bold;
+}
+
+
+.profile-card button {
+  background-color: #D6A84F;
+  color: #4B3832;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-card button:hover {
+  background-color: #C08C3D;
+  color: #fff;
+}
+
+.order-item {
+    background-color: #fefcf8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+
+  .order-item:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+  }
+  
+
+  .order-item p {
+    margin-bottom: 8px;
+    color: #4B3832;
+  }
+  
+
+  .order-item .btn {
+    background-color: #D6A84F;
+    color: #4B3832;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 10px;
+  }
+  
+  .order-item .btn:hover {
+    background-color: #C08C3D;
+    color: #fff;
+  }
+
+/* Newsletter Section */
+.newsletter-signup-section {
+  background-color: #f8f4f0;
+}
+
+/* Headings in Newsletter */
+.section-heading {
+  color: #5C4033;
+}
+
+/* Card Style */
+.newsletter-card {
+  background-color: #ffffff;
+}
+
+/* Subscribe Button */
+.newsletter-btn {
+  background-color: #D4A373;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.75rem;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background-color: #c78c5e; /* Slightly darker on hover */
+}
+
+/* Banner Image Styling */
+.banner-image {
+  max-height: 450px;
+}
+
+/* Slide-in Animation */
+@keyframes slideInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideInUp 1s ease-out forwards;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in forwards;
 }

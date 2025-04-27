@@ -30,11 +30,11 @@
   <!-- Category Cards -->
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
     {% for category in categories %}
-      <div class="col {% if forloop.last %}mb-4{% endif %}">
+      <div class="col">
         <div class="card h-100">
-          {% if category.name == "Acoustic Guitars" %}
+          {% if category.name == "Acoustic" %}
             <img src="{% static 'images/acoustic-guitar-home.jpg' %}" class="card-img-top" alt="Acoustic Guitars">
-          {% elif category.name == "Electric Guitars" %}
+          {% elif category.name == "Electric" %}
             <img src="{% static 'images/electric-guitar-new.jpg' %}" class="card-img-top" alt="Electric Guitars">
           {% elif category.name == "Accessories" %}
             <img src="{% static 'images/accessories-home.jpg' %}" class="card-img-top" alt="Accessories">
@@ -45,7 +45,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">{{ category.name }}</h5>
             <p class="card-text">{{ category.description }}</p>
-            <a href="{% url 'categories:category_detail' category.pk %}" class="btn btn-outline-primary">
+            <a href="{% url 'categories:category_detail' category.pk %}" class="btn btn-view-details">
               Shop {{ category.name }}
             </a>
           </div>
@@ -57,6 +57,12 @@
       </div>
     {% endfor %}
   </div>
-
+  <section class="mt-5 text-center" id="categories-intro">
+    <h2 class="h4">Discover Your Sound</h2>
+    <p class="lead">
+      Whether you're a seasoned musician or just starting your journey, we have the perfect guitars and accessories 
+      to help you find your signature sound. Shop with confidence and let the music begin!
+    </p>
+  </section>
 </div>
 {% endblock %}

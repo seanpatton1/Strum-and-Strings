@@ -8,24 +8,44 @@
 {% endblock %}
 
 {% block title %}{{ category.name }} – Strum & Strings{% endblock %}
-{% block main_class %}container-fluid pt-4 my-5{% endblock %}
+{% block main_class %}container-fluid my-3{% endblock %}
 
 {% block content %}
 <div class="row">
-  <aside class="sticky-top col-12 col-md-3 mb-4">
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="breadcrumb" id="breadcrumb-main">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Categories</li>
+    </ol>
+  </nav>
+
+  <div class="d-md-none mb-2">
+    <button
+      class="btn btn-filters-custom w-100"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#filterCollapse"
+      aria-expanded="false"
+      aria-controls="filterCollapse"
+    >
+      <i class="bi bi-sliders"></i> Filters
+    </button>
+  </div>
+  <aside class="sticky-top col-12 col-md-3 mb-4 sidebar">
     <div class="collapse d-md-block" id="filterCollapse">
       <h5>Filter by brand</h5>
       <ul class="list-unstyled">
         <li>
           <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}{% if price_filter %}price={{ price_filter }}{% endif %}"
-             class="{% if not brand_filter %}fw-bold text-primary{% endif %}">
+             class="{% if not brand_filter %}fw-bold{% endif %}">
             All
           </a>
         </li>
         {% for b in brands %}
           <li>
             <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}brand={{ b|urlencode }}{% if price_filter %}&price={{ price_filter }}{% endif %}"
-               class="{% if b == brand_filter %}fw-bold text-primary{% endif %}">
+               class="{% if b == brand_filter %}fw-bold{% endif %}">
               {{ b }}
             </a>
           </li>
@@ -36,31 +56,31 @@
       <ul class="list-unstyled">
         <li>
           <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}{% if brand_filter %}brand={{ brand_filter }}{% endif %}"
-             class="{% if not price_filter %}fw-bold text-primary{% endif %}">
+             class="{% if not price_filter %}fw-bold{% endif %}">
             All
           </a>
         </li>
         <li>
           <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}price=under200"
-             class="{% if price_filter == 'under200' %}fw-bold text-primary{% endif %}">
+             class="{% if price_filter == 'under200' %}fw-bold{% endif %}">
             Under £200
           </a>
         </li>
         <li>
           <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}price=200-500"
-             class="{% if price_filter == '200-500' %}fw-bold text-primary{% endif %}">
+             class="{% if price_filter == '200-500' %}fw-bold{% endif %}">
             £200 – £500
           </a>
         </li>
         <li>
           <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}price=500-1000"
-             class="{% if price_filter == '500-1000' %}fw-bold text-primary{% endif %}">
+             class="{% if price_filter == '500-1000' %}fw-bold{% endif %}">
             £500 – £1 000
           </a>
         </li>
         <li>
           <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}price=over1000"
-             class="{% if price_filter == 'over1000' %}fw-bold text-primary{% endif %}">
+             class="{% if price_filter == 'over1000' %}fw-bold{% endif %}">
             Over £1 000
           </a>
         </li>
@@ -71,18 +91,17 @@
   <section class="container col-12 col-md-9">
     <h1 class="mb-4">{{ category.name }}</h1>
     <p class="lead">{{ category.description }}</p>
-
     <div class="row g-4 mt-3">
       {% for product in products %}
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="card h-100">
             {% if product.image %}
               <img src="{{ product.image.url }}"
-                   class="card-img-top"
+                   class="img-fluid w-100 rounded shadow-sm"
                    alt="{{ product.name }}">
             {% else %}
               <img src="{% static 'images/placeholder.png' %}"
-                   class="card-img-top"
+                   class="img-fluid w-100 rounded shadow-sm"
                    alt="Placeholder">
             {% endif %}
             <div class="card-body text-center">
@@ -90,9 +109,9 @@
               {% if product.short_description %}
                 <p class="card-text">{{ product.short_description }}</p>
               {% endif %}
-              <p class="h5 mb-3">£{{ product.price }}</p>
-              <a href="{% url 'products:product_detail' product.pk %}"
-                 class="btn btn-primary">
+              <p class="h5 mb-2">£{{ product.price }}</p>
+              <a href="{% url 'products:product_detail' product.id %}"
+                 class="btn btn-view-details d-inline-block">
                 View Details
               </a>
             </div>

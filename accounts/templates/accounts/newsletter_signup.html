@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'accounts/css/profile.css' %}">
+{% endblock %}
+
+{% block title %}Newsletter Signup – Strum & Strings{% endblock %}
+{% block main_class %}container py-5 mt-5{% endblock %}
+
+{% block content %}
+  <section class="newsletter-signup-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold section-heading">Stay in the Loop with Strum & Strings</h1>
+        <p class="lead text-muted">Be the first to know about new arrivals, exclusive deals, and special offers tailored just for music lovers.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card newsletter-card shadow-sm border-0 p-4 slide-in">
+            <div class="card-body">
+              <h4 class="card-title mb-4 text-center section-heading">Subscribe to Our Newsletter</h4>
+
+              <form action="https://outlook.us6.list-manage.com/subscribe/post?u=5d44ed433e8886252fa6407f4&amp;id=8f78eb2ec5&amp;f_id=00d1c2e1f0" method="post" target="_blank" novalidate>
+      
+                <div class="form-floating mb-3">
+                  <input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Email address" required>
+                  <label for="mce-EMAIL">Email Address</label>
+                </div>
+          
+                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                  <input type="text" name="b_5d44ed433e8886252fa6407f4_8f78eb2ec5" tabindex="-1" value="">
+                </div>
+          
+                <div class="d-grid">
+                  <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn newsletter-btn">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <img src="{% static 'images/newsletter_banner.jpg' %}" alt="Stay Tuned" class="img-fluid rounded shadow fade-in banner-image">
+      </div>
+    </div>
+  </section>
+{% endblock %}
+

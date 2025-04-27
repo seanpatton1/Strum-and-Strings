@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
-from .forms import ProfileForm
+from .forms import ProfileForm, NewsletterSignupForm
 from orders.models import Order
 
 
@@ -24,3 +24,15 @@ def profile(request):
         'form': form,
         'orders': orders,  # Pass orders to the template
     })
+
+
+def newsletter_signup(request):
+    if request.method == 'POST':
+        form = NewsletterSignupForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thank you for subscribing to our newsletter!')
+            return redirect('home')
+    else:
+        form = NewsletterSignupForm()
+    return render(request, 'accounts/newsletter_signup.html', {'form': form})

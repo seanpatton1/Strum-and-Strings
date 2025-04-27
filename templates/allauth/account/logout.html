@@ -1,9 +1,15 @@
 {% extends "base.html" %}
+{% load static %}
 {% load i18n %}
 
 {% block title %}Logout – Strum & Strings{% endblock %}
 
 {% block main_class %}container py-5 my-5{% endblock %}
+
+{% block extra_css %}
+{{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/logout.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="row justify-content-center">

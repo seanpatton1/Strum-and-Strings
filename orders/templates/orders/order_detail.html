@@ -1,20 +1,43 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'orders/css/orders.css' %}">
+{% endblock %}
+
 {% block title %}Order #{{ order.id }} – Strum & Strings{% endblock %}
 
 {% block main_class %}container py-5{% endblock %}
 
 {% block content %}
-  <div class="row justify-content-center">
+<div class="row justify-content-center">
     <div class="col-md-8">
-      <h2 class="mb-4 text-center">Order #{{ order.id }}</h2>
-      <ul class="list-group mb-4">
-        <li class="list-group-item"><strong>Status:</strong> {{ order.status }}</li>
-        <li class="list-group-item"><strong>Order Date:</strong> {{ order.order_date }}</li>
-        <li class="list-group-item"><strong>Product:</strong> {{ order.product.name }}</li>
-        <li class="list-group-item"><strong>Quantity:</strong> {{ order.quantity }}</li>
-        <li class="list-group-item"><strong>Total:</strong> £{{ order.total_price }}</li>
-      </ul>
-      <a href="{% url 'accounts:profile' %}" class="btn btn-secondary">Back to Profile</a>
+        <div class="order-detail-card shadow-sm p-4">
+            <h2 class="mb-4 text-center">Order #{{ order.id }}</h2>
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item border-0"><strong>Status:</strong> {{ order.status|title }}</li>
+                <li class="list-group-item border-0"><strong>Order Date:</strong> {{ order.created_at|date:"F j, Y, g:i a" }}</li>
+
+                {% for item in order.items.all %}
+                    <li class="list-group-item border-0">
+                        <div class="fw-bold">{{ item.product.name }}</div>
+                        <div class="text-center">
+                            <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="image-order">
+                        </div>
+                        <div>Quantity: {{ item.quantity }}</div>
+                        <div>Subtotal: £{{ item.total_price|floatformat:2 }}</div>
+                    </li>
+                {% empty %}
+                    <li class="list-group-item border-0">No items found in this order.</li>
+                {% endfor %}
+
+                <li class="list-group-item border-top mt-2 pt-3"><strong>Total:</strong> £{{ order.grand_total|floatformat:2 }}</li>
+            </ul>
+            <div class="d-flex justify-content-center">
+                <a href="{% url 'accounts:profile' %}" class="btn btn-secondary text-center">Back to Profile</a>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
 {% endblock %}

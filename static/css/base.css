@@ -30,8 +30,8 @@ main {
 }
 
 header {
-    background-color: #222;
-    color: #fff;
+    background-color: #4B3832;
+    color: #F4EBD0;
     min-height: 80px;
     display: flex;
     align-items: center;
@@ -47,12 +47,47 @@ header .navbar-brand {
 header .navbar-nav .nav-link {
     font-size: 1rem;
     margin: 0 10px;
+    color: #F4EBD0;
+}
+
+header .navbar-nav .nav-link:hover {
+    color: #D6A84F;
 }
 
 .navbar-brand-container {
     flex-grow: 1;
     margin-left: 0;
     padding-left: 10px;
+}
+
+.navbar-brand {
+    color: #F4EBD0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+    color: #D6A84F;
+}
+
+.navbar-nav .nav-link {
+    color: #F4EBD0;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #D6A84F;
+}
+
+.btn-custom-search {
+    background-color: #D6A84F;
+    color: #4B3832;
+    border: none;
+    padding: 6px 12px;
+}
+
+.btn-custom-search:hover {
+    background-color: #C08C3D;
+    color: #fff;
 }
 
 
@@ -116,6 +151,34 @@ header .navbar-nav .nav-link {
     z-index: 0;
 }
 
+.home-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #F4EBD0;
+}
+
+.home-hero p {
+    font-size: 1.5rem;
+    color: #F4EBD0;
+    margin-bottom: 20px;
+}
+
+.home-hero a.btn {
+    background-color: #D6A84F;
+    color: #4B3832;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.home-hero a.btn:hover {
+    background-color: #C08C3D;
+    color: #fff;
+}
+
 .main-picture {
     margin-left: -24px !important;
 }
@@ -132,8 +195,8 @@ header .navbar-nav .nav-link {
     padding: 0;
     border: none;
     border-radius: 50%;
-    background-color: #0d6efd;
-    color: white;
+    background-color: #D6A84F;
+    color: #4B3832;
     cursor: pointer;
     text-align: center;
     line-height: 40px;
@@ -142,8 +205,34 @@ header .navbar-nav .nav-link {
   }
   
   #back-to-top:hover {
-    background-color: #0b5ed7;
+    background-color: #C08C3D;
+    color: #fff;
   }
+
+  footer {
+    background-color: #4B3832;
+    color: #F4EBD0;
+}
+
+footer a {
+    color: #F4EBD0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #D6A84F;
+    text-decoration: underline;
+}
+
+.footer-social-icons a i {
+    color: #F4EBD0;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.footer-social-icons a:hover i {
+    color: #D6A84F;
+}
 
 /* For Small Screens (smaller than 768px) */
 @media (max-width: 767.98px) {
@@ -156,18 +245,17 @@ header .navbar-nav .nav-link {
     }
 
     footer .row {
-        text-align: center; /* Center-align text */
+        text-align: center;
     }
 
     footer .col-md-6,
     footer .col-md-3 {
-        text-align: center; /* Center-align text for all columns */
-        margin-bottom: 20px; /* Add spacing between columns */
+        text-align: center;
     }
 
-    .burger-one {
+    /* .burger-one {
         margin-top: 5px;
-    }
+    } */
 
     #navbarNav form {
         margin-top: 10px;
@@ -180,7 +268,7 @@ header .navbar-nav .nav-link {
     }
 
     #navbarNav ul.navbar-nav li.nav-item {
-        border: 1px solid #fff;
+        border: 1px solid;
         border-radius: 5px;
         padding: 10px;
         margin-bottom: 10px;
@@ -189,7 +277,6 @@ header .navbar-nav .nav-link {
     }
 
     #navbarNav ul.navbar-nav li.nav-item a.nav-link {
-        color: #fff;
         text-decoration: none;
     }
 
@@ -197,14 +284,14 @@ header .navbar-nav .nav-link {
         margin-top: 10px;
     }
 
-    /* Hero Section Full-Screen Background */
+  
     .home-hero {
         background-image: url("/static/images/stratocaster-home-image.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 100vh; /* Full screen height */
-        color: #fff; /* Ensure text is readable */
+        height: 100vh;
+        color: #fff;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -218,7 +305,7 @@ header .navbar-nav .nav-link {
     }
 
     .home-hero h1, .home-hero p, .home-hero a {
-        position: relative; /* Keep text above the background */
+        position: relative;
         z-index: 1;
     }
 
@@ -229,7 +316,7 @@ header .navbar-nav .nav-link {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        background-color: rgba(0, 0, 0, 0.5);
         z-index: 0;
     }
 
@@ -238,7 +325,7 @@ header .navbar-nav .nav-link {
         padding-right: 0 !important;
     }
 
-    /* Body and HTML Fix for Horizontal Overflow */
+    
     body, html {
         margin: 0;
         padding: 0;
@@ -261,7 +348,7 @@ header .navbar-nav .nav-link {
     }
 
     #navbarNav ul.navbar-nav li.nav-item {
-        border: 1px solid #fff;
+        border: 1px solid;
         border-radius: 5px;
         padding: 10px;
         width: 80%;
@@ -269,8 +356,15 @@ header .navbar-nav .nav-link {
     }
 
     #navbarNav ul.navbar-nav li.nav-item a.nav-link {
-        color: #fff;
         text-decoration: none;
+    }
+
+    .navbar-toggler {
+        margin-left: 10px;
+    }
+
+    form.d-flex.mx-auto {
+        margin-top: 10px;
     }
 
     #search-one {
@@ -313,4 +407,45 @@ header .navbar-nav .nav-link {
     .option-container {
         display: none;
     }
+}
+
+/* global side bar styles */
+
+.sidebar {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+    overflow: visible;
+}
+
+.wrapper {
+    overflow: visible;
+}
+
+.sidebar a {
+    color: #4B3832;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #D6A84F;
+    text-decoration: underline;
+}
+
+.btn-filters-custom {
+    background-color: #D6A84F;
+    color: #4B3832;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-filters-custom:hover {
+    background-color: #C08C3D;
+    color: #fff;
 }

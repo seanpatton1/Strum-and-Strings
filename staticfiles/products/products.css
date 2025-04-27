@@ -2,32 +2,103 @@
 
 /* Container spacing */
 .product-detail {
-    margin: 3rem 0;
-  }
-  
-  /* Image styling */
-  .product-detail-img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 0.25rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Details column */
-  .product-info {
-    padding-left: 1.5rem;
-  }
-  
-  /* Price styling */
-  .product-price {
-    font-size: 1.75rem;
-    font-weight: bold;
-    margin: 1rem 0;
-  }
-  
-  /* “Add to Cart” button */
-  .btn-add-cart {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-  }
-  
+  margin: 3rem 0;
+}
+
+.product-detail img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.product-detail .row {
+  align-items: flex-start; /* align content to the top */
+}
+
+/* Details column */
+.product-info {
+  padding-left: 1.5rem;
+}
+
+/* Price styling */
+.product-price {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+/* “Add to Cart” button */
+.btn-add-cart {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+
+.breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+/* Fix card size in the carousel */
+#relatedProductsCarousel .card {
+  height: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Control the image inside the card */
+#relatedProductsCarousel .card-img-top {
+  max-height: 300px;
+  width: auto;
+  object-fit: contain;
+  padding: 15px;
+}
+
+#relatedProductsCarousel .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+#relatedProductsCarousel .card {
+  height: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+#relatedProductsCarousel .card-img-top {
+  max-height: 300px;
+  width: auto;
+  object-fit: contain;
+  padding: 15px;
+}
+
+
+#relatedProductsCarousel .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#mobileCollapseWrapper .card-img-top {
+  max-height: 200px;
+  object-fit: contain;
+  padding: 10px;
+}

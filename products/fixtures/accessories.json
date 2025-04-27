@@ -9,7 +9,7 @@
       "model": "Assorted Picks",
       "short_description": "A set of mixed‑gauge picks in nylon for versatile tone and feel.",
       "price": "4.99",
-      "image": "products/Dunlop PVP102.jpg"
+      "image": "products/Dunlop-PVP102.jpg"
     }
   },
   {
@@ -48,7 +48,7 @@
       "model": "D'Addario Planet Waves",
       "short_description": "Durable, shielded cable for noise‑free connection between guitar and amp.",
       "price": "14.99",
-      "image": "products/D'Addario-Planet-Waves.jpg"
+      "image": "products/D'Addario-Planet-Waves-cable.jpg"
     }
   },
   {
@@ -190,7 +190,7 @@
       "category": 3,
       "model": "Taylor Care Kit",
       "short_description": "Complete kit with polish, cloth, fretboard oil and brush.",
-      "price": "16.99",
+      "price": "49.99",
       "image": "products/Taylor-Care-Kit.jpg"
     }
   },
@@ -256,7 +256,7 @@
       "model": "Lizard Queen",
       "short_description": "Iconic fuzzy distortion with sustain and tone controls.",
       "price": "89.99",
-      "image": "products/Lizard-Queenjpg"
+      "image": "products/Lizard-Queen.jpg"
     }
   },
   {
@@ -282,7 +282,7 @@
       "model": "Katana-50 MkII",
       "short_description": "50‑watt amp head with enhanced BOSS tone studio and power control.",
       "price": "229.99",
-      "image": "products/L5-Studio-5.jpg"
+      "image": "products/MK11.jpg"
     }
   },
   {
@@ -308,7 +308,7 @@
       "model": "Crush 20RT",
       "short_description": "20‑watt solid‑state amp with cab‑sim and tuner.",
       "price": "149.99",
-      "image": "products/Crush 20RT.jpg"
+      "image": "products/20RT.jpg"
     }
   },
   {
