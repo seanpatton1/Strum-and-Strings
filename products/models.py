@@ -1,5 +1,6 @@
 from django.db import models
 from django.templatetags.static import static
+from cloudinary.models import CloudinaryField
 from categories.models import Category
 
 
@@ -19,16 +20,11 @@ class Product(models.Model):
         max_length=100,
         help_text="e.g. Stratocaster, Les Paul, Dreadnought, etc."
     )
-    image = models.ImageField(
-        upload_to='products/',
-        blank=True,
-        null=True
-    )
-    cloudinary_image_url = models.URLField(
-        max_length=1024,
+    image = CloudinaryField(
+        "image",
         blank=True,
         null=True,
-        help_text="Optional Cloudinary image URL."
+        help_text="Upload product image to Cloudinary."
     )
     short_description = models.TextField(blank=True)
     price = models.DecimalField(
