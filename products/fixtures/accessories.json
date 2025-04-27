@@ -1,328 +1,327 @@
 [
-    {
-      "model": "products.product",
-      "pk": 176,
-      "fields": {
-        "name": "Guitar Picks (Assorted Set)",
-        "brand": "Dunlop",
-        "category": 3,
-        "model": "Assorted Picks",
-        "short_description": "A set of mixed‑gauge picks in nylon for versatile tone and feel.",
-        "price": "4.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 177,
-      "fields": {
-        "name": "Nylon Adjustable Strap",
-        "brand": "Ernie Ball",
-        "category": 3,
-        "model": "Adjustable Nylon Strap",
-        "short_description": "Comfortable woven strap with adjustable length and leather ends.",
-        "price": "12.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 178,
-      "fields": {
-        "name": "Spring‑Loaded Capo",
-        "brand": "Kyser",
-        "category": 3,
-        "model": "Spring Capo",
-        "short_description": "One‑handed capo for quick key changes on both acoustic and electric guitars.",
-        "price": "9.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 179,
-      "fields": {
-        "name": "3 m Instrument Cable (¼″ TS)",
-        "brand": "Planet Waves",
-        "category": 3,
-        "model": "3m TS Cable",
-        "short_description": "Durable, shielded cable for noise‑free connection between guitar and amp.",
-        "price": "14.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 180,
-      "fields": {
-        "name": "Clip‑On Tuner",
-        "brand": "Snark",
-        "category": 3,
-        "model": "Clip‑On Tuner",
-        "short_description": "Chromatic tuner with bright display, clips easily to your headstock.",
-        "price": "11.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 181,
-      "fields": {
-        "name": "Folding Guitar Stand",
-        "brand": "On‑Stage",
-        "category": 3,
-        "model": "Folding Stand",
-        "short_description": "Lightweight, collapsible A‑frame stand for secure instrument support.",
-        "price": "19.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 182,
-      "fields": {
-        "name": "Padded Gig Bag",
-        "brand": "Gator",
-        "category": 3,
-        "model": "Padded Case",
-        "short_description": "Soft case with foam padding, exterior pocket, and backpack straps.",
-        "price": "29.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 183,
-      "fields": {
-        "name": "Hardshell Case",
-        "brand": "SKB",
-        "category": 3,
-        "model": "Hardshell Case",
-        "short_description": "Rigid case with plush interior, metal latches, and handle for touring.",
-        "price": "89.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 184,
-      "fields": {
-        "name": "Light‑Gauge Acoustic Strings (set)",
-        "brand": "D'Addario",
-        "category": 3,
-        "model": "Light Acoustic Strings",
-        "short_description": "Phosphor bronze strings in light gauge for bright tone and easy playability.",
-        "price": "8.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 185,
-      "fields": {
-        "name": "String Winder & Cutter Combo",
-        "brand": "D'Addario",
-        "category": 3,
-        "model": "Winder & Cutter",
-        "short_description": "2‑in‑1 tool to speed up string changes and trim excess string.",
-        "price": "7.49",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 186,
-      "fields": {
-        "name": "Digital Metronome",
-        "brand": "Korg",
-        "category": 3,
-        "model": "Digital Metronome",
-        "short_description": "Portable digital metronome with tempo, rhythm and tuning functions.",
-        "price": "15.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 187,
-      "fields": {
-        "name": "Soundhole Humidifier",
-        "brand": "Oasis",
-        "category": 3,
-        "model": "Humidifier",
-        "short_description": "Moisture‑control device to protect your guitar from dryness and cracking.",
-        "price": "12.49",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 188,
-      "fields": {
-        "name": "Pedalboard",
-        "brand": "Pedaltrain",
-        "category": 3,
-        "model": "Pedalboard",
-        "short_description": "Lightweight aluminum pedalboard with power supply mounting options.",
-        "price": "59.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 189,
-      "fields": {
-        "name": "Overdrive Effects Pedal",
-        "brand": "Boss",
-        "category": 3,
-        "model": "Overdrive Pedal",
-        "short_description": "Classic overdrive pedal for warm, driven tones and adjustable gain.",
-        "price": "39.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 190,
-      "fields": {
-        "name": "Cleaning & Maintenance Kit",
-        "brand": "Dunlop",
-        "category": 3,
-        "model": "Care Kit",
-        "short_description": "Complete kit with polish, cloth, fretboard oil and brush.",
-        "price": "16.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 191,
-      "fields": {
-        "name": "Distortion Pedal",
-        "brand": "MXR",
-        "category": 3,
-        "model": "Distortion+ (M104)",
-        "short_description": "Signature distortion stompbox with bright LED and tone control.",
-        "price": "69.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 192,
-      "fields": {
-        "name": "Chorus Pedal",
-        "brand": "TC Electronic",
-        "category": 3,
-        "model": "Corona Chorus",
-        "short_description": "Versatile chorus effect with TonePrint presets and analog dry‑through.",
-        "price": "129.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 193,
-      "fields": {
-        "name": "Digital Delay Pedal",
-        "brand": "Boss",
-        "category": 3,
-        "model": "DD-8",
-        "short_description": "Multi‑mode digital delay with loop function and tap tempo.",
-        "price": "149.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 194,
-      "fields": {
-        "name": "Reverb Pedal",
-        "brand": "Electro-Harmonix",
-        "category": 3,
-        "model": "Holy Grail",
-        "short_description": "Plate, spring, and hall reverb modes in a compact enclosure.",
-        "price": "79.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 195,
-      "fields": {
-        "name": "Fuzz Pedal",
-        "brand": "Electro-Harmonix",
-        "category": 3,
-        "model": "Big Muff Pi",
-        "short_description": "Iconic fuzzy distortion with sustain and tone controls.",
-        "price": "89.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 196,
-      "fields": {
-        "name": "Combo Guitar Amp",
-        "brand": "Fender",
-        "category": 3,
-        "model": "Mustang LT25",
-        "short_description": "25‑watt modelling amp with 20 amp models and onboard effects.",
-        "price": "199.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 197,
-      "fields": {
-        "name": "Studio Amp Head",
-        "brand": "Boss",
-        "category": 3,
-        "model": "Katana-50 MkII",
-        "short_description": "50‑watt amp head with enhanced BOSS tone studio and power control.",
-        "price": "229.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 198,
-      "fields": {
-        "name": "Tube Combo Amp",
-        "brand": "Marshall",
-        "category": 3,
-        "model": "DSL20CR",
-        "short_description": "20‑watt tube combo with two channels and reverb.",
-        "price": "499.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 199,
-      "fields": {
-        "name": "Practice Amp",
-        "brand": "Orange",
-        "category": 3,
-        "model": "Crush 20",
-        "short_description": "20‑watt solid‑state amp with cab‑sim and tuner.",
-        "price": "149.99",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 200,
-      "fields": {
-        "name": "Power Amp Module",
-        "brand": "Mesa/Boogie",
-        "category": 3,
-        "model": "Express 5:50+",
-        "short_description": "50‑watt stereo power amp module for pedalboard setups.",
-        "price": "299.99",
-        "image": ""
-      }
+  {
+    "model": "products.product",
+    "pk": 101,
+    "fields": {
+      "name": "Dunlop PVP102",
+      "brand": "Dunlop",
+      "category": 3,
+      "model": "Assorted Picks",
+      "short_description": "A set of mixed‑gauge picks in nylon for versatile tone and feel.",
+      "price": "4.99",
+      "image": "products/Dunlop PVP102.jpg"
     }
-  ]
-  
+  },
+  {
+    "model": "products.product",
+    "pk": 102,
+    "fields": {
+      "name": "Ernie Ball 4142 Red Rose Jacquard Strap",
+      "brand": "Ernie Ball",
+      "category": 3,
+      "model": "Ernie Ball 4142",
+      "short_description": "Comfortable woven strap with adjustable length and leather ends.",
+      "price": "25.99",
+      "image": "products/Ernie-Ball-4142.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 103,
+    "fields": {
+      "name": "Dunlop 83CB Trigger Capo Black",
+      "brand": "Dunlop",
+      "category": 3,
+      "model": "Dunlop 83CB",
+      "short_description": "One‑handed capo for quick key changes on both acoustic and electric guitars.",
+      "price": "9.99",
+      "image": "products/Dunlop-83CB.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 104,
+    "fields": {
+      "name": "D'Addario Planet Waves Classic Series Guitar Cable 10Ft",
+      "brand": "D'Addario",
+      "category": 3,
+      "model": "D'Addario Planet Waves",
+      "short_description": "Durable, shielded cable for noise‑free connection between guitar and amp.",
+      "price": "14.99",
+      "image": "products/D'Addario-Planet-Waves.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 105,
+    "fields": {
+      "name": "D'Addario Planet Waves Micro clip-on tuner",
+      "brand": "Snark",
+      "category": 3,
+      "model": "Micro-Clip",
+      "short_description": "Chromatic tuner with bright display, clips easily to your headstock.",
+      "price": "11.99",
+      "image": "products/Micro-Clip.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 106,
+    "fields": {
+      "name": "Ordo S-1GTR Universal A Frame Guitar Stand",
+      "brand": "Ordo",
+      "category": 3,
+      "model": "Ordo-S-1GTR",
+      "short_description": "Lightweight, collapsible A‑frame stand for secure instrument support.",
+      "price": "19.99",
+      "image": "products/Ordo-S-1GTR.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 107,
+    "fields": {
+      "name": "Fender FE405 Electric Guitar Gig Bag",
+      "brand": "Fender",
+      "category": 3,
+      "model": "Fender FE405",
+      "short_description": "Soft case with foam padding, exterior pocket.",
+      "price": "29.99",
+      "image": "products/Fender-FE405.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 108,
+    "fields": {
+      "name": "Ordo GC-2GDN Deluxe Dreadnought Acoustic ABS Hard Case",
+      "brand": "Ordo",
+      "category": 3,
+      "model": "Ordo GC-2GDN",
+      "short_description": "Rigid case with plush interior, metal latches, and handle for touring.",
+      "price": "89.99",
+      "image": "products/Ordo-GC-2GDN.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 109,
+    "fields": {
+      "name": "Light‑Gauge Acoustic Strings (set)",
+      "brand": "D'Addario",
+      "category": 3,
+      "model": "D'Addario EJ16",
+      "short_description": "Phosphor bronze strings in light gauge for bright tone and easy playability.",
+      "price": "8.99",
+      "image": "products/D'Addario-EJ16.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 110,
+    "fields": {
+      "name": "String Winder & Cutter Combo",
+      "brand": "D'Addario",
+      "category": 3,
+      "model": "Pro-Winder",
+      "short_description": "2‑in‑1 tool to speed up string changes and trim excess string.",
+      "price": "7.49",
+      "image": "products/Pro-Winder.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 111,
+    "fields": {
+      "name": "BOSS DB30 Metronome",
+      "brand": "BOSS",
+      "category": 3,
+      "model": "Digital Metronome",
+      "short_description": "Portable digital metronome with tempo, rhythm and tuning functions.",
+      "price": "15.99",
+      "image": "products/BOSS-DB30.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 112,
+    "fields": {
+      "name": "D'Addario Planet Waves Screeching Halt Soundhole Plug",
+      "brand": "D'Addario",
+      "category": 3,
+      "model": "Screeching Halt",
+      "short_description": "Moisture‑control device to protect your guitar from dryness and cracking.",
+      "price": "12.49",
+      "image": "products/Screeching-Halt.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 113,
+    "fields": {
+      "name": "BOSS BCB-30X Pedalboard",
+      "brand": "BOSS",
+      "category": 3,
+      "model": "BCB-30X",
+      "short_description": "Lightweight aluminum pedalboard with power supply mounting options.",
+      "price": "59.99",
+      "image": "products/BCB-30X.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 114,
+    "fields": {
+      "name": "BOSS SD-1 Super Overdrive",
+      "brand": "Boss",
+      "category": 3,
+      "model": "SD-1",
+      "short_description": "Classic overdrive pedal for warm, driven tones and adjustable gain.",
+      "price": "39.99",
+      "image": "products/SD-1.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 115,
+    "fields": {
+      "name": "Taylor Care Kit for Satin Guitars",
+      "brand": "Taylor",
+      "category": 3,
+      "model": "Taylor Care Kit",
+      "short_description": "Complete kit with polish, cloth, fretboard oil and brush.",
+      "price": "16.99",
+      "image": "products/Taylor-Care-Kit.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 116,
+    "fields": {
+      "name": "BOSS DS-1",
+      "brand": "BOSS",
+      "category": 3,
+      "model": "DS-1",
+      "short_description": "Signature distortion stompbox with bright LED and tone control.",
+      "price": "69.99",
+      "image": "products/DS-1.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 117,
+    "fields": {
+      "name": "BOSS CH-1 Super Chorus",
+      "brand": "BOSS",
+      "category": 3,
+      "model": "CH-1",
+      "short_description": "Versatile chorus effect with TonePrint presets and analog dry‑through.",
+      "price": "129.99",
+      "image": "products/CH-1.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 118,
+    "fields": {
+      "name": "BOSS DD-3T Digital Delay",
+      "brand": "Boss",
+      "category": 3,
+      "model": "DD-3T",
+      "short_description": "Multi‑mode digital delay with loop function and tap tempo.",
+      "price": "149.99",
+      "image": "products/DD-3T.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 119,
+    "fields": {
+      "name": "Fender Hammertone Reverb",
+      "brand": "Fender",
+      "category": 3,
+      "model": "Fender Hammertone",
+      "short_description": "Plate, spring, and hall reverb modes in a compact enclosure.",
+      "price": "79.99",
+      "image": "products/Fender-Hammertone.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 120,
+    "fields": {
+      "name": "Electro Harmonix Lizard Queen Octave Fuzz",
+      "brand": "Electro-Harmonix",
+      "category": 3,
+      "model": "Lizard Queen",
+      "short_description": "Iconic fuzzy distortion with sustain and tone controls.",
+      "price": "89.99",
+      "image": "products/Lizard-Queenjpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 121,
+    "fields": {
+      "name": "Fender Champion II 50 Combo Solid State Amp",
+      "brand": "Fender",
+      "category": 3,
+      "model": "Fender Champion II",
+      "short_description": "25‑watt modelling amp with 20 amp models and onboard effects.",
+      "price": "199.99",
+      "image": "products/Fender-Champion-11.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 122,
+    "fields": {
+      "name": "Laney Lionheart L5 Studio 5 Watt Valve Amp Head Made In The UK",
+      "brand": "Laney",
+      "category": 3,
+      "model": "Katana-50 MkII",
+      "short_description": "50‑watt amp head with enhanced BOSS tone studio and power control.",
+      "price": "229.99",
+      "image": "products/L5-Studio-5.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 123,
+    "fields": {
+      "name": "Marshall DSL20CR 20 Watt Combo",
+      "brand": "Marshall",
+      "category": 3,
+      "model": "DSL20CR",
+      "short_description": "20‑watt tube combo with two channels and reverb.",
+      "price": "499.99",
+      "image": "products/DSL20CR.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 124,
+    "fields": {
+      "name": "Orange Crush 20RT Combo Practice Amp",
+      "brand": "Orange",
+      "category": 3,
+      "model": "Crush 20RT",
+      "short_description": "20‑watt solid‑state amp with cab‑sim and tuner.",
+      "price": "149.99",
+      "image": "products/Crush 20RT.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 125,
+    "fields": {
+      "name": "Synergy Amps Engl Powerball 2 Channel Preamp Modul",
+      "brand": "Synergy Amps Engl",
+      "category": 3,
+      "model": "Powerball-2",
+      "short_description": "50‑watt stereo power amp module for pedalboard setups.",
+      "price": "299.99",
+      "image": "products/Powerball-2.jpg"
+    }
+  }
+]

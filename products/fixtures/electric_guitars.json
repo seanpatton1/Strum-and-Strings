@@ -1,7 +1,7 @@
 [
     {
       "model": "products.product",
-      "pk": 101,
+      "pk": 51,
       "fields": {
         "name": "Fender Stratocaster",
         "brand": "Fender",
@@ -9,12 +9,12 @@
         "model": "Stratocaster",
         "short_description": "Iconic double‑cutaway with three single‑coil pickups and versatile tone.",
         "price": "1199.00",
-        "image": ""
+        "image": "products/stratocater.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 102,
+      "pk": 52,
       "fields": {
         "name": "Fender Telecaster",
         "brand": "Fender",
@@ -22,12 +22,12 @@
         "model": "Telecaster",
         "short_description": "Classic slab‑body with two single‑coil pickups and punchy twang.",
         "price": "1099.00",
-        "image": ""
+        "image": "products/telecaster.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 103,
+      "pk": 53,
       "fields": {
         "name": "Fender Jazzmaster",
         "brand": "Fender",
@@ -35,12 +35,12 @@
         "model": "Jazzmaster",
         "short_description": "Offset body with wide single‑coil pickups, ideal for surf and alternative tones.",
         "price": "1299.00",
-        "image": ""
+        "image": "products/jazzmaster.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 104,
+      "pk": 54,
       "fields": {
         "name": "Fender Jaguar",
         "brand": "Fender",
@@ -48,12 +48,12 @@
         "model": "Jaguar",
         "short_description": "Short‑scale offset with distinctive switching and bright tone.",
         "price": "1399.00",
-        "image": ""
+        "image": "products/jaguar.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 105,
+      "pk": 55,
       "fields": {
         "name": "Fender Mustang",
         "brand": "Fender",
@@ -61,12 +61,12 @@
         "model": "Mustang",
         "short_description": "Compact offset with dynamic single‑coil pickups, great for indie styles.",
         "price": "899.00",
-        "image": ""
+        "image": "products/mustang.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 106,
+      "pk": 56,
       "fields": {
         "name": "Gibson Les Paul Standard",
         "brand": "Gibson",
@@ -74,12 +74,12 @@
         "model": "Les Paul Standard",
         "short_description": "Solid‑body with dual humbuckers and legendary sustain.",
         "price": "2499.00",
-        "image": ""
+        "image": "products/les-paul.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 107,
+      "pk": 57,
       "fields": {
         "name": "Gibson SG Standard",
         "brand": "Gibson",
@@ -87,12 +87,12 @@
         "model": "SG Standard",
         "short_description": "Lightweight double‑cutaway with powerful humbuckers.",
         "price": "1999.00",
-        "image": ""
+        "image": "products/gibson-sg.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 108,
+      "pk": 58,
       "fields": {
         "name": "Gibson ES‑335",
         "brand": "Gibson",
@@ -100,12 +100,12 @@
         "model": "ES-335",
         "short_description": "Semi‑hollow body with warm, resonant tone and humbucking pickups.",
         "price": "2999.00",
-        "image": ""
+        "image": "products/ES-335.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 109,
+      "pk": 59,
       "fields": {
         "name": "Gibson Flying V",
         "brand": "Gibson",
@@ -113,12 +113,12 @@
         "model": "Flying V",
         "short_description": "Angular body with powerful humbucking sound and stage presence.",
         "price": "2199.00",
-        "image": ""
+        "image": "products/flying-v.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 110,
+      "pk": 60,
       "fields": {
         "name": "Gibson Explorer",
         "brand": "Gibson",
@@ -126,12 +126,12 @@
         "model": "Explorer",
         "short_description": "Futuristic shape with bright humbucker tone.",
         "price": "2299.00",
-        "image": ""
+        "image": "products/explorer.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 111,
+      "pk": 61,
       "fields": {
         "name": "Ibanez RG550",
         "brand": "Ibanez",
@@ -139,12 +139,12 @@
         "model": "RG550",
         "short_description": "Super-fast neck and hot humbuckers for shredding.",
         "price": "899.99",
-        "image": ""
+        "image": "products/RG550.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 112,
+      "pk": 62,
       "fields": {
         "name": "Ibanez S570",
         "brand": "Ibanez",
@@ -152,12 +152,12 @@
         "model": "S570",
         "short_description": "Slim mahogany body with versatile HSH pickup configuration.",
         "price": "799.99",
-        "image": ""
+        "image": "products/S570.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 113,
+      "pk": 63,
       "fields": {
         "name": "Ibanez AR420",
         "brand": "Ibanez",
@@ -165,12 +165,12 @@
         "model": "AR420",
         "short_description": "Classic body shape with warm dual humbuckers.",
         "price": "599.99",
-        "image": ""
+        "image": "products/AR420.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 114,
+      "pk": 64,
       "fields": {
         "name": "Ibanez JEM77",
         "brand": "Ibanez",
@@ -178,12 +178,12 @@
         "model": "JEM77",
         "short_description": "Steve Vai signature with monkey grip and DiMarzio pickups.",
         "price": "1799.99",
-        "image": ""
+        "image": "products/JEM77.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 115,
+      "pk": 65,
       "fields": {
         "name": "Ibanez SA460",
         "brand": "Ibanez",
@@ -191,12 +191,12 @@
         "model": "SA460",
         "short_description": "Body‑through design with powerful humbuckers and through‑body bridge.",
         "price": "649.99",
-        "image": ""
+        "image": "products/SA460.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 116,
+      "pk": 66,
       "fields": {
         "name": "PRS Custom 24",
         "brand": "PRS",
@@ -204,12 +204,12 @@
         "model": "Custom 24",
         "short_description": "Versatile dual humbuckers with 24‑fret and PRS tremolo.",
         "price": "3499.00",
-        "image": ""
+        "image": "products/Custom-24.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 117,
+      "pk": 67,
       "fields": {
         "name": "PRS SE Standard 24",
         "brand": "PRS",
@@ -217,12 +217,12 @@
         "model": "SE Standard 24",
         "short_description": "Affordable 24‑fret SE model with PRS pickups.",
         "price": "849.00",
-        "image": ""
+        "image": "products/SE-Standard-24.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 118,
+      "pk": 68,
       "fields": {
         "name": "PRS McCarty 594",
         "brand": "PRS",
@@ -230,12 +230,12 @@
         "model": "McCarty 594",
         "short_description": "Vintage‑inspired 5‑piece maple neck with humbuckers.",
         "price": "3799.00",
-        "image": ""
+        "image": "products/McCarty-594.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 119,
+      "pk": 69,
       "fields": {
         "name": "PRS Silver Sky",
         "brand": "PRS",
@@ -243,12 +243,12 @@
         "model": "Silver Sky",
         "short_description": "John Mayer signature with bright single‑coil sound.",
         "price": "1999.00",
-        "image": ""
+        "image": "products/Silver-Sky.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 120,
+      "pk": 70,
       "fields": {
         "name": "PRS SE Hollowbody II",
         "brand": "PRS",
@@ -256,12 +256,12 @@
         "model": "SE Hollowbody II",
         "short_description": "Semi‑hollow body with punchy PRS SE humbuckers.",
         "price": "999.00",
-        "image": ""
+        "image": "products/SE-Hollowbody-2.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 121,
+      "pk": 71,
       "fields": {
         "name": "Epiphone Les Paul Standard",
         "brand": "Epiphone",
@@ -269,12 +269,12 @@
         "model": "Les Paul Standard",
         "short_description": "Budget‑friendly Les Paul with Alnico humbuckers.",
         "price": "499.00",
-        "image": ""
+        "image": "products/E-Les-Paul-Standard.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 122,
+      "pk": 72,
       "fields": {
         "name": "Epiphone SG Special",
         "brand": "Epiphone",
@@ -282,12 +282,12 @@
         "model": "SG Special",
         "short_description": " affordable SG with open‑coil humbuckers.",
         "price": "399.00",
-        "image": ""
+        "image": "products/SG-Special.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 123,
+      "pk": 73,
       "fields": {
         "name": "Epiphone Casino",
         "brand": "Epiphone",
@@ -295,12 +295,12 @@
         "model": "Casino",
         "short_description": "Fully hollow with P‑90 pickups and vintage vibe.",
         "price": "849.00",
-        "image": ""
+        "image": "products/Casino.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 124,
+      "pk": 74,
       "fields": {
         "name": "Epiphone Dot",
         "brand": "Epiphone",
@@ -308,12 +308,12 @@
         "model": "Dot",
         "short_description": "Budget ES‑335 style semi‑hollow with Alnico P‑90s.",
         "price": "599.00",
-        "image": ""
+        "image": "products/Dot.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 125,
+      "pk": 75,
       "fields": {
         "name": "Epiphone Explorer",
         "brand": "Epiphone",
@@ -321,12 +321,12 @@
         "model": "Explorer",
         "short_description": "Replica Explorer with humbuckers and aggressive styling.",
         "price": "649.00",
-        "image": ""
+        "image": "products/explorer.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 126,
+      "pk": 76,
       "fields": {
         "name": "Yamaha Pacifica 112V",
         "brand": "Yamaha",
@@ -334,12 +334,12 @@
         "model": "Pacifica 112V",
         "short_description": "Versatile HSS setup with alder body—excellent value.",
         "price": "299.99",
-        "image": ""
+        "image": "products/Pacifica-112V.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 127,
+      "pk": 77,
       "fields": {
         "name": "Yamaha Revstar RS502T",
         "brand": "Yamaha",
@@ -347,12 +347,12 @@
         "model": "Revstar RS502T",
         "short_description": "Retro styling with coil‑split humbuckers and T‑Series dog‑ear pickups.",
         "price": "1199.99",
-        "image": ""
+        "image": "products/RS502T.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 128,
+      "pk": 78,
       "fields": {
         "name": "Yamaha SG1820",
         "brand": "Yamaha",
@@ -360,25 +360,25 @@
         "model": "SG1820",
         "short_description": "Mahogany body with Alnico humbuckers and bound neck.",
         "price": "1499.99",
-        "image": ""
+        "image": "products/SG1820.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 129,
-        "fields": {
-          "name": "Yamaha Pacifica 212VQM",
-          "brand": "Yamaha",
-          "category": 2,
-          "model": "Pacifica 212VQM",
-          "short_description": "Quilted maple top with HSS pickups and tremolo.",
-          "price": "399.99",
-          "image": ""
-        }
+      "pk": 79,
+      "fields": {
+        "name": "Yamaha Pacifica 212VQM",
+        "brand": "Yamaha",
+        "category": 2,
+        "model": "Pacifica 212VQM",
+        "short_description": "Quilted maple top with HSS pickups and tremolo.",
+        "price": "399.99",
+        "image": "products/212VQM.jpg"
+      }
     },
     {
       "model": "products.product",
-      "pk": 130,
+      "pk": 80,
       "fields": {
         "name": "Yamaha Pacifica 611HFM",
         "brand": "Yamaha",
@@ -386,12 +386,12 @@
         "model": "Pacifica 611HFM",
         "short_description": "Premium Pacifica with dual humbuckers and flamed maple top.",
         "price": "799.99",
-        "image": ""
+        "image": "products/611HFM.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 131,
+      "pk": 81,
       "fields": {
         "name": "ESP LTD EC‑1000",
         "brand": "ESP",
@@ -399,12 +399,12 @@
         "model": "EC-1000",
         "short_description": "Mahogany body with EMG active humbuckers for metal tones.",
         "price": "999.00",
-        "image": ""
+        "image": "products/EC-1000.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 132,
+      "pk": 82,
       "fields": {
         "name": "ESP LTD M‑1000",
         "brand": "ESP",
@@ -412,12 +412,12 @@
         "model": "M-1000",
         "short_description": "Modern flying V style with active pickups.",
         "price": "899.00",
-        "image": ""
+        "image": "products/M-1000.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 133,
+      "pk": 83,
       "fields": {
         "name": "ESP LTD B‑1000",
         "brand": "ESP",
@@ -425,12 +425,12 @@
         "model": "B-1000",
         "short_description": "Bass model but often used for drop‑tuned guitars.",
         "price": "799.00",
-        "image": ""
+        "image": "products/B-1000.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 134,
+      "pk": 84,
       "fields": {
         "name": "ESP LTD EC‑50",
         "brand": "ESP",
@@ -438,25 +438,25 @@
         "model": "EC-50",
         "short_description": "Entry‑level Les Paul style with ESP pickups.",
         "price": "349.00",
-        "image": ""
+        "image": "products/EC-50.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 135,
+      "pk": 85,
       "fields": {
         "name": "ESP LTD Viper‑50",
         "brand": "ESP",
         "category": 2,
         "model": "Viper-50",
         "short_description": "Double‑cut with ESP designed humbuckers.",
-        "price": "399.00",  
-        "image": ""
+        "price": "399.00",
+        "image": "products/Viper-50.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 136,
+      "pk": 86,
       "fields": {
         "name": "Jackson Soloist SL2",
         "brand": "Jackson",
@@ -464,12 +464,12 @@
         "model": "Soloist SL2",
         "short_description": "Neck‑through superstrat with high‐output pickups.",
         "price": "1199.00",
-        "image": ""
+        "image": "products/Soloist-SL2.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 137,
+      "pk": 87,
       "fields": {
         "name": "Jackson Dinky JS32",
         "brand": "Jackson",
@@ -477,12 +477,12 @@
         "model": "Dinky JS32",
         "short_description": "Affordable Dinky with Floyd Rose and Jackson humbuckers.",
         "price": "399.99",
-        "image": ""
+        "image": "products/JS32.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 138,
+      "pk": 88,
       "fields": {
         "name": "Jackson Kelly Pro",
         "brand": "Jackson",
@@ -490,12 +490,12 @@
         "model": "Kelly Pro",
         "short_description": "Distinctive Kelly body with active pickups.",
         "price": "799.99",
-        "image": ""
+        "image": "products/Kelly-Pro.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 139,
+      "pk": 89,
       "fields": {
         "name": "Jackson King V JS32",
         "brand": "Jackson",
@@ -503,12 +503,12 @@
         "model": "King V JS32",
         "short_description": "Classic V shape with Jackson single‑coil and humbucker.",
         "price": "499.99",
-        "image": ""
+        "image": "products/King-V-JS32.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 140,
+      "pk": 90,
       "fields": {
         "name": "Jackson Adrian Smith SDX",
         "brand": "Jackson",
@@ -516,12 +516,12 @@
         "model": "Adrian Smith SDX",
         "short_description": "Signature model with dual humbuckers and fast neck.",
         "price": "899.99",
-        "image": ""
+        "image": "products/Adrian-Smith-SDX.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 141,
+      "pk": 91,
       "fields": {
         "name": "Gretsch G6120",
         "brand": "Gretsch",
@@ -529,12 +529,12 @@
         "model": "G6120",
         "short_description": "Hollow‑body with Filter’Tron pickups and Bigsby vibrato.",
         "price": "2999.00",
-        "image": ""
+        "image": "products/G6120.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 142,
+      "pk": 92,
       "fields": {
         "name": "Gretsch G5420T",
         "brand": "Gretsch",
@@ -542,12 +542,12 @@
         "model": "G5420T",
         "short_description": "Electromatic hollow with Broad’Tron pickups and Bigsby.",
         "price": "1199.00",
-        "image": ""
+        "image": "products/G5420T.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 143,
+      "pk": 93,
       "fields": {
         "name": "Gretsch G5230T",
         "brand": "Gretsch",
@@ -555,12 +555,12 @@
         "model": "G5230T",
         "short_description": "Electromatic Jet with Filter’Tron and Bigsby tailpiece.",
         "price": "999.00",
-        "image": ""
+        "image": "products/G5230T.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 144,
+      "pk": 94,
       "fields": {
         "name": "Gretsch G2655",
         "brand": "Gretsch",
@@ -568,12 +568,12 @@
         "model": "G2655",
         "short_description": "Streamliner Hollow with Broad’Tron pickups.",
         "price": "699.00",
-        "image": ""
+        "image": "products/G2655.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 145,
+      "pk": 95,
       "fields": {
         "name": "Gretsch G5120",
         "brand": "Gretsch",
@@ -581,12 +581,12 @@
         "model": "G5120",
         "short_description": "Electromatic retro hollow with Broad’Tron and Bigsby.",
         "price": "1299.00",
-        "image": ""
+        "image": "products/G5120.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 146,
+      "pk": 96,
       "fields": {
         "name": "Charvel Pro-Mod DK24",
         "brand": "Charvel",
@@ -594,12 +594,12 @@
         "model": "Pro-Mod DK24",
         "short_description": "Modern double‑cut with hot humbuckers and sleek neck.",
         "price": "899.00",
-        "image": ""
+        "image": "products/Pro-Mod-DK24.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 147,
+      "pk": 97,
       "fields": {
         "name": "Charvel San Dimas Style 1",
         "brand": "Charvel",
@@ -607,12 +607,12 @@
         "model": "San Dimas Style 1",
         "short_description": "Superstrat design with powerful humbuckers.",
         "price": "999.00",
-        "image": ""
+        "image": "products/San-Dimas-Style-1.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 148,
+      "pk": 98,
       "fields": {
         "name": "Charvel So-Cal Style 1",
         "brand": "Charvel",
@@ -620,12 +620,12 @@
         "model": "So-Cal Style 1",
         "short_description": "Vintage‑inspired offset with modern pickups.",
         "price": "1099.00",
-        "image": ""
+        "image": "products/So-Cal-Style-1.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 149,
+      "pk": 99,
       "fields": {
         "name": "Charvel MJ Signature DK24",
         "brand": "Charvel",
@@ -633,12 +633,12 @@
         "model": "MJ Signature DK24",
         "short_description": "Marty Friedman signature model with unique pickups.",
         "price": "1499.00",
-        "image": ""
+        "image": "products/MJ-Signature-DK24.jpg"
       }
     },
     {
       "model": "products.product",
-      "pk": 150,
+      "pk": 100,
       "fields": {
         "name": "Charvel Pro-Mod DK24 HH",
         "brand": "Charvel",
@@ -646,203 +646,7 @@
         "model": "Pro-Mod DK24 HH",
         "short_description": "Dual‑humbucker Pro-Mod with modern appointments.",
         "price": "799.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 151,
-      "fields": {
-        "name": "Schecter C-1 Classic",
-        "brand": "Schecter",
-        "category": 2,
-        "model": "C-1 Classic",
-        "short_description": "Mahogany body with Schecter USA pickups.",
-        "price": "749.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 152,
-      "fields": {
-        "name": "Schecter Omen-6",
-        "brand": "Schecter",
-        "category": 2,
-        "model": "Omen-6",
-        "short_description": "Affordably priced Omen series with monster tone.",
-        "price": "329.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 153,
-      "fields": {
-        "name": "Schecter Hellraiser C-1",
-        "brand": "Schecter",
-        "category": 2,
-        "model": "Hellraiser C-1",
-        "short_description": "Exotic top, active EMG pickups, great for metal.",
-        "price": "999.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 154,
-      "fields": {
-        "name": "Schecter Blackjack ATX",
-        "brand": "Schecter",
-        "category": 2,
-        "model": "Blackjack ATX",
-        "short_description": "Thin‑body style with Seymour Duncan humbuckers.",
-        "price": "899.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 155,
-      "fields": {
-        "name": "Schecter Damien Platinum-6",
-        "brand": "Schecter",
-        "category": 2,
-        "model": "Damien Platinum-6",
-        "short_description": "Versatile Platinum series with hotspot pickups.",
-        "price": "649.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 156,
-      "fields": {
-        "name": "Sterling by Music Man StingRay Ray4",
-        "brand": "Sterling",
-        "category": 2,
-        "model": "StingRay Ray4",
-        "short_description": "4-string bass, but popular among drop‑tuned guitarists.",
-        "price": "399.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 157,
-      "fields": {
-        "name": "Sterling by Music Man Cutlass",
-        "brand": "Sterling",
-        "category": 2,
-        "model": "Cutlass",
-        "short_description": "Modern comfort body with versatile humbuckers.",
-        "price": "699.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 158,
-      "fields": {
-        "name": "Sterling by Music Man JP60",
-        "brand": "Sterling",
-        "category": 2,
-        "model": "JP60",
-        "short_description": "John Petrucci signature with DiMarzio pickups.",
-        "price": "899.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 159,
-      "fields": {
-        "name": "Sterling by Music Man Albert Lee",
-        "brand": "Sterling",
-        "category": 2,
-        "model": "Albert Lee",
-        "short_description": "Chicken‑picker style with three single‑coil blades.",
-        "price": "799.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 160,
-      "fields": {
-        "name": "Sterling by Music Man Luke III",
-        "brand": "Sterling",
-        "category": 2,
-        "model": "Luke III",
-        "short_description": "Modern singlecut with S‑Style pickups.",
-        "price": "799.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 161,
-      "fields": {
-        "name": "Godin Session",
-        "brand": "Godin",
-        "category": 2,
-        "model": "Session",
-        "short_description": "Hybrid design with magnetic and piezo pickups.",
-        "price": "899.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 162,
-      "fields": {
-        "name": "Godin LGXT",
-        "brand": "Godin",
-        "category": 2,
-        "model": "LGXT",
-        "short_description": "Acoustic‑electric/solid combo with piezo and humbucker.",
-        "price": "1199.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 163,
-      "fields": {
-        "name": "Godin Radiator",
-        "brand": "Godin",
-        "category": 2,
-        "model": "Radiator",
-        "short_description": "Solid‑body with P90s and wraparound tailpiece.",
-        "price": "749.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 164,
-      "fields": {
-        "name": "Godin 5th Avenue",
-        "brand": "Godin",
-        "category": 2,
-        "model": "5th Avenue",
-        "short_description": "Fully hollow jazz box with classic F‑hole design.",
-        "price": "1299.00",
-        "image": ""
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 165,
-      "fields": {
-        "name": "Godin Redline Offset",
-        "brand": "Godin",
-        "category": 2,
-        "model": "Redline Offset",
-        "short_description": "Offset body with humbucking and single‑coil pickups.",
-        "price": "999.00",
-        "image": ""
+        "image": "products/Pro-Mod-DK24-HH.jpg"
       }
     }
-  ]
-  
+]

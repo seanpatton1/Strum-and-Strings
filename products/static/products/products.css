@@ -7,10 +7,10 @@
 
 .product-detail img {
   max-width: 100%;
-  width: 80%; /* shrink image a bit */
   height: auto;
   display: block;
-  margin: 0 auto; /* center nicely */
+  margin: 0 auto;
+  object-fit: cover;
 }
 
 .product-detail .row {
