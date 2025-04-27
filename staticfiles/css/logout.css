@@ -1,0 +1,32 @@
+/* logout.css */
+body {
+    background-color: #f9f7f3;
+    color: #5a4231;
+}
+
+h2 {
+    color: #5a4231;
+    font-weight: bold;
+}
+
+.btn-danger {
+    background-color: #c99b3b;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #b58932;
+}
+
+a {
+    color: #5a4231;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c99b3b;
+}

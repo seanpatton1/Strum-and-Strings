@@ -131,4 +131,68 @@ body {
     background-color: #C08C3D;
     color: #fff;
   }
-  
+
+/* Newsletter Section */
+.newsletter-signup-section {
+  background-color: #f8f4f0;
+}
+
+/* Headings in Newsletter */
+.section-heading {
+  color: #5C4033;
+}
+
+/* Card Style */
+.newsletter-card {
+  background-color: #ffffff;
+}
+
+/* Subscribe Button */
+.newsletter-btn {
+  background-color: #D4A373;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.75rem;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background-color: #c78c5e; /* Slightly darker on hover */
+}
+
+/* Banner Image Styling */
+.banner-image {
+  max-height: 450px;
+}
+
+/* Slide-in Animation */
+@keyframes slideInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideInUp 1s ease-out forwards;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in forwards;
+}
