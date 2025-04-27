@@ -24,6 +24,12 @@ class Product(models.Model):
         blank=True,
         null=True
     )
+    cloudinary_image_url = models.URLField(
+        max_length=1024,
+        blank=True,
+        null=True,
+        help_text="Optional Cloudinary image URL."
+    )
     short_description = models.TextField(blank=True)
     price = models.DecimalField(
         max_digits=8,
