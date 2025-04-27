@@ -13,7 +13,6 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'model',
         'image',
-        'cloudinary_image_url',
         'short_description',
         'price',
     )
