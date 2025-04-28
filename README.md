@@ -16,32 +16,31 @@ Visit the deployed website [here](https://strum-and-strings-e5017bc28566.herokua
 
 ## Table of Contents
 
-1. [Business Model](#business-model)
-2. [User Experience (UX)](#user-experience-ux)
-    - [Project Goals](#project-goals)
-    - [Implementation](#implementation)
-    - [Color Scheme](#color-scheme)
-    - [Typography](#typography)
-    - [Database Models](#database-models)
-    - [Wireframes](#wireframes)
-3. [Features](#features)
-    - [Home Page](#home-page)
-    - [Shop Page](#shop-page)
-    - [Product Detail Page](#product-detail-page)
-    - [Cart and Checkout](#cart-and-checkout)
-    - [Profile and Order History](#profile-and-order-history)
-    - [Newsletter Signup](#newsletter-signup)
-4. [Technologies Used](#technologies-used)
-    - [Languages](#languages)
-    - [Frameworks](#frameworks)
-    - [Libraries and Programs](#libraries-and-programs)
-5. [Testing](#testing)
-    - [Validator Testing](#validator-testing)
-    - [Manual Testing](#manual-testing)
+## Table of Contents
+
+1. [User Experience (UX)](#user-experience-ux)
+    1. [Project Goals](#project-goals)
+    2. [Implementation](#implementation)
+    3. [Color Scheme](#color-scheme)
+    4. [Typography](#typography)
+    5. [Database Model](#database-model)
+    6. [Wireframes](#wireframes)
+2. [Features](#features)
+    1. [Home Page](#home-page)
+    2. [About Us](#about-us)
+    3. [Product Listings](#product-listings)
+    4. [Product Details](#product-details)
+    5. [Cart and Checkout](#cart-and-checkout)
+    6. [Profile Management](#profile-management)
+    7. [Newsletter Signup](#newsletter-signup)
+    8. [Admin Panel](#admin-panel)
+3. [Technologies Used](#technologies-used)
+4. [Testing](#testing)
+5. [Finished Product](#finished-product)
 6. [Deployment](#deployment)
-7. [Credits](#credits)
-8. [Acknowledgements](#acknowledgements)
-9. [Future Implementations](#future-implementations)
+7. [Marketing Strategies](#marketing-strategies)
+8. [Credits](#credits)
+9. [Acknowledgements](#acknowledgements)
 
 # Business Model
 
@@ -446,7 +445,39 @@ This project was deployed using **Heroku** with the following process:
 ## Final Live Application
 
 - The website is live and fully functional at:  
-  [Strum & Strings Heroku Deployment](https://strum-and-strings-e5017bc28566.herokuapp.com//) 🚀
+  [Strum & Strings Heroku Deployment](https://strum-and-strings-e5017bc28566.herokuapp.com//)
+
+## Marketing Strategies
+
+### Facebook Business Page
+
+To strengthen brand visibility and engage directly with the target audience, I created a dedicated **Facebook Business Page** for **Strum & Strings**.  
+This page is used to:
+
+- Promote new products, bundle deals, and seasonal sales.
+- Share guitar-related tips, tutorials, and engaging content.
+- Build a community of musicians, students, and institutions.
+- Enhance credibility and increase organic brand reach via social media.
+
+The Facebook page also provides a direct channel for customer inquiries, helping to improve the overall user experience and support service.  
+This step fulfills the project’s marketing requirement of establishing a real-world online presence for the business.
+
+
+![Strum and strings FB business page](static/images/FB_business_page.jpg)
+---
+
+### Newsletter Integration
+
+To further enhance customer engagement and brand loyalty, I integrated a **newsletter signup form** on the website using **Mailchimp**.  
+This signup form allows visitors to:
+
+- Subscribe for exclusive offers, product updates, and musical tips.
+- Stay informed about new arrivals, limited-time bundles, and promotions.
+
+The newsletter strategy is designed to build a growing customer mailing list, supporting future email marketing campaigns and personalized offers.
+
+Both the Facebook page and the newsletter system work together to maximize reach, engagement, and retention of the Strum & Strings customer base.
+
 
 # Credits
 
