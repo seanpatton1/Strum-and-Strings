@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from products.models import Product
 
 
 class UserProfile(models.Model):
@@ -13,7 +12,7 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
-   
+
 class NewsletterSubscriber(models.Model):
     email = models.EmailField(unique=True)
     date_subscribed = models.DateTimeField(auto_now_add=True)

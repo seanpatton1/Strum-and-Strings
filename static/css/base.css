@@ -1,12 +1,15 @@
+/* ----------------- Global Structure ----------------- */
+
+/* Reset and Flex Layout for Body and HTML */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
- 
 }
 
+/* Main Content Section */
 main {
     flex: 1;
     min-height: calc(100vh - 10px);
@@ -14,109 +17,9 @@ main {
     width: 100%;
 }
 
-.home-hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* ----------------- Home Hero Section ----------------- */
 
-.product-categories {
-    margin-top: 50px;
-}
-
-.card img {
-    height: 200px;
-    object-fit: cover;
-}
-
-header {
-    background-color: #4B3832;
-    color: #F4EBD0;
-    min-height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-header .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-header .navbar-nav .nav-link {
-    font-size: 1rem;
-    margin: 0 10px;
-    color: #F4EBD0;
-}
-
-header .navbar-nav .nav-link:hover {
-    color: #D6A84F;
-}
-
-.navbar-brand-container {
-    flex-grow: 1;
-    margin-left: 0;
-    padding-left: 10px;
-}
-
-.navbar-brand {
-    color: #F4EBD0;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.navbar-brand:hover {
-    color: #D6A84F;
-}
-
-.navbar-nav .nav-link {
-    color: #F4EBD0;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #D6A84F;
-}
-
-.btn-custom-search {
-    background-color: #D6A84F;
-    color: #4B3832;
-    border: none;
-    padding: 6px 12px;
-}
-
-.btn-custom-search:hover {
-    background-color: #C08C3D;
-    color: #fff;
-}
-
-
-.search-bar {
-    width: 50%;
-}
-
-.search-bar input {
-    width: 600px;
-}
-
-.search-bar button {
-    white-space: nowrap;
-}
-
-
-.product-categories .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-
-.product-categories .card {
-    flex: 1;
-    max-width: 300px;
-}
-
+/* Home Hero Background and Layout */
 .home-hero {
     background-image: url("/static/images/stratocaster-home-image.jpg");
     background-size: cover;
@@ -135,11 +38,7 @@ header .navbar-nav .nav-link:hover {
     overflow: hidden;
 }
 
-.home-hero h1, .home-hero p, .home-hero a {
-    position: relative; /* Keep text above the background */
-    z-index: 1;
-}
-
+/* Dark overlay on Hero */
 .home-hero::before {
     content: "";
     position: absolute;
@@ -147,22 +46,33 @@ header .navbar-nav .nav-link:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 0;
 }
 
+/* Text and button positioning */
+.home-hero h1,
+.home-hero p,
+.home-hero a {
+    position: relative;
+    z-index: 1;
+}
+
+/* Home Hero Heading */
 .home-hero h1 {
     font-size: 3rem;
     font-weight: bold;
     color: #F4EBD0;
 }
 
+/* Home Hero Subheading */
 .home-hero p {
     font-size: 1.5rem;
     color: #F4EBD0;
     margin-bottom: 20px;
 }
 
+/* Home Hero Button */
 .home-hero a.btn {
     background-color: #D6A84F;
     color: #4B3832;
@@ -179,9 +89,128 @@ header .navbar-nav .nav-link:hover {
     color: #fff;
 }
 
-.main-picture {
-    margin-left: -24px !important;
+/* ----------------- Product Categories Section ----------------- */
+
+.product-categories {
+    margin-top: 50px;
 }
+
+/* Category Row Layout */
+.product-categories .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Category Cards */
+.product-categories .card {
+    flex: 1;
+    max-width: 300px;
+}
+
+/* Product Images */
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ----------------- Header and Navigation Styling ----------------- */
+
+/* Header Background and Layout */
+header {
+    background-color: #4B3832;
+    color: #F4EBD0;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* Navbar Brand */
+header .navbar-brand,
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #F4EBD0;
+}
+
+.navbar-brand:hover {
+    color: #D6A84F;
+}
+
+/* Navbar Links */
+header .navbar-nav .nav-link,
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    margin: 0 10px;
+    color: #F4EBD0;
+}
+
+header .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:hover {
+    color: #D6A84F;
+}
+
+/* Navbar Brand Container */
+.navbar-brand-container {
+    flex-grow: 1;
+    margin-left: 0;
+    padding-left: 10px;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    width: 50%;
+}
+
+.search-bar input {
+    width: 600px;
+}
+
+.search-bar button {
+    white-space: nowrap;
+}
+
+/* Search Button */
+.btn-custom-search {
+    background-color: #D6A84F;
+    color: #4B3832;
+    border: none;
+    padding: 6px 12px;
+}
+
+.btn-custom-search:hover {
+    background-color: #C08C3D;
+    color: #fff;
+}
+
+/* ----------------- Breadcrumb Styling ----------------- */
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.breadcrumb-item a {
+    color: #b8860b;
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+    color: #996515;
+}
+
+.breadcrumb-item.active {
+    color: #5a4231;
+    font-weight: bold;
+}
+
+/* ----------------- Back to Top Button ----------------- */
 
 #back-to-top {
     display: none;
@@ -202,14 +231,16 @@ header .navbar-nav .nav-link:hover {
     line-height: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: opacity 0.3s ease;
-  }
-  
-  #back-to-top:hover {
+}
+
+#back-to-top:hover {
     background-color: #C08C3D;
     color: #fff;
-  }
+}
 
-  footer {
+/* ----------------- Footer Styling ----------------- */
+
+footer {
     background-color: #4B3832;
     color: #F4EBD0;
 }
@@ -224,6 +255,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Footer Social Icons */
 .footer-social-icons a i {
     color: #F4EBD0;
     font-size: 24px;
@@ -234,7 +266,52 @@ footer a:hover {
     color: #D6A84F;
 }
 
-/* For Small Screens (smaller than 768px) */
+/* ----------------- Sidebar Styles ----------------- */
+
+.sidebar {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+    overflow: visible;
+}
+
+.wrapper {
+    overflow: visible;
+}
+
+/* Sidebar Links */
+.sidebar a {
+    color: #4B3832;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #D6A84F;
+    text-decoration: underline;
+}
+
+/* Filter Button */
+.btn-filters-custom {
+    background-color: #D6A84F;
+    color: #4B3832;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-filters-custom:hover {
+    background-color: #C08C3D;
+    color: #fff;
+}
+
+/* ----------------- Responsive Adjustments ----------------- */
+
+/* Mobile (max-width: 767.98px) */
 @media (max-width: 767.98px) {
     .option-container {
         display: none;
@@ -244,18 +321,11 @@ footer a:hover {
         padding-top: 60px !important;
     }
 
-    footer .row {
-        text-align: center;
-    }
-
+    footer .row,
     footer .col-md-6,
     footer .col-md-3 {
         text-align: center;
     }
-
-    /* .burger-one {
-        margin-top: 5px;
-    } */
 
     #navbarNav form {
         margin-top: 10px;
@@ -284,40 +354,10 @@ footer a:hover {
         margin-top: 10px;
     }
 
-  
+    /* Mobile Home Hero Adjustments */
     .home-hero {
-        background-image: url("/static/images/stratocaster-home-image.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         height: 100vh;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         margin-bottom: -25px !important;
-        margin: 0; 
-        padding: 0;
-        width: 100vw;
-        overflow: hidden;
-
-    }
-
-    .home-hero h1, .home-hero p, .home-hero a {
-        position: relative;
-        z-index: 1;
-    }
-
-    .home-hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 0;
     }
 
     .home-hero .container {
@@ -325,16 +365,13 @@ footer a:hover {
         padding-right: 0 !important;
     }
 
-    
     body, html {
-        margin: 0;
-        padding: 0;
         overflow-x: hidden;
     }
 }
 
+/* Tablet (768px to 849px) */
 @media (min-width: 768px) and (max-width: 849px) {
-
     main {
         margin-right: 0px;
     }
@@ -371,81 +408,8 @@ footer a:hover {
         margin-top: 10px;
     }
 
+    /* Tablet Home Hero Adjustments */
     .home-hero {
-        background-image: url("/static/images/stratocaster-home-image.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         height: 100vh;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        width: 100vw;
     }
-
-    .home-hero h1, .home-hero p, .home-hero a {
-        position: relative;
-        z-index: 1;
-    }
-
-    .home-hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-        z-index: 0;
-    }
-
-
-    .option-container {
-        display: none;
-    }
-}
-
-/* global side bar styles */
-
-.sidebar {
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: auto;
-    overflow: visible;
-}
-
-.wrapper {
-    overflow: visible;
-}
-
-.sidebar a {
-    color: #4B3832;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.sidebar a:hover {
-    color: #D6A84F;
-    text-decoration: underline;
-}
-
-.btn-filters-custom {
-    background-color: #D6A84F;
-    color: #4B3832;
-    border: none;
-    padding: 10px 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-}
-
-.btn-filters-custom:hover {
-    background-color: #C08C3D;
-    color: #fff;
 }

@@ -26,17 +26,24 @@ load_dotenv(dotenv_path=BASE_DIR / ".env")
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-dev-key-for-local-testing')
+SECRET_KEY = os.environ.get(
+    'SECRET_KEY',
+    'django-insecure-dev-key-for-local-testing'
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'strum-and-strings-e5017bc28566.herokuapp.com']
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://8000-seanpatton1-strumandstr-s6cl2qumj8z.ws.codeinstitute-ide.net',
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'strum-and-strings-e5017bc28566.herokuapp.com',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-seanpatton1-strumandstr-'
+    's6cl2qumj8z.ws.codeinstitute-ide.net',
+]
 
 # Application definition
 
@@ -89,7 +96,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # required by allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'cart.context_processors.cart_item_count',
@@ -177,7 +184,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',  # Ensure this points to the 'static/' directory at the root of your project
+    BASE_DIR / 'static',
 ]
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'

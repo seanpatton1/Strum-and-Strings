@@ -14,7 +14,15 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ['first_name', 'last_name', 'email', 'address', 'city', 'postcode', 'country']
+        fields = [
+            'first_name',
+            'last_name',
+            'email',
+            'address',
+            'city',
+            'postcode',
+            'country',
+        ]
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

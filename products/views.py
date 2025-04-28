@@ -15,7 +15,10 @@ def product_detail(request, pk):
     ).exclude(id=product.id)
 
     # Randomly pick up to 4 related products
-    related_products = sample(list(related_products), min(len(related_products), 4))
+    related_products = sample(
+                    list(related_products),
+                    min(len(related_products), 4)
+                )
 
     return render(request, 'products/product_details.html', {
         'product': product,

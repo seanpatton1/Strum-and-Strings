@@ -1,11 +1,13 @@
-/* products/static/products/css/product.css */
+/* ----------------- Global Container & Layout ----------------- */
 
-/* Container spacing */
+/* Container spacing around product details */
 .product-detail {
   margin: 3rem 0;
 }
 
-.product-detail img {
+/* Product image styling */
+.product-detail img,
+.product-detail .img-fluid {
   max-width: 100%;
   height: auto;
   display: block;
@@ -13,53 +15,53 @@
   object-fit: cover;
 }
 
+/* Align details to top */
 .product-detail .row {
-  align-items: flex-start; /* align content to the top */
+  align-items: flex-start;
 }
 
-/* Details column */
+/* Details column padding */
 .product-info {
   padding-left: 1.5rem;
 }
 
-/* Price styling */
+/* ----------------- Price and Cart Button Styling ----------------- */
+
+/* Price text */
 .product-price {
   font-size: 1.75rem;
   font-weight: bold;
   margin: 1rem 0;
 }
 
-/* “Add to Cart” button */
+/* Add to Cart button */
 .btn-add-cart {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
 }
 
+/* Price text color */
+h4.text-primary {
+  color: #5a4231;
+}
+
+/* ----------------- Breadcrumb Navigation ----------------- */
 .breadcrumb a {
   color: inherit;
   text-decoration: none;
 }
 
 .breadcrumb a:hover {
-  color: #D6A84F; /* Gold color for breadcrumb hover */
+  color: #D6A84F; /* Gold color on hover */
   text-decoration: underline;
 }
 
-/* Focus and hover styles for buttons */
-.btn-primary:focus, .btn-outline-primary:focus {
-  outline: none;
-  box-shadow: none;
-}
+/* ----------------- Button Styling ----------------- */
 
-/* Price text color */
-h4.text-primary {
-  color: #5a4231; /* Dark brown */
-}
-
-/* Primary Button styles */
+/* Primary buttons (add to cart, etc.) */
 .btn-primary {
-  background-color: #D6A84F; /* Gold color for consistency */
-  color: #4B3832; /* Dark brown */
+  background-color: #D6A84F;
+  color: #4B3832;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -69,14 +71,14 @@ h4.text-primary {
 }
 
 .btn-primary:hover {
-  background-color: #C08C3D; /* Darker gold on hover */
+  background-color: #C08C3D;
   color: white;
 }
 
-/* Outline Primary Button styles */
+/* Outline Primary Button (optional alternative style) */
 .btn-outline-primary {
-  background-color: #D6A84F; /* Gold color for consistency */
-  color: #4B3832; /* Dark brown */
+  background-color: #D6A84F;
+  color: #4B3832;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -86,12 +88,19 @@ h4.text-primary {
 }
 
 .btn-outline-primary:hover {
-  background-color: #D6A84F; /* Same gold for background */
+  background-color: #D6A84F;
   color: white;
-  border-color: #C08C3D; /* Darker gold border on hover */
+  border-color: #C08C3D;
 }
 
-/* Card Button styling */
+/* Focus states removal */
+.btn-primary:focus,
+.btn-outline-primary:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Card button in product detail */
 .card-body .btn {
   width: 100%;
   max-width: 200px;
@@ -99,24 +108,19 @@ h4.text-primary {
   display: block;
 }
 
-/* Image inside product detail */
-.product-detail .img-fluid {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
+/* ----------------- Related Products Carousel Styling ----------------- */
 
-/* Carousel item text centering */
+/* Center carousel item text */
 .carousel-inner .carousel-item {
   text-align: center;
 }
 
-/* Accordion item margin */
+/* Margin between accordion items */
 .accordion-item {
   margin-bottom: 20px;
 }
 
-/* Fix card size in the carousel */
+/* Carousel card structure */
 #relatedProductsCarousel .card {
   height: 100%;
   min-height: 500px;
@@ -126,7 +130,7 @@ h4.text-primary {
   align-items: center;
 }
 
-/* Control the image inside the card */
+/* Product image inside carousel */
 #relatedProductsCarousel .card-img-top {
   max-height: 300px;
   width: auto;
@@ -134,6 +138,7 @@ h4.text-primary {
   padding: 15px;
 }
 
+/* Card body inside carousel */
 #relatedProductsCarousel .card-body {
   flex-grow: 1;
   display: flex;
@@ -141,31 +146,9 @@ h4.text-primary {
   justify-content: flex-end;
 }
 
-/* Same card structure for related products carousel */
-#relatedProductsCarousel .card {
-  height: 100%;
-  min-height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
+/* ----------------- Mobile Adjustments for Related Products ----------------- */
 
-#relatedProductsCarousel .card-img-top {
-  max-height: 300px;
-  width: auto;
-  object-fit: contain;
-  padding: 15px;
-}
-
-#relatedProductsCarousel .card-body {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-/* Mobile related products image adjustments */
+/* Adjust image size in mobile collapse view */
 #mobileCollapseWrapper .card-img-top {
   max-height: 200px;
   object-fit: contain;

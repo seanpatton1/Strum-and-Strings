@@ -8,14 +8,19 @@ from orders.models import Order
 
 @login_required
 def profile(request):
-    user_profile, created = UserProfile.objects.get_or_create(user=request.user)
+    user_profile, created = UserProfile.objects.get_or_create(
+        user=request.user
+    )
     orders = Order.objects.filter(user=request.user)
 
     if request.method == 'POST':
         form = ProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
             form.save()
-            messages.success(request, "Your profile has been updated successfully!")
+            messages.success(
+                request,
+                "Your profile has been updated successfully!"
+            )
             return redirect('accounts:profile')
     else:
         form = ProfileForm(instance=user_profile)
@@ -31,7 +36,10 @@ def newsletter_signup(request):
         form = NewsletterSignupForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Thank you for subscribing to our newsletter!')
+            messages.success(
+                request,
+                'Thank you for subscribing to our newsletter!'
+            )
             return redirect('home')
     else:
         form = NewsletterSignupForm()

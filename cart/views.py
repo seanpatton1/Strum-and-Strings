@@ -1,4 +1,3 @@
-import os
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
@@ -7,7 +6,7 @@ from products.models import Product
 from .models import CartItem
 from decimal import Decimal
 from django.contrib import messages
-from orders.models import Order, OrderItem
+from orders.models import Order
 from django.views.decorators.http import require_POST
 import stripe
 import json
@@ -146,7 +145,9 @@ def create_checkout_session(request):
             payment_method_types=['card'],
             line_items=line_items,
             mode='payment',
-            success_url=f'{domain}/cart/success/?session_id={{CHECKOUT_SESSION_ID}}',
+            success_url=(
+                f'{domain}/cart/success/?session_id={{CHECKOUT_SESSION_ID}}'
+            ),
             cancel_url=f'{domain}/cart/',
             metadata={
                 'username': request.user.username,
@@ -179,17 +180,27 @@ def success(request):
         order = Order.objects.get(stripe_session_id=session_id)
 
         if request.user.is_authenticated and order.user != request.user:
-            messages.error(request, "You are not authorized to view this order.")
+            messages.error(
+                request,
+                "You are not authorized to view this order."
+            )
             return redirect('products:products_list')
 
         # Clear the cart (only if the user is authenticated)
         if request.user.is_authenticated:
             CartItem.objects.filter(user=request.user).delete()
-            
+
         order_items = order.items.all()
 
     except Order.DoesNotExist:
         messages.error(request, "Order not found.")
         return redirect('products:products_list')
 
-    return render(request, 'cart/success.html', {'order': order, 'order_items': order_items, })
+    return render(
+            request,
+            'cart/success.html',
+            {
+                'order': order,
+                'order_items': order_items,
+            }
+        )

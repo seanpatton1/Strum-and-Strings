@@ -26,15 +26,25 @@ class StripeWH_Handler:
         username = metadata.get('username')
         if not username:
             logger.warning("Webhook received but no username in metadata.")
-            return HttpResponse(content="Webhook received with no username metadata.", status=200)
+            return HttpResponse(
+                content="Webhook received with no username metadata.",
+                status=200
+            )
 
         try:
             user = User.objects.get(username=username)
             cart_items = CartItem.objects.filter(user=user)
 
-            total = sum(item.product.price * item.quantity for item in cart_items)
+            total = sum(
+                item.product.price * item.quantity
+                for item in cart_items
+            )
             free_delivery_threshold = Decimal('50.00')
-            delivery_fee = Decimal('0.00') if total >= free_delivery_threshold else Decimal('4.95')
+            delivery_fee = (
+                Decimal('0.00')
+                if total >= free_delivery_threshold
+                else Decimal('4.95')
+            )
             grand_total = total + delivery_fee
 
             order = Order.objects.create(
@@ -64,8 +74,17 @@ class StripeWH_Handler:
 
             cart_items.delete()
 
-            return HttpResponse(content="Order created via webhook.", status=200)
+            return HttpResponse(
+                content="Order created via webhook.",
+                status=200
+            )
 
         except Exception as e:
-            logger.error(f"Error creating order from webhook: {str(e)}", exc_info=True)
-            return HttpResponse(content="Webhook received but error occurred.", status=200)
+            logger.error(
+                f"Error creating order from webhook: {str(e)}",
+                exc_info=True
+            )
+            return HttpResponse(
+                content="Webhook received but error occurred.",
+                status=200
+            )

@@ -37,7 +37,12 @@ urlpatterns = [
     path('cart/', include('cart.urls')),
     path('accounts/', include('allauth.urls')),
     path('stripe/webhook/', webhook, name='stripe_webhook'),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path(
+        'sitemap.xml',
+        sitemap,
+        {'sitemaps': sitemaps},
+        name='django.contrib.sitemaps.views.sitemap'
+    ),
 ]
 
 

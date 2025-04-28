@@ -34,7 +34,8 @@ def webhook(request):
 
     # Map webhook events to handler functions
     event_map = {
-        'checkout.session.completed': handler.handle_checkout_session_completed,
+        'checkout.session.completed':
+        handler.handle_checkout_session_completed,
     }
 
     # Get the event type from Stripe
