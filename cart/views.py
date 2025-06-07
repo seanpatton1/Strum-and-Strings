@@ -26,6 +26,24 @@ def add_to_cart(request, product_id):
     return redirect(request.META.get('HTTP_REFERER', 'products:products_list'))
 
 
+@require_POST
+@login_required
+def update_cart_item(request, item_id):
+    cart_item = get_object_or_404(CartItem, id=item_id, user=request.user)
+
+    try:
+        quantity = int(request.POST.get('quantity'))
+        if quantity > 0:
+            cart_item.quantity = quantity
+            cart_item.save()
+        else:
+            cart_item.delete()
+    except (ValueError, TypeError):
+        pass
+
+    return redirect('cart:view_cart')
+
+
 @login_required
 def view_cart(request):
     cart_items = CartItem.objects.filter(user=request.user)
@@ -51,6 +69,13 @@ def remove_from_cart(request, item_id):
     else:
         item.delete()
 
+    return redirect('cart:view_cart')
+
+
+@login_required
+def delete_cart_item(request, item_id):
+    item = get_object_or_404(CartItem, id=item_id, user=request.user)
+    item.delete()
     return redirect('cart:view_cart')
 
 
