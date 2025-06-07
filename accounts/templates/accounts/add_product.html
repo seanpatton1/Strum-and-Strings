@@ -3,13 +3,44 @@
 
 {% block extra_css %}
   {{ block.super }}
-  <link rel="stylesheet" href="{% static 'accounts/css/profile.css' %}">
+  <link rel="stylesheet" href="{% static 'accounts/css/products.css' %}">
 {% endblock %}
 
 {% block title %}Add New Product – Strum & Strings{% endblock %}
-
-{% block main_class %}container py-5{% endblock %}
+{% block main_class %}container py-5 mt-5{% endblock %}
 
 {% block content %}
-  <h2 class="text-center mb-4">Add New Product</h2>
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card shadow-sm border-0 p-4">
+      <div class="card-body">
+        <h2 class="text-center section-heading mb-4">Add New Product</h2>
+
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+
+          {% for field in form %}
+            <div class="mb-3">
+              <label for="{{ field.id_for_label }}" class="form-label custom-label fw-bold">
+                {{ field.label }}:
+              </label>
+              {{ field }}
+              {% if field.help_text %}
+                <div class="form-text text-muted small">{{ field.help_text }}</div>
+              {% endif %}
+              {% for error in field.errors %}
+                <div class="text-danger small">{{ error }}</div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+
+          <button type="submit" class="btn btn-primary custom-submit w-100">
+            Add Product
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

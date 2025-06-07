@@ -4,8 +4,19 @@ from cloudinary.models import CloudinaryField
 from categories.models import Category
 
 
+class Brand(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    class Meta:
+        ordering = ['name']
+
+    def __str__(self):
+        return self.name
+
+
 class Product(models.Model):
     name = models.CharField(max_length=200)
+
     brand = models.CharField(
         max_length=100,
         help_text="e.g. Gibson, Martin, Yamaha, Fender, etc.",
@@ -27,6 +38,7 @@ class Product(models.Model):
         help_text="Upload product image to Cloudinary."
     )
     short_description = models.TextField(blank=True)
+
     price = models.DecimalField(
         max_digits=8,
         decimal_places=2,
@@ -39,10 +51,6 @@ class Product(models.Model):
 
     @property
     def image_url(self):
-        """
-        Returns the uploaded image URL, or a placeholder if none exists.
-        """
         if self.image and hasattr(self.image, 'url'):
             return self.image.url
-        # Adjust the path here if you placed your placeholder elsewhere
         return static('images/placeholder.jpg')

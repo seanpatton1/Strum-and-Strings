@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('orders', '0002_alter_order_product_alter_order_status'),
-        ('products', '0003_product_brand'),
+        ('products', '0001_initial'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 

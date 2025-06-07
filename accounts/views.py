@@ -5,6 +5,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from .models import UserProfile
 from .forms import ProfileForm, NewsletterSignupForm
 from orders.models import Order
+from products.forms import ProductForm
 
 
 @staff_member_required
@@ -14,7 +15,16 @@ def admin_dashboard(request):
 
 @staff_member_required
 def add_product(request):
-    return render(request, 'accounts/add_product.html')
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product added successfully.')
+            return redirect('accounts:add_product')
+    else:
+        form = ProductForm()
+
+    return render(request, 'accounts/add_product.html', {'form': form})
 
 
 @staff_member_required
