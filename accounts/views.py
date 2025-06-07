@@ -12,6 +12,21 @@ def admin_dashboard(request):
     return render(request, 'accounts/admin_dashboard.html')
 
 
+@staff_member_required
+def add_product(request):
+    return render(request, 'accounts/add_product.html')
+
+
+@staff_member_required
+def order_list(request):
+    return render(request, 'accounts/order_list.html')
+
+
+@staff_member_required
+def product_catalog(request):
+    return render(request, 'accounts/product_catalog.html')
+
+
 @login_required
 def profile(request):
     user_profile, created = UserProfile.objects.get_or_create(

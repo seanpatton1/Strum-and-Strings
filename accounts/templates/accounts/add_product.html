@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'accounts/css/profile.css' %}">
+{% endblock %}
+
+{% block title %}Add New Product – Strum & Strings{% endblock %}
+
+{% block main_class %}container py-5{% endblock %}
+
+{% block content %}
+  <h2 class="text-center mb-4">Add New Product</h2>
+{% endblock %}
