@@ -1,9 +1,15 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib.admin.views.decorators import staff_member_required
 from .models import UserProfile
 from .forms import ProfileForm, NewsletterSignupForm
 from orders.models import Order
+
+
+@staff_member_required
+def admin_dashboard(request):
+    return render(request, 'accounts/admin_dashboard.html')
 
 
 @login_required

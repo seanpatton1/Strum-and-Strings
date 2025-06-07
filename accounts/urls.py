@@ -10,4 +10,5 @@ urlpatterns = [
         views.newsletter_signup,
         name='newsletter_signup'
     ),
+    path('admin-dashboard/', views.admin_dashboard, name='admin_dashboard'),
 ]
