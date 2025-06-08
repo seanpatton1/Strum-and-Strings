@@ -1,6 +1,56 @@
 {% extends 'base.html' %}
-{% block title %}Order List – Strum & Strings{% endblock %}
-{% block main_class %}container py-5{% endblock %}
+{% load static %}
+
+{% block extra_css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'accounts/css/order_list.css' %}">
+{% endblock %}
+
+{% block title %}Admin Order Details – Strum & Strings{% endblock %}
+{% block main_class %}container py-5 mt-5{% endblock %}
+
 {% block content %}
-  <h2 class="text-center mb-4">Order List</h2>
+<div class="text-center mb-5">
+  <h1 class="display-5 fw-bold">All Orders</h1>
+  <p class="text-muted">Review recent orders placed by users.</p>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-hover align-middle">
+    <thead class="table-dark text-center">
+      <tr>
+        <th scope="col">Order ID</th>
+        <th scope="col">User</th>
+        <th scope="col">Products (Qty)</th>
+        <th scope="col">Status</th>
+        <th scope="col">Date</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      {% for order in orders %}
+      <tr>
+        <td>{{ order.id }}</td>
+        <td>{{ order.user.username }}</td>
+        <td>
+          {% for item in order.items.all %}
+            <div>{{ item.product.name }} <strong>(x{{ item.quantity }})</strong></div>
+          {% endfor %}
+        </td>
+        <td class="text-capitalize">{{ order.status }}</td>
+        <td>{{ order.created_at|date:"F j, Y" }}</td>
+        <td>
+          <a href="{% url 'accounts:admin_order_detail' order.id %}" class="btn btn-outline-primary btn-sm">
+            View Details
+          </a>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="6">No orders found.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 {% endblock %}

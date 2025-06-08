@@ -1,0 +1,92 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block extra_css %} 
+{{ block.super }}
+<link
+  rel="stylesheet"
+  href="{% static 'accounts/css/admin_order_detail.css' %}"/>
+{% endblock %} 
+
+{% block title %}Admin Order Details – Strum & Strings{% endblock %} 
+
+{% block main_class %}container py-5 mt-5{% endblock %} 
+
+{% block content %}
+<section class="admin-order-detail py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bold">Order #{{ order.pk }}</h1>
+      <p class="text-muted">
+        Placed by <strong>{{ order.user.username }}</strong> on {{
+        order.created_at|date:"F j, Y, g:i a" }}
+      </p>
+    </div>
+
+    <div class="card shadow-sm p-4 mb-4">
+      <h4 class="mb-3">Customer Information</h4>
+      <p><strong>Name:</strong> {{ order.full_name }}</p>
+      <p><strong>Email:</strong> {{ order.email }}</p>
+      <p><strong>Phone:</strong> {{ order.phone }}</p>
+      <p>
+        <strong>Address:</strong><br />
+        {{ order.street_address1 }}<br />
+        {% if order.street_address2 %}{{ order.street_address2 }}<br />{% endif%}
+        {{ order.town_or_city }}, {{ order.postal_code }}<br />
+        {{ order.country }}
+      </p>
+    </div>
+
+    <div class="card shadow-sm p-4 mb-4">
+      <h4 class="mb-3">Order Items</h4>
+      <ul class="list-group list-group-flush">
+        {% for item in order.items.all %}
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          {{ item.quantity }} x {{ item.product.name }}
+          <span>£{{ item.total_price|floatformat:2 }}</span>
+        </li>
+        {% empty %}
+        <li class="list-group-item">No items in this order.</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="card shadow-sm p-4 mb-4">
+      <h4 class="mb-3">Payment Summary</h4>
+      <p>
+        <strong>Order Total:</strong> £{{ order.order_total|floatformat:2 }}
+      </p>
+      <p>
+        <strong>Delivery Fee:</strong> £{{ order.delivery_fee|floatformat:2 }}
+      </p>
+      <p>
+        <strong>Grand Total:</strong>
+        <strong>£{{ order.grand_total|floatformat:2 }}</strong>
+      </p>
+        <div class="text-center">
+        <form method="post" class="text-center mt-4">
+        {% csrf_token %}
+        <div class="form-group mb-3 mx-auto" style="max-width: 300px;">
+            {{ form.status.label_tag }}
+            {{ form.status }}
+        </div>
+        <button type="submit" class="btn btn-primary">Update Status</button>
+        </form>
+        </div>
+    </div>
+
+    <div class="text-center mt-4 d-flex justify-content-center gap-3 flex-wrap">
+      <a href="{% url 'accounts:admin_order_list' %}" class="btn btn-secondary"
+        >Back to Orders</a
+      >
+      <a
+        href="{% url 'accounts:admin_edit_order' order.id %}"
+        class="btn btn-warning"
+        >Edit Order</a
+      >
+    </div>
+  </div>
+</section>
+{% endblock %}
+

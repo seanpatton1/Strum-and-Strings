@@ -1,6 +1,7 @@
 from django import forms
 from .models import UserProfile
 from .models import NewsletterSubscriber
+from orders.models import Order
 
 
 class ProfileForm(forms.ModelForm):
@@ -63,4 +64,13 @@ class NewsletterSignupForm(forms.ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Enter your email address'
             }),
+        }
+
+
+class OrderStatusForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ['status']
+        widgets = {
+            'status': forms.Select(attrs={'class': 'form-control'})
         }

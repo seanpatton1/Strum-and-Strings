@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'accounts/css/admin_order_detail.css' %}">
+{% endblock %}
+
+{% block title %}Edit Order #{{ order.pk }} – Strum & Strings{% endblock %}
+{% block main_class %}container py-5 mt-5{% endblock %}
+
+{% block content %}
+<section class="admin-edit-order py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bold">Edit Order #{{ order.pk }}</h1>
+      <p class="text-muted">
+       Placed by <strong>{{ order.user.username }}</strong> on <strong>{{ order.created_at|date:"F j, Y, g:i a" }}</strong>
+      </p>
+
+    </div>
+
+    <div class="card shadow-sm p-4 mb-4">
+        <form method="post" class="text-center mt-3">
+        {% csrf_token %}
+        <div class="form-group mb-3">
+            <label for="{{ form.status.id_for_label }}"><strong>Status:</strong></label><br>
+            {{ form.status }}
+        </div>
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary">Update Status</button>
+        </div>
+        </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

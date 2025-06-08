@@ -1,9 +1,9 @@
 from django.contrib import messages
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
 from .models import UserProfile
-from .forms import ProfileForm, NewsletterSignupForm
+from .forms import ProfileForm, NewsletterSignupForm, OrderStatusForm
 from orders.models import Order
 from products.forms import ProductForm
 
@@ -11,6 +11,24 @@ from products.forms import ProductForm
 @staff_member_required
 def admin_dashboard(request):
     return render(request, 'accounts/admin_dashboard.html')
+
+
+@staff_member_required
+def admin_edit_order(request, order_id):
+    order = get_object_or_404(Order, pk=order_id)
+
+    if request.method == 'POST':
+        form = OrderStatusForm(request.POST, instance=order)
+        if form.is_valid():
+            form.save()
+            return redirect('accounts:admin_order_detail', order_id=order.id)
+    else:
+        form = OrderStatusForm(instance=order)
+
+    return render(request, 'accounts/admin_edit_order.html', {
+        'form': form,
+        'order': order,
+    })
 
 
 @staff_member_required
@@ -29,12 +47,30 @@ def add_product(request):
 
 @staff_member_required
 def order_list(request):
-    return render(request, 'accounts/order_list.html')
+    orders = Order.objects.select_related('user').order_by('-created_at')
+    return render(request, 'accounts/order_list.html', {
+        'orders': orders
+    })
 
 
 @staff_member_required
 def product_catalog(request):
     return render(request, 'accounts/product_catalog.html')
+
+
+@staff_member_required
+def admin_order_detail(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+    form = OrderStatusForm(request.POST or None, instance=order)
+
+    if request.method == 'POST' and form.is_valid():
+        form.save()
+        return redirect('accounts:admin_order_detail', order_id=order.id)
+
+    return render(request, 'accounts/admin_order_detail.html', {
+        'order': order,
+        'form': form
+    })
 
 
 @login_required
@@ -75,3 +111,21 @@ def newsletter_signup(request):
     else:
         form = NewsletterSignupForm()
     return render(request, 'accounts/newsletter_signup.html', {'form': form})
+
+
+@staff_member_required
+def admin_edit_order(request, order_id):
+    order = get_object_or_404(Order, pk=order_id)
+
+    if request.method == 'POST':
+        form = OrderStatusForm(request.POST, instance=order)
+        if form.is_valid():
+            form.save()
+            return redirect('accounts:admin_order_detail', order_id=order.id)
+    else:
+        form = OrderStatusForm(instance=order)
+
+    return render(request, 'accounts/admin_edit_order.html', {
+        'order': order,
+        'form': form
+    })
