@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="{% static 'accounts/css/profile.css' %}">
 {% endblock %}
 
+{% block postloadjs %}
+  {{ block.super }}
+  <script src="{% static 'accounts/js/newsletter_signup.js' %}"></script>
+{% endblock %}
+
 {% block title %}Newsletter Signup – Strum & Strings{% endblock %}
 {% block main_class %}container py-5 mt-5{% endblock %}
 
@@ -23,7 +28,7 @@
             <div class="card-body">
               <h4 class="card-title mb-4 text-center section-heading">Subscribe to Our Newsletter</h4>
 
-              <form action="https://outlook.us6.list-manage.com/subscribe/post?u=5d44ed433e8886252fa6407f4&amp;id=8f78eb2ec5&amp;f_id=00d1c2e1f0" method="post" target="_blank" novalidate>
+              <form id="newsletter-form" action="https://outlook.us6.list-manage.com/subscribe/post?u=5d44ed433e8886252fa6407f4&amp;id=8f78eb2ec5&amp;f_id=00d1c2e1f0" method="post" target="_blank" novalidate>
       
                 <div class="form-floating mb-3">
                   <input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Email address" required>

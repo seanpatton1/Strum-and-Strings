@@ -17,5 +17,6 @@ urlpatterns = [
     path('orders/', views.order_list, name='order_list'),
     path('orders/<int:order_id>/', views.admin_order_detail, name='admin_order_detail'),
     path('admin-dashboard/orders/', views.order_list, name='admin_order_list'),
-    path('admin-dashboard/orders/<int:order_id>/edit/', views.admin_edit_order, name='admin_edit_order')
+    path('admin-dashboard/orders/<int:order_id>/edit/', views.admin_edit_order, name='admin_edit_order'),
+    path("newsletter/save-email/", views.save_newsletter_email, name="save_newsletter_email")
 ]

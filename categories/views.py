@@ -3,7 +3,7 @@ from decimal import Decimal
 from django.shortcuts import render, get_object_or_404
 
 from .models import Category
-from products.models import Product
+from products.models import Product, Brand
 
 
 def categories_list(request):
@@ -60,12 +60,8 @@ def category_detail(request, pk):
         .distinct()
         .order_by('model')
     )
-    brands = (
-        all_products
-        .values_list('brand', flat=True)
-        .distinct()
-        .order_by('brand')
-    )
+
+    brands = Brand.objects.filter(products__in=all_products).distinct().order_by("name")
 
     context = {
         'category':     category,

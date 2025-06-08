@@ -1,8 +1,10 @@
 from django.contrib import messages
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
-from .models import UserProfile
+from .models import UserProfile, NewsletterSubscriber
 from .forms import ProfileForm, NewsletterSignupForm, OrderStatusForm
 from orders.models import Order
 from products.forms import ProductForm
@@ -113,19 +115,23 @@ def newsletter_signup(request):
     return render(request, 'accounts/newsletter_signup.html', {'form': form})
 
 
-@staff_member_required
-def admin_edit_order(request, order_id):
-    order = get_object_or_404(Order, pk=order_id)
+@csrf_exempt
+def save_newsletter_email(request):
+    if request.method == "POST":
+        email = request.POST.get("email")
+        user = request.user if request.user.is_authenticated else None
 
-    if request.method == 'POST':
-        form = OrderStatusForm(request.POST, instance=order)
-        if form.is_valid():
-            form.save()
-            return redirect('accounts:admin_order_detail', order_id=order.id)
-    else:
-        form = OrderStatusForm(instance=order)
+        if email:
+            # Either get existing or create new entry
+            subscriber, created = NewsletterSubscriber.objects.get_or_create(
+                email=email,
+                defaults={'user': user}
+            )
+            # If it exists but user was not saved before, update it
+            if not subscriber.user and user:
+                subscriber.user = user
+                subscriber.save()
 
-    return render(request, 'accounts/admin_edit_order.html', {
-        'order': order,
-        'form': form
-    })
+            return JsonResponse({"status": "success"})
+
+    return JsonResponse({"status": "error"}, status=400)

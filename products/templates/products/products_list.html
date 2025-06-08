@@ -15,8 +15,15 @@
   <!-- Breadcrumb Navigation -->
   <nav aria-label="breadcrumb" id="breadcrumb-main">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Categories</li>
+      <li class="breadcrumb-item">
+        <a href="{% url 'home' %}">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="{% url 'categories:categories_list' %}">Categories</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">
+        All Products
+      </li>
     </ol>
   </nav>
 
