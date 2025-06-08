@@ -124,7 +124,7 @@ if 'DATABASE_URL' in os.environ:
     EMAIL_USE_TLS = True
     EMAIL_HOST_USER = 'apikey'
     EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
-    DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+    DEFAULT_FROM_EMAIL = 'strumandstrings@outlook.com'
 else:
     # Development settings
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -222,4 +222,5 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
 STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY")
+STRIPE_LIVE_MODE = False
 STRIPE_WH_SECRET = os.getenv("STRIPE_WH_SECRET")
