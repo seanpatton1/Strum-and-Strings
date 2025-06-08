@@ -34,8 +34,17 @@
 
                 <li class="list-group-item border-top mt-2 pt-3"><strong>Total:</strong> £{{ order.grand_total|floatformat:2 }}</li>
             </ul>
-            <div class="d-flex justify-content-center">
-                <a href="{% url 'accounts:profile' %}" class="btn btn-secondary text-center">Back to Profile</a>
+            <div class="text-center mt-4">
+                {% if order.status != 'cancelled' %}
+                    <form method="POST" action="{% url 'orders:cancel_order' order.id %}" class="d-inline-block">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger mb-3">Cancel Order</button>
+                    </form>
+                {% else %}
+                    <p class="text-danger fw-bold mb-3">Order Cancelled</p>
+                {% endif %}
+                
+                <a href="{% url 'accounts:profile' %}" class="btn btn-warning fw-bold">Back to Profile</a>
             </div>
         </div>
     </div>

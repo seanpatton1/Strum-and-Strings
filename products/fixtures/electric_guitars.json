@@ -4,7 +4,7 @@
       "pk": 51,
       "fields": {
         "name": "Fender Stratocaster",
-        "brand": "Fender",
+        "brand": 4,
         "category": 2,
         "model": "Stratocaster",
         "short_description": "Iconic double‑cutaway with three single‑coil pickups and versatile tone.",
@@ -17,7 +17,7 @@
       "pk": 52,
       "fields": {
         "name": "Fender Telecaster",
-        "brand": "Fender",
+        "brand": 4,
         "category": 2,
         "model": "Telecaster",
         "short_description": "Classic slab‑body with two single‑coil pickups and punchy twang.",
@@ -30,7 +30,7 @@
       "pk": 53,
       "fields": {
         "name": "Fender Jazzmaster",
-        "brand": "Fender",
+        "brand": 4,
         "category": 2,
         "model": "Jazzmaster",
         "short_description": "Offset body with wide single‑coil pickups, ideal for surf and alternative tones.",
@@ -43,7 +43,7 @@
       "pk": 54,
       "fields": {
         "name": "Fender Jaguar",
-        "brand": "Fender",
+        "brand": 4,
         "category": 2,
         "model": "Jaguar",
         "short_description": "Short‑scale offset with distinctive switching and bright tone.",
@@ -56,7 +56,7 @@
       "pk": 55,
       "fields": {
         "name": "Fender Mustang",
-        "brand": "Fender",
+        "brand": 4,
         "category": 2,
         "model": "Mustang",
         "short_description": "Compact offset with dynamic single‑coil pickups, great for indie styles.",
@@ -69,7 +69,7 @@
       "pk": 56,
       "fields": {
         "name": "Gibson Les Paul Standard",
-        "brand": "Gibson",
+        "brand": 5,
         "category": 2,
         "model": "Les Paul Standard",
         "short_description": "Solid‑body with dual humbuckers and legendary sustain.",
@@ -82,7 +82,7 @@
       "pk": 57,
       "fields": {
         "name": "Gibson SG Standard",
-        "brand": "Gibson",
+        "brand": 5,
         "category": 2,
         "model": "SG Standard",
         "short_description": "Lightweight double‑cutaway with powerful humbuckers.",
@@ -95,7 +95,7 @@
       "pk": 58,
       "fields": {
         "name": "Gibson ES‑335",
-        "brand": "Gibson",
+        "brand": 5,
         "category": 2,
         "model": "ES-335",
         "short_description": "Semi‑hollow body with warm, resonant tone and humbucking pickups.",
@@ -108,7 +108,7 @@
       "pk": 59,
       "fields": {
         "name": "Gibson Flying V",
-        "brand": "Gibson",
+        "brand": 5,
         "category": 2,
         "model": "Flying V",
         "short_description": "Angular body with powerful humbucking sound and stage presence.",
@@ -121,7 +121,7 @@
       "pk": 60,
       "fields": {
         "name": "Gibson Explorer",
-        "brand": "Gibson",
+        "brand": 5,
         "category": 2,
         "model": "Explorer",
         "short_description": "Futuristic shape with bright humbucker tone.",
@@ -134,7 +134,7 @@
       "pk": 61,
       "fields": {
         "name": "Ibanez RG550",
-        "brand": "Ibanez",
+        "brand": 10,
         "category": 2,
         "model": "RG550",
         "short_description": "Super-fast neck and hot humbuckers for shredding.",
@@ -147,7 +147,7 @@
       "pk": 62,
       "fields": {
         "name": "Ibanez S570",
-        "brand": "Ibanez",
+        "brand": 10,
         "category": 2,
         "model": "S570",
         "short_description": "Slim mahogany body with versatile HSH pickup configuration.",
@@ -160,7 +160,7 @@
       "pk": 63,
       "fields": {
         "name": "Ibanez AR420",
-        "brand": "Ibanez",
+        "brand": 10,
         "category": 2,
         "model": "AR420",
         "short_description": "Classic body shape with warm dual humbuckers.",
@@ -173,7 +173,7 @@
       "pk": 64,
       "fields": {
         "name": "Ibanez JEM77",
-        "brand": "Ibanez",
+        "brand": 10,
         "category": 2,
         "model": "JEM77",
         "short_description": "Steve Vai signature with monkey grip and DiMarzio pickups.",
@@ -186,7 +186,7 @@
       "pk": 65,
       "fields": {
         "name": "Ibanez SA460",
-        "brand": "Ibanez",
+        "brand": 10,
         "category": 2,
         "model": "SA460",
         "short_description": "Body‑through design with powerful humbuckers and through‑body bridge.",
@@ -199,7 +199,7 @@
       "pk": 66,
       "fields": {
         "name": "PRS Custom 24",
-        "brand": "PRS",
+        "brand": 11,
         "category": 2,
         "model": "Custom 24",
         "short_description": "Versatile dual humbuckers with 24‑fret and PRS tremolo.",
@@ -212,7 +212,7 @@
       "pk": 67,
       "fields": {
         "name": "PRS SE Standard 24",
-        "brand": "PRS",
+        "brand": 11,
         "category": 2,
         "model": "SE Standard 24",
         "short_description": "Affordable 24‑fret SE model with PRS pickups.",
@@ -225,7 +225,7 @@
       "pk": 68,
       "fields": {
         "name": "PRS McCarty 594",
-        "brand": "PRS",
+        "brand": 11,
         "category": 2,
         "model": "McCarty 594",
         "short_description": "Vintage‑inspired 5‑piece maple neck with humbuckers.",
@@ -238,7 +238,7 @@
       "pk": 69,
       "fields": {
         "name": "PRS Silver Sky",
-        "brand": "PRS",
+        "brand": 11,
         "category": 2,
         "model": "Silver Sky",
         "short_description": "John Mayer signature with bright single‑coil sound.",
@@ -251,7 +251,7 @@
       "pk": 70,
       "fields": {
         "name": "PRS SE Hollowbody II",
-        "brand": "PRS",
+        "brand": 11,
         "category": 2,
         "model": "SE Hollowbody II",
         "short_description": "Semi‑hollow body with punchy PRS SE humbuckers.",
@@ -264,7 +264,7 @@
       "pk": 71,
       "fields": {
         "name": "Epiphone Les Paul Standard",
-        "brand": "Epiphone",
+        "brand": 6,
         "category": 2,
         "model": "Les Paul Standard",
         "short_description": "Budget‑friendly Les Paul with Alnico humbuckers.",
@@ -277,7 +277,7 @@
       "pk": 72,
       "fields": {
         "name": "Epiphone SG Special",
-        "brand": "Epiphone",
+        "brand": 6,
         "category": 2,
         "model": "SG Special",
         "short_description": " affordable SG with open‑coil humbuckers.",
@@ -290,7 +290,7 @@
       "pk": 73,
       "fields": {
         "name": "Epiphone Casino",
-        "brand": "Epiphone",
+        "brand": 6,
         "category": 2,
         "model": "Casino",
         "short_description": "Fully hollow with P‑90 pickups and vintage vibe.",
@@ -303,7 +303,7 @@
       "pk": 74,
       "fields": {
         "name": "Epiphone Dot",
-        "brand": "Epiphone",
+        "brand": 6,
         "category": 2,
         "model": "Dot",
         "short_description": "Budget ES‑335 style semi‑hollow with Alnico P‑90s.",
@@ -316,7 +316,7 @@
       "pk": 75,
       "fields": {
         "name": "Epiphone Explorer",
-        "brand": "Epiphone",
+        "brand": 6,
         "category": 2,
         "model": "Explorer",
         "short_description": "Replica Explorer with humbuckers and aggressive styling.",
@@ -329,7 +329,7 @@
       "pk": 76,
       "fields": {
         "name": "Yamaha Pacifica 112V",
-        "brand": "Yamaha",
+        "brand": 3,
         "category": 2,
         "model": "Pacifica 112V",
         "short_description": "Versatile HSS setup with alder body—excellent value.",
@@ -342,7 +342,7 @@
       "pk": 77,
       "fields": {
         "name": "Yamaha Revstar RS502T",
-        "brand": "Yamaha",
+        "brand": 3,
         "category": 2,
         "model": "Revstar RS502T",
         "short_description": "Retro styling with coil‑split humbuckers and T‑Series dog‑ear pickups.",
@@ -355,7 +355,7 @@
       "pk": 78,
       "fields": {
         "name": "Yamaha SG1820",
-        "brand": "Yamaha",
+        "brand": 3,
         "category": 2,
         "model": "SG1820",
         "short_description": "Mahogany body with Alnico humbuckers and bound neck.",
@@ -368,7 +368,7 @@
       "pk": 79,
       "fields": {
         "name": "Yamaha Pacifica 212VQM",
-        "brand": "Yamaha",
+        "brand": 3,
         "category": 2,
         "model": "Pacifica 212VQM",
         "short_description": "Quilted maple top with HSS pickups and tremolo.",
@@ -381,7 +381,7 @@
       "pk": 80,
       "fields": {
         "name": "Yamaha Pacifica 611HFM",
-        "brand": "Yamaha",
+        "brand": 3,
         "category": 2,
         "model": "Pacifica 611HFM",
         "short_description": "Premium Pacifica with dual humbuckers and flamed maple top.",
@@ -394,7 +394,7 @@
       "pk": 81,
       "fields": {
         "name": "ESP LTD EC‑1000",
-        "brand": "ESP",
+        "brand": 12,
         "category": 2,
         "model": "EC-1000",
         "short_description": "Mahogany body with EMG active humbuckers for metal tones.",
@@ -407,7 +407,7 @@
       "pk": 82,
       "fields": {
         "name": "ESP LTD M‑1000",
-        "brand": "ESP",
+        "brand": 12,
         "category": 2,
         "model": "M-1000",
         "short_description": "Modern flying V style with active pickups.",
@@ -420,7 +420,7 @@
       "pk": 83,
       "fields": {
         "name": "ESP LTD B‑1000",
-        "brand": "ESP",
+        "brand": 12,
         "category": 2,
         "model": "B-1000",
         "short_description": "Bass model but often used for drop‑tuned guitars.",
@@ -433,7 +433,7 @@
       "pk": 84,
       "fields": {
         "name": "ESP LTD EC‑50",
-        "brand": "ESP",
+        "brand": 12,
         "category": 2,
         "model": "EC-50",
         "short_description": "Entry‑level Les Paul style with ESP pickups.",
@@ -446,7 +446,7 @@
       "pk": 85,
       "fields": {
         "name": "ESP LTD Viper‑50",
-        "brand": "ESP",
+        "brand": 12,
         "category": 2,
         "model": "Viper-50",
         "short_description": "Double‑cut with ESP designed humbuckers.",
@@ -459,7 +459,7 @@
       "pk": 86,
       "fields": {
         "name": "Jackson Soloist SL2",
-        "brand": "Jackson",
+        "brand": 13,
         "category": 2,
         "model": "Soloist SL2",
         "short_description": "Neck‑through superstrat with high‐output pickups.",
@@ -472,7 +472,7 @@
       "pk": 87,
       "fields": {
         "name": "Jackson Dinky JS32",
-        "brand": "Jackson",
+        "brand": 13,
         "category": 2,
         "model": "Dinky JS32",
         "short_description": "Affordable Dinky with Floyd Rose and Jackson humbuckers.",
@@ -485,7 +485,7 @@
       "pk": 88,
       "fields": {
         "name": "Jackson Kelly Pro",
-        "brand": "Jackson",
+        "brand": 13,
         "category": 2,
         "model": "Kelly Pro",
         "short_description": "Distinctive Kelly body with active pickups.",
@@ -498,7 +498,7 @@
       "pk": 89,
       "fields": {
         "name": "Jackson King V JS32",
-        "brand": "Jackson",
+        "brand": 13,
         "category": 2,
         "model": "King V JS32",
         "short_description": "Classic V shape with Jackson single‑coil and humbucker.",
@@ -511,7 +511,7 @@
       "pk": 90,
       "fields": {
         "name": "Jackson Adrian Smith SDX",
-        "brand": "Jackson",
+        "brand": 13,
         "category": 2,
         "model": "Adrian Smith SDX",
         "short_description": "Signature model with dual humbuckers and fast neck.",
@@ -524,7 +524,7 @@
       "pk": 91,
       "fields": {
         "name": "Gretsch G6120",
-        "brand": "Gretsch",
+        "brand": 14,
         "category": 2,
         "model": "G6120",
         "short_description": "Hollow‑body with Filter’Tron pickups and Bigsby vibrato.",
@@ -537,7 +537,7 @@
       "pk": 92,
       "fields": {
         "name": "Gretsch G5420T",
-        "brand": "Gretsch",
+        "brand": 14,
         "category": 2,
         "model": "G5420T",
         "short_description": "Electromatic hollow with Broad’Tron pickups and Bigsby.",
@@ -550,7 +550,7 @@
       "pk": 93,
       "fields": {
         "name": "Gretsch G5230T",
-        "brand": "Gretsch",
+        "brand": 14,
         "category": 2,
         "model": "G5230T",
         "short_description": "Electromatic Jet with Filter’Tron and Bigsby tailpiece.",
@@ -563,7 +563,7 @@
       "pk": 94,
       "fields": {
         "name": "Gretsch G2655",
-        "brand": "Gretsch",
+        "brand": 14,
         "category": 2,
         "model": "G2655",
         "short_description": "Streamliner Hollow with Broad’Tron pickups.",
@@ -576,7 +576,7 @@
       "pk": 95,
       "fields": {
         "name": "Gretsch G5120",
-        "brand": "Gretsch",
+        "brand": 14,
         "category": 2,
         "model": "G5120",
         "short_description": "Electromatic retro hollow with Broad’Tron and Bigsby.",
@@ -589,7 +589,7 @@
       "pk": 96,
       "fields": {
         "name": "Charvel Pro-Mod DK24",
-        "brand": "Charvel",
+        "brand": 15,
         "category": 2,
         "model": "Pro-Mod DK24",
         "short_description": "Modern double‑cut with hot humbuckers and sleek neck.",
@@ -602,7 +602,7 @@
       "pk": 97,
       "fields": {
         "name": "Charvel San Dimas Style 1",
-        "brand": "Charvel",
+        "brand": 15,
         "category": 2,
         "model": "San Dimas Style 1",
         "short_description": "Superstrat design with powerful humbuckers.",
@@ -615,7 +615,7 @@
       "pk": 98,
       "fields": {
         "name": "Charvel So-Cal Style 1",
-        "brand": "Charvel",
+        "brand": 15,
         "category": 2,
         "model": "So-Cal Style 1",
         "short_description": "Vintage‑inspired offset with modern pickups.",
@@ -628,7 +628,7 @@
       "pk": 99,
       "fields": {
         "name": "Charvel MJ Signature DK24",
-        "brand": "Charvel",
+        "brand": 15,
         "category": 2,
         "model": "MJ Signature DK24",
         "short_description": "Marty Friedman signature model with unique pickups.",
@@ -641,7 +641,7 @@
       "pk": 100,
       "fields": {
         "name": "Charvel Pro-Mod DK24 HH",
-        "brand": "Charvel",
+        "brand": 15,
         "category": 2,
         "model": "Pro-Mod DK24 HH",
         "short_description": "Dual‑humbucker Pro-Mod with modern appointments.",

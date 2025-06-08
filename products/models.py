@@ -17,10 +17,12 @@ class Brand(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=200)
 
-    brand = models.CharField(
-        max_length=100,
-        help_text="e.g. Gibson, Martin, Yamaha, Fender, etc.",
-        default="Unknown",
+    brand = models.ForeignKey(
+        'Brand',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='products'
     )
     category = models.ForeignKey(
         Category,

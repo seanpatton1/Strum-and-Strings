@@ -56,15 +56,15 @@
       <ul class="list-unstyled">
         <li>
           <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}{% if selected_category %}category={{ selected_category }}{% endif %}{% if price_filter %}&price={{ price_filter }}{% endif %}"
-             class="{% if not selected_brand %}fw-bold{% endif %}">
+            class="{% if not selected_brand %}fw-bold{% endif %}">
             All
           </a>
         </li>
         {% for b in brands %}
         <li>
-          <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}brand={{ b|urlencode }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if price_filter %}&price={{ price_filter }}{% endif %}"
-             class="{% if b == selected_brand %}fw-bold{% endif %}">
-            {{ b }}
+          <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}brand={{ b.id }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if price_filter %}&price={{ price_filter }}{% endif %}"
+            class="{% if b.id|stringformat:'s' == selected_brand %}fw-bold{% endif %}">
+            {{ b.name }}
           </a>
         </li>
         {% endfor %}

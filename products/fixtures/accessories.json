@@ -4,7 +4,7 @@
     "pk": 101,
     "fields": {
       "name": "Dunlop PVP102",
-      "brand": "Dunlop",
+      "brand": 16,
       "category": 3,
       "model": "Assorted Picks",
       "short_description": "A set of mixed‑gauge picks in nylon for versatile tone and feel.",
@@ -17,7 +17,7 @@
     "pk": 102,
     "fields": {
       "name": "Ernie Ball 4142 Red Rose Jacquard Strap",
-      "brand": "Ernie Ball",
+      "brand": 17,
       "category": 3,
       "model": "Ernie Ball 4142",
       "short_description": "Comfortable woven strap with adjustable length and leather ends.",
@@ -30,7 +30,7 @@
     "pk": 103,
     "fields": {
       "name": "Dunlop 83CB Trigger Capo Black",
-      "brand": "Dunlop",
+      "brand": 16,
       "category": 3,
       "model": "Dunlop 83CB",
       "short_description": "One‑handed capo for quick key changes on both acoustic and electric guitars.",
@@ -43,7 +43,7 @@
     "pk": 104,
     "fields": {
       "name": "D'Addario Planet Waves Classic Series Guitar Cable 10Ft",
-      "brand": "D'Addario",
+      "brand": 18,
       "category": 3,
       "model": "D'Addario Planet Waves",
       "short_description": "Durable, shielded cable for noise‑free connection between guitar and amp.",
@@ -55,8 +55,8 @@
     "model": "products.product",
     "pk": 105,
     "fields": {
-      "name": "D'Addario Planet Waves Micro clip-on tuner",
-      "brand": "Snark",
+      "name": "Planet Waves Micro clip-on tuner",
+      "brand": 27,
       "category": 3,
       "model": "Micro-Clip",
       "short_description": "Chromatic tuner with bright display, clips easily to your headstock.",
@@ -69,7 +69,7 @@
     "pk": 106,
     "fields": {
       "name": "Ordo S-1GTR Universal A Frame Guitar Stand",
-      "brand": "Ordo",
+      "brand": 19,
       "category": 3,
       "model": "Ordo-S-1GTR",
       "short_description": "Lightweight, collapsible A‑frame stand for secure instrument support.",
@@ -82,7 +82,7 @@
     "pk": 107,
     "fields": {
       "name": "Fender FE405 Electric Guitar Gig Bag",
-      "brand": "Fender",
+      "brand": 4,
       "category": 3,
       "model": "Fender FE405",
       "short_description": "Soft case with foam padding, exterior pocket.",
@@ -95,7 +95,7 @@
     "pk": 108,
     "fields": {
       "name": "Ordo GC-2GDN Deluxe Dreadnought Acoustic ABS Hard Case",
-      "brand": "Ordo",
+      "brand": 19,
       "category": 3,
       "model": "Ordo GC-2GDN",
       "short_description": "Rigid case with plush interior, metal latches, and handle for touring.",
@@ -108,7 +108,7 @@
     "pk": 109,
     "fields": {
       "name": "Light‑Gauge Acoustic Strings (set)",
-      "brand": "D'Addario",
+      "brand": 18,
       "category": 3,
       "model": "D'Addario EJ16",
       "short_description": "Phosphor bronze strings in light gauge for bright tone and easy playability.",
@@ -121,7 +121,7 @@
     "pk": 110,
     "fields": {
       "name": "String Winder & Cutter Combo",
-      "brand": "D'Addario",
+      "brand": 18,
       "category": 3,
       "model": "Pro-Winder",
       "short_description": "2‑in‑1 tool to speed up string changes and trim excess string.",
@@ -134,7 +134,7 @@
     "pk": 111,
     "fields": {
       "name": "BOSS DB30 Metronome",
-      "brand": "BOSS",
+      "brand": 20,
       "category": 3,
       "model": "Digital Metronome",
       "short_description": "Portable digital metronome with tempo, rhythm and tuning functions.",
@@ -147,7 +147,7 @@
     "pk": 112,
     "fields": {
       "name": "D'Addario Planet Waves Screeching Halt Soundhole Plug",
-      "brand": "D'Addario",
+      "brand": 18,
       "category": 3,
       "model": "Screeching Halt",
       "short_description": "Moisture‑control device to protect your guitar from dryness and cracking.",
@@ -160,7 +160,7 @@
     "pk": 113,
     "fields": {
       "name": "BOSS BCB-30X Pedalboard",
-      "brand": "BOSS",
+      "brand": 20,
       "category": 3,
       "model": "BCB-30X",
       "short_description": "Lightweight aluminum pedalboard with power supply mounting options.",
@@ -173,7 +173,7 @@
     "pk": 114,
     "fields": {
       "name": "BOSS SD-1 Super Overdrive",
-      "brand": "Boss",
+      "brand": 20,
       "category": 3,
       "model": "SD-1",
       "short_description": "Classic overdrive pedal for warm, driven tones and adjustable gain.",
@@ -186,7 +186,7 @@
     "pk": 115,
     "fields": {
       "name": "Taylor Care Kit for Satin Guitars",
-      "brand": "Taylor",
+      "brand": 2,
       "category": 3,
       "model": "Taylor Care Kit",
       "short_description": "Complete kit with polish, cloth, fretboard oil and brush.",
@@ -199,7 +199,7 @@
     "pk": 116,
     "fields": {
       "name": "BOSS DS-1",
-      "brand": "BOSS",
+      "brand": 20,
       "category": 3,
       "model": "DS-1",
       "short_description": "Signature distortion stompbox with bright LED and tone control.",
@@ -212,7 +212,7 @@
     "pk": 117,
     "fields": {
       "name": "BOSS CH-1 Super Chorus",
-      "brand": "BOSS",
+      "brand": 20,
       "category": 3,
       "model": "CH-1",
       "short_description": "Versatile chorus effect with TonePrint presets and analog dry‑through.",
@@ -225,7 +225,7 @@
     "pk": 118,
     "fields": {
       "name": "BOSS DD-3T Digital Delay",
-      "brand": "Boss",
+      "brand": 20,
       "category": 3,
       "model": "DD-3T",
       "short_description": "Multi‑mode digital delay with loop function and tap tempo.",
@@ -238,7 +238,7 @@
     "pk": 119,
     "fields": {
       "name": "Fender Hammertone Reverb",
-      "brand": "Fender",
+      "brand": 4,
       "category": 3,
       "model": "Fender Hammertone",
       "short_description": "Plate, spring, and hall reverb modes in a compact enclosure.",
@@ -251,7 +251,7 @@
     "pk": 120,
     "fields": {
       "name": "Electro Harmonix Lizard Queen Octave Fuzz",
-      "brand": "Electro-Harmonix",
+      "brand": 21,
       "category": 3,
       "model": "Lizard Queen",
       "short_description": "Iconic fuzzy distortion with sustain and tone controls.",
@@ -264,7 +264,7 @@
     "pk": 121,
     "fields": {
       "name": "Fender Champion II 50 Combo Solid State Amp",
-      "brand": "Fender",
+      "brand": 4,
       "category": 3,
       "model": "Fender Champion II",
       "short_description": "25‑watt modelling amp with 20 amp models and onboard effects.",
@@ -277,7 +277,7 @@
     "pk": 122,
     "fields": {
       "name": "Laney Lionheart L5 Studio 5 Watt Valve Amp Head Made In The UK",
-      "brand": "Laney",
+      "brand": 22,
       "category": 3,
       "model": "Katana-50 MkII",
       "short_description": "50‑watt amp head with enhanced BOSS tone studio and power control.",
@@ -290,7 +290,7 @@
     "pk": 123,
     "fields": {
       "name": "Marshall DSL20CR 20 Watt Combo",
-      "brand": "Marshall",
+      "brand": 23,
       "category": 3,
       "model": "DSL20CR",
       "short_description": "20‑watt tube combo with two channels and reverb.",
@@ -303,7 +303,7 @@
     "pk": 124,
     "fields": {
       "name": "Orange Crush 20RT Combo Practice Amp",
-      "brand": "Orange",
+      "brand": 24,
       "category": 3,
       "model": "Crush 20RT",
       "short_description": "20‑watt solid‑state amp with cab‑sim and tuner.",
@@ -316,7 +316,7 @@
     "pk": 125,
     "fields": {
       "name": "Synergy Amps Engl Powerball 2 Channel Preamp Modul",
-      "brand": "Synergy Amps Engl",
+      "brand": 25,
       "category": 3,
       "model": "Powerball-2",
       "short_description": "50‑watt stereo power amp module for pedalboard setups.",

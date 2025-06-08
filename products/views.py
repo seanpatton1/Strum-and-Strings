@@ -1,6 +1,6 @@
 from decimal import Decimal
 from django.shortcuts import render, get_object_or_404
-from .models import Product
+from .models import Product, Brand
 from categories.models import Category
 from django.db.models import Q
 from random import sample
@@ -62,14 +62,9 @@ def products_list(request):
         if upper is not None:
             products = products.filter(price__lte=upper)
 
-    # gather sidebar choices
+    # Sidebar choices
     categories = Category.objects.all()
-    brands = (
-        Product.objects
-        .values_list('brand', flat=True)
-        .distinct()
-        .order_by('brand')
-    )
+    brands = Brand.objects.filter(products__in=products).distinct().order_by("name")
 
     return render(request, 'products/products_list.html', {
         'products':          products,
