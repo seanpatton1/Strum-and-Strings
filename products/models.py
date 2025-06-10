@@ -1,5 +1,6 @@
 from django.db import models
 from django.templatetags.static import static
+from django.contrib import admin
 from cloudinary.models import CloudinaryField
 from categories.models import Category
 
