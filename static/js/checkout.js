@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
   
       const formData = {
-        full_name: document.querySelector('#full_name').value,
+        first_name: document.querySelector('#first_name').value,
+        last_name: document.querySelector('#last_name').value,
         email: document.querySelector('#email').value,
         phone: document.querySelector('#phone').value,
         street_address1: document.querySelector('#street_address1').value,

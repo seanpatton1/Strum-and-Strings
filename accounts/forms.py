@@ -8,6 +8,7 @@ class ProfileForm(forms.ModelForm):
     first_name = forms.CharField(max_length=30, required=False)
     last_name = forms.CharField(max_length=30, required=False)
     email = forms.EmailField(required=True)
+    phone = forms.CharField(max_length=20, required=False)
     address = forms.CharField(max_length=255, required=False)
     city = forms.CharField(max_length=100, required=False)
     postcode = forms.CharField(max_length=20, required=False)
@@ -19,6 +20,7 @@ class ProfileForm(forms.ModelForm):
             'first_name',
             'last_name',
             'email',
+            'phone',
             'address',
             'city',
             'postcode',
@@ -32,6 +34,7 @@ class ProfileForm(forms.ModelForm):
             self.fields['first_name'].initial = self.instance.user.first_name
             self.fields['last_name'].initial = self.instance.user.last_name
             self.fields['email'].initial = self.instance.user.email
+            self.fields['phone'].initial = self.instance.phone
             self.fields['address'].initial = self.instance.address
             self.fields['city'].initial = self.instance.city
             self.fields['postcode'].initial = self.instance.postcode
@@ -44,6 +47,7 @@ class ProfileForm(forms.ModelForm):
         user.first_name = self.cleaned_data['first_name']
         user.last_name = self.cleaned_data['last_name']
         user.email = self.cleaned_data['email']
+        profile.phone = self.cleaned_data['phone']
         profile.address = self.cleaned_data['address']
         profile.city = self.cleaned_data['city']
         profile.postcode = self.cleaned_data['postcode']

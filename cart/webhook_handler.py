@@ -46,10 +46,13 @@ class StripeWH_Handler:
                 else Decimal('4.95')
             )
             grand_total = total + delivery_fee
+            # debugging print statement
+            print("Creating order for user:", user)
 
             order = Order.objects.create(
                 user=user,
-                full_name=metadata.get('full_name'),
+                first_name=metadata.get('first_name'),
+                last_name=metadata.get('last_name'),
                 email=metadata.get('email'),
                 phone=metadata.get('phone'),
                 street_address1=metadata.get('street_address1'),
@@ -84,6 +87,7 @@ class StripeWH_Handler:
                 f"Error creating order from webhook: {str(e)}",
                 exc_info=True
             )
+            print("WEBHOOK ORDER ERROR:", str(e))
             return HttpResponse(
                 content="Webhook received but error occurred.",
                 status=200

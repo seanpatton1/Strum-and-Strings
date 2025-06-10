@@ -3,10 +3,12 @@ from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.http import JsonResponse
 from products.models import Product
+from .forms import CheckoutForm
 from .models import CartItem
 from decimal import Decimal
 from django.contrib import messages
 from orders.models import Order
+from accounts.models import UserProfile
 from django.views.decorators.http import require_POST
 import stripe
 import json
@@ -97,21 +99,36 @@ def checkout(request):
 
     grand_total = total + delivery_fee
 
+    # Pre-populate profile data
+    initial_data = {}
+    try:
+        profile = request.user.userprofile
+        initial_data = {
+            'first_name': f"{request.user.first_name}",
+            'last_name': f"{request.user.last_name}",
+            'email': request.user.email,
+            'phone': profile.phone,
+            'street_address1': profile.address,
+            'street_address2': '',
+            'country': profile.country,
+            'postal_code': profile.postcode,
+            'town_or_city': profile.city,
+        }
+    except UserProfile.DoesNotExist:
+        pass
+
     # Handle form submission (POST)
     if request.method == 'POST':
-        request.session['checkout_data'] = {
-            'full_name': request.POST.get('full_name'),
-            'email': request.POST.get('email'),
-            'phone': request.POST.get('phone'),
-            'street_address1': request.POST.get('street_address1'),
-            'street_address2': request.POST.get('street_address2'),
-            'country': request.POST.get('country'),
-            'postal_code': request.POST.get('postal_code'),
-            'town_or_city': request.POST.get('town_or_city'),
-        }
-        return redirect('cart:success')
+        form = CheckoutForm(request.POST)
+        if form.is_valid():
+            # Store form data in session or process as needed
+            request.session['checkout_data'] = form.cleaned_data
+            return redirect('cart:success')
+    else:
+        form = CheckoutForm(initial=initial_data)
 
     return render(request, 'cart/checkout.html', {
+        'form': form,
         'cart_items': cart_items,
         'total': total,
         'delivery_fee': delivery_fee,
@@ -176,7 +193,8 @@ def create_checkout_session(request):
             cancel_url=f'{domain}/cart/',
             metadata={
                 'username': request.user.username,
-                'full_name': data.get('full_name'),
+                'first_name': data.get('first_name'),
+                'last_name': data.get('last_name'),
                 'email': data.get('email'),
                 'phone': data.get('phone'),
                 'street_address1': data.get('street_address1'),
