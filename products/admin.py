@@ -22,3 +22,6 @@ class ProductAdmin(admin.ModelAdmin):
 @admin.register(Brand)
 class BrandAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
+    list_filter = ('name',)
+    search_fields = ('name',)
+    fields = ('name',)

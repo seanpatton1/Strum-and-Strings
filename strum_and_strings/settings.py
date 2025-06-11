@@ -128,7 +128,7 @@ if 'DATABASE_URL' in os.environ:
 else:
     # Development settings
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'webmaster@localhost'
+    DEFAULT_FROM_EMAIL = 'strumandstrings@outlook.com'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
