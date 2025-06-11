@@ -323,5 +323,70 @@
       "price": "299.99",
       "image": "products/Powerball-2.jpg"
     }
+  },
+  { 
+    "model": "products.brand", 
+    "pk": 2, 
+    "fields": { "name": "Taylor" } 
+  },
+  { 
+    "model": "products.brand", 
+    "pk": 4, 
+    "fields": { "name": "Fender" } 
+  },
+  { 
+    "model": "products.brand", 
+    "pk": 16, 
+    "fields": { "name": "Dunlop" } 
+  },
+  { 
+    "model": "products.brand", 
+    "pk": 17, 
+    "fields": { "name": "Ernie Ball" } 
+  },
+  { 
+    "model": "products.brand", 
+    "pk": 18, 
+    "fields": { "name": "D'Addario" } 
+  },
+  { 
+    "model": "products.brand", 
+    "pk": 19, 
+    "fields": { "name": "Ordo" } 
+  },
+  { 
+    "model": "products.brand", 
+    "pk": 20, 
+    "fields": { "name": "BOSS" } 
+  },
+  { 
+    "model": "products.brand", 
+    "pk": 21, 
+    "fields": { "name": "Electro Harmonix" } 
+  },
+  { 
+    "model": "products.brand", 
+    "pk": 22, 
+    "fields": { "name": "Laney" } 
+  },
+  { 
+    "model": "products.brand", 
+    "pk": 23, 
+    "fields": { "name": "Marshall" } 
+  },
+  { 
+    "model": "products.brand", 
+    "pk": 24, 
+    "fields": { "name": "Orange" } 
+  },
+  { 
+    "model": "products.brand", 
+    "pk": 25, 
+    "fields": { "name": "Synergy Amps" } 
+  },
+  { 
+    "model": "products.brand", 
+    "pk": 27, 
+    "fields": { "name": "Planet Waves" } 
   }
 ]
