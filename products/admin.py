@@ -20,4 +20,4 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(Brand)
 class BrandAdmin(admin.ModelAdmin):
-    list_display = ('name',)
+    list_display = ('id', 'name')
