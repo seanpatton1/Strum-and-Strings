@@ -1,14 +1,20 @@
-/* logout.css */
+/* ----------------- Logout Page Styling ----------------- */
+
+/* Body Background and Text Color */
 body {
     background-color: #f9f7f3;
     color: #5a4231;
 }
 
+/* Heading Styling */
 h2 {
     color: #5a4231;
     font-weight: bold;
 }
 
+/* ----------------- Button Styling ----------------- */
+
+/* Logout Button Style */
 .btn-danger {
     background-color: #c99b3b;
     color: white;
@@ -18,15 +24,20 @@ h2 {
     font-weight: bold;
 }
 
+/* Logout Button Hover State */
 .btn-danger:hover {
     background-color: #b58932;
 }
 
+/* ----------------- Link Styling ----------------- */
+
+/* Links on the logout page */
 a {
     color: #5a4231;
     text-decoration: none;
 }
 
+/* Link Hover State */
 a:hover {
     color: #c99b3b;
 }

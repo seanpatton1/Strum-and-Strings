@@ -1,17 +1,20 @@
+/* ----------------- General Header and Navbar Styling ----------------- */
 header .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 header .navbar-nav .nav-link {
-    font-size: 1rem;
-    margin: 0 10px;
+  font-size: 1rem;
+  margin: 0 10px;
 }
 
+/* ----------------- Global Background ----------------- */
 body {
   background-color: #f9f7f3;
 }
 
+/* ----------------- Breadcrumb Styling ----------------- */
 .breadcrumb {
   background-color: transparent;
   padding: 0;
@@ -34,18 +37,20 @@ body {
   font-weight: bold;
 }
 
+/* ----------------- Container Spacing ----------------- */
 .container.mt-2 {
   padding-bottom: 2rem;
 }
 
-/* Fix category card image sizing */
+/* ----------------- Category Card Styling ----------------- */
+/* Image inside card */
 .card-img-top {
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   object-position: center;
 }
 
-/* Ensure all category cards have consistent height */
+/* Card base styling */
 .card {
   height: 100%;
   display: flex;
@@ -55,7 +60,7 @@ body {
   border-radius: 0.5rem;
 }
 
-
+/* Card body layout */
 .card-body {
   flex-grow: 1;
   display: flex;
@@ -63,11 +68,7 @@ body {
   justify-content: space-between;
 }
 
-.card-img-top {
-  height: 250px;
-  object-fit: cover;
-}
-
+/* ----------------- Categories Intro Section ----------------- */
 #categories-intro {
   max-width: 800px;
   margin: 0 auto;
@@ -84,126 +85,128 @@ body {
   font-size: 1.1rem;
 }
 
+/* View Details Button Styling */
+.btn-view-details {
+  background-color: #D6A84F;
+  color: #4B3832;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: auto;
+}
+
 .btn-view-details:hover {
   background-color: #b58932;
   color: white;
 }
 
-/* For Small Screens (smaller than 768px) */
+/* ----------------- Responsive Adjustments (Mobile < 768px) ----------------- */
 @media (max-width: 767.98px) {
-
   .breadcrumb {
-    background-color: transparent;
-    padding: 0;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+      background-color: transparent;
+      padding: 0;
+      margin-bottom: 1rem;
+      font-size: 1rem;
   }
-  
+
   .breadcrumb-item a {
-    color: #b8860b;
-    text-decoration: none;
+      color: #b8860b;
+      text-decoration: none;
   }
-  
+
   .breadcrumb-item a:hover {
-    text-decoration: underline;
-    color: #996515;
+      text-decoration: underline;
+      color: #996515;
   }
 
-    #breadcrumb-main {
-        padding-top: 5px;
-    }
-
-    #bottom-img {
-        padding-bottom: 10px;
-    }
-
-    #footer-one {
-        padding-top: 60px !important;
-    }
-
-    footer .row {
-        text-align: center; /* Center-align text */
-    }
-
-    footer .col-md-6,
-    footer .col-md-3 {
-        text-align: center; /* Center-align text for all columns */
-        margin-bottom: 20px; /* Add spacing between columns */
-    }
-
- }
-
-/* category_details styles */
-
-/* Prevent header from covering content */
-body {
-    padding-top: 80px;
+  #breadcrumb-main {
+      padding-top: 5px;
   }
 
-  /* Remove default list styling & space out items */
-  .sidebar ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .sidebar li + li {
-    margin-top: 0.5rem;
-  }
-  
-  /* Make sidebar sticky under the navbar */
-  .sidebar.sticky-top {
-    position: sticky;
-    top: 80px; 
-  }
-  
-  /* Highlight the currently‐active filter */
-  .sidebar a.fw-bold {
-    text-decoration: underline;
+  #bottom-img {
+      padding-bottom: 10px;
   }
 
-  .btn-view-details {
-    background-color: #D6A84F;
-    color: #4B3832;
-    border: none;
-    padding: 6px 12px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    width: auto;
+  #footer-one {
+      padding-top: 60px !important;
+  }
+
+  footer .row {
+      text-align: center;
+  }
+
+  footer .col-md-6,
+  footer .col-md-3 {
+      text-align: center;
+      margin-bottom: 20px;
+  }
 }
-  
-  /* Hide the sidebar on small screens */
-  @media (max-width: 767.98px) {
-    .sidebar {
+
+/* ----------------- Category Details Page Styles ----------------- */
+/* Prevent navbar from covering content */
+body {
+  padding-top: 80px;
+}
+
+/* Sidebar (Filter section) */
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar li + li {
+  margin-top: 0.5rem;
+}
+
+/* Sticky sidebar under navbar */
+.sidebar.sticky-top {
+  position: sticky;
+  top: 80px;
+}
+
+/* Highlight active filter link */
+.sidebar a.fw-bold {
+  text-decoration: underline;
+}
+
+/* Hide sidebar on mobile */
+@media (max-width: 767.98px) {
+  .sidebar {
       display: none;
-    }
   }
+}
 
-  .card img {
-    width: 100%;
-    height: 250px;
-    object-fit: contain;
-    background-color: #F4EBD0;
-    padding: 10px;
-    border-radius: 8px;
-  }
-  
-  .card {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  }
+/* ----------------- Product Card Styling ----------------- */
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  background-color: #F4EBD0;
+  padding: 10px;
+  border-radius: 8px;
+}
 
-  @media (min-width: 768px) {
-    #filterCollapse {
+/* Card Hover Effects */
+.card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Sticky filter sidebar for larger screens */
+@media (min-width: 768px) {
+  #filterCollapse {
       position: sticky;
       top: 100px;
       max-height: calc(100vh - 120px);
       overflow-y: auto;
-    }
   }
+}

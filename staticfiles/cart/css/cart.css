@@ -1,21 +1,23 @@
-/* cart.css */
-main {
-    padding-bottom: 2rem !important;
-  }
-  
- 
-  .container {
-    margin-bottom: 0 !important;
-    padding-bottom: 1rem !important;
-  }
+/* ----------------- Cart Page Styling ----------------- */
 
-/* Container and text spacing */
+/* Main page spacing */
+main {
+  padding-bottom: 2rem !important;
+}
+
+/* Container spacing override */
+.container {
+  margin-bottom: 0 !important;
+  padding-bottom: 1rem !important;
+}
+
+/* Cart Heading */
 h2.text-center {
   font-size: 2rem;
   color: #5a4231;
 }
 
-/* Table styling */
+/* Table base styling */
 .table {
   width: 100%;
   margin-bottom: 20px;
@@ -23,31 +25,36 @@ h2.text-center {
   border-radius: 10px;
 }
 
+/* Dark table header */
 .table-dark {
   background-color: #4b3832;
   color: white;
   font-weight: bold;
 }
 
+/* Table border */
 .table-bordered {
   border: 1px solid #ddd;
 }
 
+/* Table cells */
 .table th,
 .table td {
   padding: 15px;
   text-align: center;
 }
 
+/* Table headings */
 .table th {
   background-color: #5a4231;
 }
 
+/* Table data */
 .table td {
   font-size: 1rem;
 }
 
-/* Button styling */
+/* Danger Button (Remove item) */
 .btn-danger {
   background-color: #d6a84f;
   color: #4b3832;
@@ -57,10 +64,11 @@ h2.text-center {
 }
 
 .btn-danger:hover {
-  background-color: #c08c3d;
+  background-color: #a80b0b;
   color: white;
 }
 
+/* Success Button (Proceed to checkout) */
 .btn-success {
   background-color: #4b3832;
   color: white;
@@ -75,7 +83,23 @@ h2.text-center {
   color: white;
 }
 
+.btn-update {
+  background-color: #c99b3b;
+  color: #4b3832;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
 
+.btn-update:hover {
+  background-color: #b58932;
+  color: white;
+}
+
+/* Cart totals and checkout section */
 .text-end {
   text-align: right;
   margin-top: 20px;
@@ -86,8 +110,9 @@ h2.text-center {
   color: #5a4231;
 }
 
-.text-end a {
-  background-color: #4b3832;
+/* Checkout Button inside Cart */
+.checkout-btn {
+  background-color: #c99b3b;
   color: white;
   padding: 15px 25px;
   font-size: 1rem;
@@ -96,45 +121,91 @@ h2.text-center {
   border-radius: 5px;
 }
 
-.text-end a:hover {
+.checkout-btn:hover {
   background-color: #c99b3b;
   color: white;
 }
 
+/* Empty cart message */
 p.text-center {
   font-size: 1.5rem;
   color: #5a4231;
 }
 
-/* Media query for mobile responsiveness */
-@media (max-width: 768px) {
+.cart-product-name,
+.cart-price,
+.cart-subtotal {
+  font-weight: bold;
+  text-align: center;
+  color: #4b3832;
+}
 
-  /* Hide the table headers in mobile view */
+/* Responsive adjustments for Cart */
+@media (max-width: 768px) {
+  
+  .mt-3 {
+    margin-bottom: 10px;
+  }
+  
+  
+  .btn-update {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 0px !important;
+  }
+
+  .quantity-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.table tbody tr {
+  display: block;
+  margin-bottom: 20px;
+  padding: 15px;
+  /* background-color: #fdfaf4; */
+  border: 3px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.table td {
+  padding: 10px;
+  display: block;
+}
+
+.quantity-form input {
+  width: 100%;
+}
+
   .table th {
     display: none;
   }
 
   .cart-container {
-    padding: 15px; /* Slightly reduced padding for mobile */
+    padding: 15px;
   }
 
-  /* Adjust table rows for mobile view */
   .table td {
     display: block;
     text-align: left;
     padding: 10px 0;
   }
 
-  /* Adjust the 'REMOVE' button for mobile */
   .btn-danger {
     display: block;
     width: 100%;
     padding: 12px 0;
     text-align: center;
     font-size: 16px;
+    margin-bottom: 10px;
   }
 
-  /* Style for the 'Proceed to Checkout' button */
   .btn-success {
     width: 100%;
     padding: 12px 0;
@@ -142,29 +213,76 @@ p.text-center {
     font-size: 16px;
   }
 
-  /* Adjust the total and checkout button for mobile */
   .text-end {
     text-align: center;
     margin-top: 15px;
   }
 
-  /* Mobile adjustments for the checkout table */
   .table th,
   .table td {
     padding: 10px;
   }
+
+    .table td {
+    text-align: center;
+  }
+
+  .quantity-form {
+    align-items: center;
+  }
+
+  .table tbody tr {
+    padding: 20px 10px;
+  }
+
+    .order-summary {
+    text-align: center !important;
+  }
+
+  .order-summary h4 {
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 15px;
 }
 
+  .table td {
+    text-align: center;
+  }
 
+  .cart-product-name,
+  .cart-price,
+  .cart-subtotal {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
 
-/* checkout css */
+    .table-bordered {
+    border: none;
+  }
 
-/* Main Content Styles */
+  .table-bordered td {
+    border: none;
+  }
 
-/* Button Styles */
+  .table-bordered tr {
+    border: none;
+  }
+
+}
+
+/* ----------------- Checkout Page Styling ----------------- */
+
+/* Primary checkout button */
 .btn-primary {
-  background-color: #c99b3b; /* Gold background */
-  color: #5a4231; /* Dark brown text */
+  background-color: #c99b3b;
+  color: #5a4231;
   border: none;
   padding: 12px 20px;
   font-size: 1.2rem;
@@ -179,7 +297,7 @@ p.text-center {
   color: white;
 }
 
-
+/* List group (order summary) styling */
 .list-group-item {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -192,32 +310,35 @@ p.text-center {
   justify-content: space-between;
 }
 
+/* Highlight important details in checkout */
 .list-group-item strong {
   color: #5a4231;
 }
 
+/* Muted text */
 .list-group-item .text-muted {
   color: #888;
 }
 
-/* Form Section */
+/* Checkout form (left side) */
 .col-md-7 {
   background-color: #fff;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Order summary (right side) */
 .col-md-5 {
   background-color: #fff;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Margin and spacing utilities */
 .row {
   margin-top: 30px;
 }
 
-/* Margin and Padding */
 .mb-3 {
   margin-bottom: 20px;
 }
@@ -226,9 +347,10 @@ p.text-center {
   margin-top: 20px;
 }
 
-/* Responsive Design */
+/* Responsive adjustments for Checkout */
 @media (max-width: 767px) {
-  .col-md-7, .col-md-5 {
+  .col-md-7,
+  .col-md-5 {
     padding: 15px;
   }
 
@@ -242,9 +364,9 @@ p.text-center {
   }
 }
 
+/* ----------------- Order Success Page Styling ----------------- */
 
-/* success styles */
-
+/* Success container */
 .success-container {
   background-color: #f9f7f3;
   padding: 40px;
@@ -253,17 +375,20 @@ p.text-center {
   margin-top: 50px;
 }
 
+/* Main heading */
 .success-container h2 {
   color: #5a4231;
   font-weight: bold;
   font-size: 2rem;
 }
 
+/* Subheading / Lead text */
 .success-container .lead {
   color: #c99b3b;
   font-size: 1.25rem;
 }
 
+/* Success page card */
 .card {
   background-color: #ffffff;
   border: 1px solid #ddd;
@@ -273,44 +398,50 @@ p.text-center {
   margin: 20px auto;
 }
 
+/* Card body content */
 .card-body {
   padding: 20px;
 }
 
+/* Order number heading */
 .card-title {
   color: #5a4231;
   font-weight: bold;
   font-size: 1.5rem;
 }
 
+/* Details inside card */
 .card-body p {
   color: #5a4231;
   font-size: 1.1rem;
 }
 
+/* Subheadings inside card */
 .card-body h6 {
   font-size: 1.1rem;
   font-weight: bold;
   color: #5a4231;
 }
 
+/* Address formatting */
 .card-body address {
   font-style: normal;
   color: #5a4231;
 }
 
-/* List Styles */
+/* List group on success page */
 .list-group-item {
   background-color: #fff;
   border: 1px solid #ddd;
   padding: 12px;
 }
 
+/* Highlighted totals */
 .list-group-item strong {
   font-weight: bold;
 }
 
-/* Button Styling */
+/* Button to Continue Shopping */
 .btn-primary {
   background-color: #c99b3b !important;
   color: #fff;
@@ -326,7 +457,7 @@ p.text-center {
   background-color: #b58932;
 }
 
-/* Responsive Styling */
+/* Responsive adjustments for Success Page */
 @media (max-width: 768px) {
   .success-container {
     padding: 20px;

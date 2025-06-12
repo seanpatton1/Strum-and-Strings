@@ -1,61 +1,64 @@
+/* ----------------- General Page Styling ----------------- */
 body {
-    background-color: #f9f7f3;
-  }
+  background-color: #f9f7f3;
+}
 
-/* Center the orders inside the orders card */
+/* ----------------- Profile Page: Orders Section ----------------- */
+/* Center the orders card */
 .orders-card {
-    /* max-height: 600px; */
-    /* overflow-y: auto; */
-    margin: 0 auto; 
-    max-width: 800px;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
-/* Set a max width for each individual order item */
+/* Set max width for individual order items */
 .order-item {
-    width: 100%;
-    max-width: 500px;
+  width: 100%;
+  max-width: 500px;
 }
 
+/* ----------------- Profile Card Styling ----------------- */
 .profile-card {
-    position: sticky;
-    top: 100px;
+  position: sticky;
+  top: 100px;
 }
 
+/* ----------------- Custom Button Styles ----------------- */
 .btn-custom {
-    background-color: #D6A84F;
-    color: #4B3832;
-    border: none;
-    padding: 6px 12px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .btn-custom:hover {
-    background-color: #C08C3D;
-    color: #fff;
-  }
-  
-  .btn-custom-outline {
-    background-color: transparent;
-    color: #4B3832;
-    border: 2px solid #D6A84F;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 0.5rem;
-    padding: 6px 12px;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-custom-outline:hover {
-    background-color: #D6A84F;
-    color: #fff;
-  }
+  background-color: #D6A84F;
+  color: #4B3832;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  .profile-card,
+.btn-custom:hover {
+  background-color: #C08C3D;
+  color: #fff;
+}
+
+.btn-custom-outline {
+  background-color: transparent;
+  color: #4B3832;
+  border: 2px solid #D6A84F;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-custom-outline:hover {
+  background-color: #D6A84F;
+  color: #fff;
+}
+
+/* ----------------- Card Styling for Profile & Orders ----------------- */
+.profile-card,
 .orders-card {
   background-color: #f9f7f3;
   border: 1px solid #ddd;
@@ -65,20 +68,20 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .profile-card:hover,
 .orders-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* ----------------- Headings Inside Cards ----------------- */
 .profile-card h2,
 .orders-card h3 {
   color: #4B3832;
   font-weight: bold;
 }
 
-
+/* ----------------- Button Styling Inside Profile Card ----------------- */
 .profile-card button {
   background-color: #D6A84F;
   color: #4B3832;
@@ -95,59 +98,59 @@ body {
   color: #fff;
 }
 
+/* ----------------- Styling Individual Order Items ----------------- */
 .order-item {
-    background-color: #fefcf8;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-  
+  background-color: #fefcf8;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
 
-  .order-item:hover {
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    transform: translateY(-3px);
-  }
-  
+.order-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
 
-  .order-item p {
-    margin-bottom: 8px;
-    color: #4B3832;
-  }
-  
+/* Paragraphs inside each order */
+.order-item p {
+  margin-bottom: 8px;
+  color: #4B3832;
+}
 
-  .order-item .btn {
-    background-color: #D6A84F;
-    color: #4B3832;
-    font-weight: bold;
-    text-transform: uppercase;
-    border: none;
-    padding: 8px 16px;
-    margin-top: 10px;
-  }
-  
-  .order-item .btn:hover {
-    background-color: #C08C3D;
-    color: #fff;
-  }
+/* Buttons inside order items */
+.order-item .btn {
+  background-color: #D6A84F;
+  color: #4B3832;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+}
 
-/* Newsletter Section */
+.order-item .btn:hover {
+  background-color: #C08C3D;
+  color: #fff;
+}
+
+/* ----------------- Newsletter Signup Section ----------------- */
 .newsletter-signup-section {
   background-color: #f8f4f0;
 }
 
-/* Headings in Newsletter */
+/* Headings inside the Newsletter section */
 .section-heading {
   color: #5C4033;
 }
 
-/* Card Style */
+/* Card styling inside Newsletter section */
 .newsletter-card {
   background-color: #ffffff;
 }
 
-/* Subscribe Button */
+/* Subscribe button for Newsletter */
 .newsletter-btn {
   background-color: #D4A373;
   color: white;
@@ -159,15 +162,16 @@ body {
 }
 
 .newsletter-btn:hover {
-  background-color: #c78c5e; /* Slightly darker on hover */
+  background-color: #c78c5e;
 }
 
-/* Banner Image Styling */
+/* ----------------- Banner Image Styling ----------------- */
 .banner-image {
   max-height: 450px;
 }
 
-/* Slide-in Animation */
+/* ----------------- Animations ----------------- */
+/* Slide-in animation */
 @keyframes slideInUp {
   0% {
       opacity: 0;
@@ -183,7 +187,7 @@ body {
   animation: slideInUp 1s ease-out forwards;
 }
 
-/* Fade-in Animation */
+/* Fade-in animation */
 @keyframes fadeIn {
   0% {
       opacity: 0;

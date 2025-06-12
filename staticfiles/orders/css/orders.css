@@ -1,7 +1,9 @@
+/* ----------------- Global Body Styling ----------------- */
 body {
   background-color: #f9f7f3;
 }
 
+/* ----------------- Order Detail Card Styling ----------------- */
 .order-detail-card {
   padding: 30px;
   background-color: #f9f7f3;
@@ -12,26 +14,21 @@ body {
   margin-right: auto;
 }
 
+/* Order Detail Heading */
 .order-detail-card h2 {
   color: #5a4231;
   font-weight: bold;
 }
 
+/* List Group Items inside the Order Card */
 .order-detail-card .list-group-item {
   background-color: #ffffff;
   border: 1px solid #ddd;
   margin-bottom: 10px;
 }
 
-.order-detail-card .btn-secondary {
-  background-color: #c99b3b;
-  color: white;
-}
-
-.order-detail-card .btn-secondary:hover {
-  background-color: #b58932;
-}
-
+/* ----------------- Order Detail Buttons ----------------- */
+/* Secondary button inside Order Detail */
 .order-detail-card .btn-secondary {
   background-color: #c99b3b;
   color: white;
@@ -45,12 +42,14 @@ body {
   margin-top: 20px;
 }
 
+/* Hover effect for Secondary button */
 .order-detail-card .btn-secondary:hover {
   background-color: #b58932;
   color: white;
   text-decoration: none;
 }
 
+/* ----------------- Image Styling for Ordered Products ----------------- */
 .image-order {
   max-width: 200px;
   height: auto;

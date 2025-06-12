@@ -1,17 +1,23 @@
-main {
-    padding-bottom: 120px;
-  }
+/* ----------------- Global Page Layout ----------------- */
 
-  body {
-    background-color: #f9f7f3;
+/* Main padding for spacing under content */
+main {
+  padding-bottom: 120px;
 }
 
+/* Global body background */
+body {
+  background-color: #f9f7f3;
+}
 
+/* ----------------- Sidebar (Filters) Styling ----------------- */
+/* Sticky sidebar positioning */
 .sidebar.sticky-top {
   position: sticky;
   top: 80px;
 }
 
+/* ----------------- View Details Button Styling ----------------- */
 .btn-view-details {
   background-color: #D6A84F;
   color: #4B3832;
@@ -28,6 +34,8 @@ main {
   color: #fff;
 }
 
+/* ----------------- Card Styling for Products ----------------- */
+/* Product image inside card */
 .card img {
   width: 100%;
   height: 250px;
@@ -37,21 +45,25 @@ main {
   border-radius: 8px;
 }
 
+/* Card base styling */
 .card {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Card hover effect */
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
+/* ----------------- Headings ----------------- */
 h1 {
   margin-top: 20px;
   margin-bottom: 30px;
 }
 
+/* ----------------- Breadcrumb Navigation Styling ----------------- */
 .breadcrumb {
   background-color: transparent;
   padding: 0;
@@ -74,26 +86,31 @@ h1 {
   font-weight: bold;
 }
 
+/* ----------------- Responsive Adjustments ----------------- */
+
+/* Hide sidebar on mobile */
 @media (max-width: 767.98px) {
   .sidebar {
-    display: none;
+      display: none;
   }
 }
 
+/* Desktop: Sidebar Sticky Filter Styling */
 @media (min-width: 768px) {
+  /* Sticky filter area inside collapse */
   #filterCollapse {
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
   }
 
   .sidebar {
-    position: sticky;
-    top: 100px;
-    max-height: calc(100vh - 15px);
-    overflow-y: auto;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 15px);
+      overflow-y: auto;
   }
 
   #filterCollapse {
-    display: block !important;
+      display: block !important;
   }
 }
