@@ -134,6 +134,7 @@ def checkout(request):
         'delivery_fee': delivery_fee,
         'grand_total': grand_total,
         'stripe_public_key': settings.STRIPE_PUBLIC_KEY,
+        'profile_data': initial_data,
     })
 
 
