@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Delete Product{% endblock %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card p-4 shadow-sm bg-light rounded">
+                <h2 class="text-center text-danger mb-4">Delete Product</h2>
+                <p class="text-center">Are you sure you want to delete <strong>{{ product.name }}</strong>?</p>
+
+                <form method="post" class="text-center">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger px-4">Yes, Delete</button>
+                    <a href="{% url 'accounts:product_catalog' %}" class="btn btn-secondary px-4 ms-2">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

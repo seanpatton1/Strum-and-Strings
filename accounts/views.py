@@ -7,6 +7,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from .models import UserProfile, NewsletterSubscriber
 from .forms import ProfileForm, NewsletterSignupForm, OrderStatusForm
 from orders.models import Order
+from products.models import Product
 from products.forms import ProductForm
 
 
@@ -57,7 +58,12 @@ def order_list(request):
 
 @staff_member_required
 def product_catalog(request):
-    return render(request, 'accounts/product_catalog.html')
+    products = Product.objects.all()
+    categories = ['Acoustic', 'Electric', 'Accessories']
+    return render(request, 'accounts/product_catalog.html', {
+        'products': products,
+        'categories': categories,
+    })
 
 
 @staff_member_required
@@ -72,6 +78,39 @@ def admin_order_detail(request, order_id):
     return render(request, 'accounts/admin_order_detail.html', {
         'order': order,
         'form': form
+    })
+
+
+@staff_member_required
+def edit_product(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product updated successfully.')
+            return redirect('accounts:product_catalog')
+    else:
+        form = ProductForm(instance=product)
+
+    return render(request, 'accounts/edit_product.html', {
+        'form': form,
+        'product': product
+    })
+
+
+@staff_member_required
+def delete_product(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        product.delete()
+        messages.success(request, 'Product deleted successfully.')
+        return redirect('accounts:product_catalog')
+
+    return render(request, 'accounts/confirm_delete_product.html', {
+        'product': product
     })
 
 
