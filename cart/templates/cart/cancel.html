@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+{{ block.super }}
+  <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
+{% endblock %}
+
+{% block title %}Checkout Cancelled{% endblock %}
+{% block main_class %}container py-5 mt-5{% endblock %}
+
+{% block content %}
+<div class="cancel-wrapper">
+    <h2 class="text-danger">Payment Cancelled</h2>
+    <p>Your payment was cancelled or did not go through.</p>
+    <p>If this was a mistake, you can <a href="{% url 'cart:checkout' %}">try again</a>.</p>
+</div>
+{% endblock %}

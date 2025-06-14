@@ -174,3 +174,39 @@ def save_newsletter_email(request):
             return JsonResponse({"status": "success"})
 
     return JsonResponse({"status": "error"}, status=400)
+
+
+@staff_member_required
+def newsletter_list(request):
+    subscribers = NewsletterSubscriber.objects.all()
+    return render(request, 'accounts/newsletter_list.html', {'subscribers': subscribers})
+
+
+@staff_member_required
+def newsletter_update(request, subscriber_id):
+    subscriber = get_object_or_404(NewsletterSubscriber, id=subscriber_id)
+    form = NewsletterSignupForm(request.POST or None, instance=subscriber)
+
+    if form.is_valid():
+        form.save()
+        messages.success(request, 'Subscriber updated successfully.')
+        return redirect('accounts:newsletter_list')
+
+    return render(request, 'accounts/newsletter_form.html', {
+        'form': form,
+        'title': 'Edit Subscriber',
+    })
+
+
+@staff_member_required
+def newsletter_delete(request, subscriber_id):
+    subscriber = get_object_or_404(NewsletterSubscriber, id=subscriber_id)
+
+    if request.method == 'POST':
+        subscriber.delete()
+        messages.success(request, 'Subscriber deleted successfully.')
+        return redirect('accounts:newsletter_list')
+
+    return render(request, 'accounts/newsletter_confirm_delete.html', {
+        'subscriber': subscriber
+    })

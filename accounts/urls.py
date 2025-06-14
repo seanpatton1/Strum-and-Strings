@@ -20,6 +20,8 @@ urlpatterns = [
     path('admin-dashboard/orders/<int:order_id>/edit/', views.admin_edit_order, name='admin_edit_order'),
     path("newsletter/save-email/", views.save_newsletter_email, name="save_newsletter_email"),
     path('admin-dashboard/products/<int:product_id>/edit/', views.edit_product, name='edit_product'),
-    path('admin-dashboard/products/<int:product_id>/delete/', views.delete_product, name='delete_product')
-
+    path('admin-dashboard/products/<int:product_id>/delete/', views.delete_product, name='delete_product'),
+    path('admin-dashboard/newsletter/', views.newsletter_list, name='newsletter_list'),
+    path('admin-dashboard/newsletter/<int:subscriber_id>/edit/', views.newsletter_update, name='newsletter_update'),
+    path('admin-dashboard/newsletter/<int:subscriber_id>/delete/', views.newsletter_delete, name='newsletter_delete')
 ]

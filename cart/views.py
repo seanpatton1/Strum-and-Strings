@@ -191,7 +191,7 @@ def create_checkout_session(request):
             success_url=(
                 f'{domain}/cart/success/?session_id={{CHECKOUT_SESSION_ID}}'
             ),
-            cancel_url=f'{domain}/cart/',
+            cancel_url=f'{domain}/cart/checkout/cancel/',
             metadata={
                 'username': request.user.username,
                 'first_name': data.get('first_name'),
@@ -248,3 +248,7 @@ def success(request):
                 'order_items': order_items,
             }
         )
+
+
+def cancel(request):
+    return render(request, 'cart/cancel.html')

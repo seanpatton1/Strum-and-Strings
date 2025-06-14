@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+{{ block.super }}
+  <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
+{% endblock %}
+
+{% block title %}Newsletter Subscribers{% endblock %}
+{% block main_class %}container py-5 mt-5{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">Newsletter Subscribers</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>User</th>
+        <th>Subscribed On</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for sub in subscribers %}
+      <tr>
+        <td>{{ sub.email }}</td>
+        <td>{{ sub.user }}</td>
+        <td>{{ sub.date_subscribed }}</td>
+        <td>
+          <a href="{% url 'accounts:newsletter_update' sub.id %}" class="btn btn-sm btn-primary">Edit</a>
+          <a href="{% url 'accounts:newsletter_delete' sub.id %}" class="btn btn-sm btn-danger">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

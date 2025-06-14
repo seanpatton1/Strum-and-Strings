@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+{{ block.super }}
+  <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
+{% endblock %}
+
+{% block title %}Delete Subscriber{% endblock %}
+{% block main_class %}container py-5 mt-5{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="alert alert-warning text-center">
+    <h4>Are you sure you want to delete <strong>{{ subscriber.email }}</strong>?</h4>
+    <form method="post" class="d-inline-block mt-3">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger">Yes, Delete</button>
+      <a href="{% url 'accounts:newsletter_list' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+  </div>
+</div>
+{% endblock %}
