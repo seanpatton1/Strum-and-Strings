@@ -12,7 +12,6 @@ class ProductAdmin(admin.ModelAdmin):
         'brand',
         'category',
         'model',
-        'id',
         'image',
         'short_description',
         'price',

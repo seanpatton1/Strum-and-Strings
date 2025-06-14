@@ -120,18 +120,20 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100">
             {% if product.image %}
-            <img
-              src="{{ product.image.url }}"
-              alt="{{ product.name }}"
-              class="img-fluid w-100 rounded shadow-sm"
-            >
-          {% else %}
-            <img
-              src="{% static 'images/music_placeholder.png' %}"
-              alt="Placeholder"
-              class="img-fluid w-100 rounded shadow-sm"
-            >
-          {% endif %}
+              <img
+                src="https://res.cloudinary.com/dozu2yi8k/image/upload/v1/{{ product.image }}"
+                alt="{{ product.name }} - Product Image"
+                class="img-fluid w-100 rounded shadow-sm"
+                loading="lazy"
+              >
+            {% else %}
+              <img
+                src="{% static 'images/music_placeholder.png' %}"
+                alt="Placeholder Image"
+                class="img-fluid w-100 rounded shadow-sm"
+                loading="lazy"
+              >
+            {% endif %}
             <div class="card-body text-center">
               <h5 class="card-title">{{ product.name }}</h5>
               {% if product.short_description %}
