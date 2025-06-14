@@ -10,7 +10,17 @@
 {% block main_class %}container py-5 mt-5{% endblock %}
 
 {% block content %}
+<div>
+    <!-- Breadcrumb Navigation -->
+  <nav aria-label="breadcrumb" id="breadcrumb-main">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Admin Dashboard</li>
+    </ol>
+  </nav>
+</div>
 <section class="admin-dashboard-section py-5">
+
   <div class="container">
     <div class="text-center mb-5">
       <h1 class="display-5 fw-bold section-heading">Admin Dashboard</h1>

@@ -1,71 +1,90 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load custom_filters %}
 
 {% block extra_css %}
 {{ block.super }}
-  <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
+<link rel="stylesheet" href="{% static 'accounts/css/product_catalog.css' %}">
 {% endblock %}
 
 {% block title %}Manage Product Catalog{% endblock %}
 {% block main_class %}container py-5 mt-5{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <h2 class="mb-4 text-center">Manage Product Catalog</h2>
+<div>
+    <!-- Breadcrumb Navigation -->
+  <nav aria-label="breadcrumb" id="breadcrumb-main">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'home' %}">Admin Dashboard</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Product</li>
+    </ol>
+  </nav>
+</div>
+<div class="container mt-4">
+    <h2 class="text-center fw-bold mb-5 section-heading">Manage Product Catalog</h2>
 
-    <div class="accordion" id="productAccordion">
+    {% for category in categories %}
+        <h4 class="mb-3 text-center text-dark">{{ category }} Products</h4>
 
-        {% for category in categories %}
-        <div class="accordion-item mb-3">
-            <h2 class="accordion-header" id="heading-{{ category }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ category }}" aria-expanded="false" aria-controls="collapse-{{ category }}">
-                    {{ category }} Products
-                </button>
-            </h2>
-            <div id="collapse-{{ category }}" class="accordion-collapse collapse" aria-labelledby="heading-{{ category }}" data-bs-parent="#productAccordion">
-                <div class="accordion-body p-0">
-                    <table class="table table-bordered table-hover mb-0">
-                        <thead class="table-light">
+        <div class="table-responsive shadow-sm rounded mb-4">
+            <table class="table align-middle text-center product-table">
+                <thead class="custom-table-header text-light">
+                    <tr>
+                        <th>Name</th>
+                        <th>Brand</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% with page_obj=paginated_products|get_item:category %}
+                        {% for product in page_obj %}
                             <tr>
-                                <th>Image</th>
-                                <th>Name</th>
-                                <th>Brand</th>
-                                <th>Category</th>
-                                <th>Price</th>
-                                <th>Actions</th>
+                                <td>{{ product.name }}</td>
+                                <td>{{ product.brand }}</td>
+                                <td>{{ product.category }}</td>
+                                <td>£{{ product.price }}</td>
+                                <td>
+                                    <a href="{% url 'accounts:edit_product' product.id %}" class="btn btn-sm btn-gold text-dark fw-bold me-2">Edit</a>
+                                    <a href="{% url 'accounts:delete_product' product.id %}" class="btn btn-sm btn-danger text-light fw-bold">Delete</a>
+                                </td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            {% for product in products %}
-                                {% if product.category.name == category %}
-                                <tr>
-                                    <td>
-                                        {% if product.image %}
-                                            <img src="{{ product.image.url }}" alt="{{ product.name }}" style="width: 60px;">
-                                        {% else %}
-                                            No image
-                                        {% endif %}
-                                    </td>
-                                    <td>{{ product.name }}</td>
-                                    <td>{{ product.brand }}</td>
-                                    <td>{{ product.category }}</td>
-                                    <td>£{{ product.price }}</td>
-                                    <td>
-                                        <a href="{% url 'accounts:edit_product' product.id %}" class="btn btn-sm btn-primary">Edit</a>
-                                        <a href="{% url 'accounts:delete_product' product.id %}" class="btn btn-sm btn-danger">Delete</a>
-                                    </td>
-                                </tr>
-                                {% endif %}
-                            {% empty %}
-                            <tr><td colspan="6" class="text-center">No products in {{ category }}.</td></tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                        {% empty %}
+                            <tr>
+                                <td colspan="5" class="text-muted">No products in this category.</td>
+                            </tr>
+                        {% endfor %}
+                    {% endwith %}
+                </tbody>
+            </table>
         </div>
-        {% endfor %}
 
-    </div>
+        {% with page_obj=paginated_products|get_item:category %}
+            {% if page_obj.has_other_pages %}
+            <nav class="d-flex justify-content-center mb-5">
+                <ul class="pagination">
+                    {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page_{{ category }}={{ page_obj.previous_page_number }}">Previous</a>
+                        </li>
+                    {% endif %}
+
+                    <li class="page-item disabled">
+                        <span class="page-link">
+                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                        </span>
+                    </li>
+
+                    {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page_{{ category }}={{ page_obj.next_page_number }}">Next</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+        {% endwith %}
+    {% endfor %}
 </div>
 {% endblock %}

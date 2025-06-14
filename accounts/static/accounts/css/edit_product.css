@@ -1,0 +1,84 @@
+body {
+  background-color: #f9f7f3;
+}
+
+/* --- Styled Inputs and Selects --- */
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="file"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #4B3832;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form label.form-label {
+  font-weight: bold;
+  color: #4B3832;
+}
+
+form .form-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+form input[type="file"] {
+  padding: 5px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #D6A84F;
+  outline: none;
+  box-shadow: 0 0 5px rgba(214, 168, 79, 0.5);
+}
+
+form .text-danger {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+form.card.bg-light {
+  background-color: #ffffffbd !important;
+  border: 1px solid #e0dcd3;
+}
+
+/* --- Button Styling for Forms --- */
+.btn-custom-gold {
+  background-color: #D6A84F;
+  color: #4B3832;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom-gold:hover {
+  background-color: #b58932;
+  color: white;
+}
+
+.btn-custom-secondary {
+  background-color: #6c757d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom-secondary:hover {
+  background-color: #5a6268;
+}

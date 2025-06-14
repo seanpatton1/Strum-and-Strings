@@ -2,6 +2,10 @@ body {
   background-color: #f9f7f3;
 }
 
+.form-bright-bg {
+  background-color: #ebcc8d0a;
+}
+
 /* Label text color */
 .custom-label {
   color: #4b3832;

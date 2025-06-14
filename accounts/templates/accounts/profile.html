@@ -11,70 +11,72 @@
 {% endblock %}
 
 {% block content %}
-<div class="py-5">
-    <div class="row g-4">
-        <!-- Left Column: My Profile -->
-        <div class="col-12 col-md-4 mb-4">
-            <div class="card shadow-sm p-4 profile-card">
-                <h2 class="mb-4 text-center">My Profile</h2>
-
-                <form method="post" novalidate>
-                    {% csrf_token %}
-                    {{ form|crispy }}
-                    <div class="d-grid mt-3">
-                        <button type="submit" class="btn btn-custom w-100">Update Profile</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- Right Column: My Orders -->
-        <div class="col-12 col-md-8">
-            <div class="card shadow-sm p-4 orders-card">
-                <h3 class="mb-4 text-center">My Orders</h3>
-        
-                {% if orders %}
-                    <div class="list-group">
-                        {% for order in orders %}
-                            <div class="d-flex justify-content-center">
-                                <div class="list-group-item mb-3 order-item h-100">
-                                    <h5>Order #{{ order.id }} - {{ order.status }}</h5>
-        
-                                    {% for item in order.items.all %}
-                                        <p><strong>Product:</strong> {{ item.product.name }}</p>
-                                        <p><strong>Quantity:</strong> {{ item.quantity }}</p>
-                                    {% endfor %}
-        
-                                    <p><strong>Placed on:</strong> {{ order.created_at|date:"F j, Y, g:i a" }}</p>
-                                    <p><strong>Total:</strong> £{{ order.grand_total|floatformat:2 }}</p>
-        
-                                    <a href="{% url 'orders:order_detail' order.id %}" class="btn btn-custom mt-2">View Order</a>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
-
-                    <!-- Pagination Buttons -->
-                    {% if orders.has_other_pages %}
-                    <div class="pagination justify-content-center mt-4">
-                        {% if orders.has_previous %}
-                            <a href="?page={{ orders.previous_page_number }}" class="btn btn-outline-primary mx-1">&laquo; Previous</a>
-                        {% endif %}
-
-                        <span class="btn btn-outline-secondary mx-1 disabled">
-                            Page {{ orders.number }} of {{ orders.paginator.num_pages }}
-                        </span>
-
-                        {% if orders.has_next %}
-                            <a href="?page={{ orders.next_page_number }}" class="btn btn-outline-primary mx-1">Next &raquo;</a>
-                        {% endif %}
-                    </div>
-                    {% endif %}
-                {% else %}
-                    <p class="text-center">You have no orders yet.</p>
-                {% endif %}
-            </div>
-        </div>
+<div class="container">
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="breadcrumb" id="breadcrumb-main" class="mt-4 pt-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Profile</li>
+    </ol>
+  </nav>
+  <div class="row g-4">
+    <!-- Left Column: My Profile -->
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card shadow-sm p-4 profile-card">
+        <h2 class="mb-4 text-center">My Profile</h2>
+        <form method="post" novalidate>
+          {% csrf_token %}
+          {{ form|crispy }}
+          <div class="d-grid mt-3">
+            <button type="submit" class="btn btn-custom w-100">Update Profile</button>
+          </div>
+        </form>
+      </div>
     </div>
+
+    <!-- Right Column: My Orders -->
+    <div class="col-12 col-md-8">
+      <div class="card shadow-sm p-4 orders-card">
+        <h3 class="mb-4 text-center">My Orders</h3>
+
+        {% if orders %}
+          <div class="list-group">
+            {% for order in orders %}
+              <div class="d-flex justify-content-center">
+                <div class="list-group-item mb-3 order-item h-100">
+                  <h5>Order #{{ order.id }} - {{ order.status }}</h5>
+                  {% for item in order.items.all %}
+                    <p><strong>Product:</strong> {{ item.product.name }}</p>
+                    <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+                  {% endfor %}
+                  <p><strong>Placed on:</strong> {{ order.created_at|date:"F j, Y, g:i a" }}</p>
+                  <p><strong>Total:</strong> £{{ order.grand_total|floatformat:2 }}</p>
+                  <a href="{% url 'orders:order_detail' order.id %}" class="btn btn-custom mt-2">View Order</a>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+          <!-- Pagination Buttons -->
+          {% if orders.has_other_pages %}
+            <div class="pagination justify-content-center mt-4">
+              {% if orders.has_previous %}
+                <a href="?page={{ orders.previous_page_number }}" class="btn btn-outline-primary mx-1">&laquo; Previous</a>
+              {% endif %}
+              <span class="btn btn-outline-secondary mx-1 disabled">
+                Page {{ orders.number }} of {{ orders.paginator.num_pages }}
+              </span>
+              {% if orders.has_next %}
+                <a href="?page={{ orders.next_page_number }}" class="btn btn-outline-primary mx-1">Next &raquo;</a>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% else %}
+          <p class="text-center">You have no orders yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
+

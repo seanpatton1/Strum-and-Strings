@@ -6,7 +6,16 @@
 
 {% block title %}Your Cart – Strum & Strings{% endblock %} 
 
-{%block main_class %}container py-5 mt-5{% endblock %} {% block content %}
+{%block main_class %}container py-5 mt-5{% endblock %}
+{% block content %}
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="breadcrumb" id="breadcrumb-main">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Cart</li>
+    </ol>
+  </nav>
+
 <h2 class="text-center mb-5">Your Shopping Cart</h2>
 
 {% if cart_items %}

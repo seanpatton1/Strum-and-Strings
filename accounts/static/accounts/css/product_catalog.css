@@ -1,0 +1,96 @@
+/* Section Heading */
+h2.section-heading {
+  color: #4B3832;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Table Container */
+.table-responsive {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Table */
+.table {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+/* Table Header */
+.table thead th {
+  background-color: #4B3832;
+  color: #F4EBD0;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border-color: #4B3832;
+}
+
+/* Table Rows */
+.table tbody td {
+  vertical-align: middle;
+  font-size: 0.95rem;
+  color: #4B3832;
+  background-color: #fff;
+}
+
+/* Zebra striping */
+.table tbody tr:nth-child(even) td {
+  background-color: #fcf7ec;
+}
+
+/* Hover effect */
+.table-hover tbody tr:hover td {
+  background-color: #f9f7f39d;
+}
+
+/* Action Buttons */
+.btn-gold {
+  background-color: #D6A84F;
+  color: #4B3832;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #b58932;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #b13f3f;
+  color: white;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #912c2c;
+}
+
+/* Pagination */
+.pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination .page-link {
+  background-color: #F4EBD0;
+  color: #4B3832;
+  border: 1px solid #D6A84F;
+  font-weight: 500;
+}
+
+.pagination .page-link:hover {
+  background-color: #D6A84F;
+  color: white;
+  border-color: #b58932;
+}
