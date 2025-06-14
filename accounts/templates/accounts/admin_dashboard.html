@@ -3,7 +3,7 @@
 
 {% block extra_css %}
   {{ block.super }}
-  <link rel="stylesheet" href="{% static 'accounts/css/profile.css' %}">
+  <link rel="stylesheet" href="{% static 'accounts/css/admin-dashboard.css' %}">
 {% endblock %}
 
 {% block title %}Admin Dashboard – Strum & Strings{% endblock %}
@@ -45,7 +45,7 @@
     </div>
 
     <div class="text-center mt-5">
-      <img src="" alt="Admin Tools" class="img-fluid rounded shadow fade-in banner-image">
+      <img src="{% static 'images/admin-dashboard-1.jpg' %}" alt="Admin Tools" class="img-fluid rounded shadow fade-in banner-image">
     </div>
   </div>
 </section>

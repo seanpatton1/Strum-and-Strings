@@ -11,6 +11,7 @@ header .navbar-nav .nav-link {
 
 /* ----------------- Global Background ----------------- */
 body {
+  padding-top: 80px;
   background-color: #f9f7f3;
 }
 
@@ -147,9 +148,6 @@ body {
 
 /* ----------------- Category Details Page Styles ----------------- */
 /* Prevent navbar from covering content */
-body {
-  padding-top: 80px;
-}
 
 /* Sidebar (Filter section) */
 .sidebar ul {
