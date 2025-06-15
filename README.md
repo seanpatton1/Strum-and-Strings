@@ -374,14 +374,12 @@ The table below outlines key user flows and whether they performed as expected d
 | User            | Checkout Process                        | Stripe checkout redirects, payment completes, order is saved                    | Pass   |
 | User            | Order Confirmation                      | Confirmation page displays summary after payment                                | Pass   |
 | User            | Newsletter Signup                       | Email is submitted, and confirmation message is shown                           | Pass   |
-
 | Admin           | Admin Login                             | Admins can access the Django admin panel using correct credentials              | Pass   |
 | Admin           | Access Django Admin Panel               | Full admin panel is visible with models for products, orders, users, etc.       | Pass   |
 | Admin           | Manage Products                         | Admins can add, edit, or delete products from both the admin and custom panel   | Pass   |
 | Admin           | View Order List                         | Admin dashboard lists all orders with product, quantity, and status             | Pass   |
 | Admin           | Edit Order Info                         | Admin can update user details and status of individual orders                   | Pass   |
 | Admin           | Manage Newsletter Subscribers           | Admin can view and manage newsletter email signups in the admin panel           | Pass   |
-
 | System/UX       | Responsive Design                       | Site is fully responsive on mobile, tablet, and desktop                         | Pass   |
 | System/UX       | 404 Error Page                          | Invalid URL shows friendly custom 404 page                                      | Pass   |
 | System/UX       | SEO Tags                                | Meta descriptions and titles set for all pages                                  | Pass   |
@@ -441,6 +439,69 @@ Responsiveness was tested across all major pages and screen sizes to ensure a co
 | View Past Orders   | User can view a list of all previous orders                           | Pass           |                                             |
 | View Order Details | User can view detailed info for each past order                       | Pass           | Includes product info, prices, and status   |
 | Cancel Order       | User can cancel an order directly from the detail view                | Pass           | Status updates accordingly                  |
+
+### Profile Edit Functionality
+
+| Feature Tested   | Expected Outcome                                     | Actual Result  | Notes                                         |
+|------------------|------------------------------------------------------|----------------|-----------------------------------------------|
+| View Profile     | User sees a form with current profile data prefilled | Pass           |                                               |
+| Edit Info        | User updates name, email, address, and other details | Pass           | First name, last name, and email are required |
+| Submit Changes   | Updated info is saved and shown on next visit        | Pass           |                                               |
+
+### Product Listing Page
+
+| Feature Tested          | Expected Outcome                                                      | Actual Result | Notes                                |
+|-------------------------|------------------------------------------------------------------------|---------------|----------------------------------------|
+| Product Grid            | Products are displayed in a clean, readable grid layout                | Pass          | Grid layout is responsive              |
+| Product Details Preview | Each product shows name, price, image, and short description           | Pass          | "View Details" button present          |
+| Category Filtering      | Sidebar filters by category                                            | Pass          | Filters update product listings        |
+| Brand Filtering         | Sidebar filters by brand                                               | Pass          | Works for all listed brands            |
+| Price Filtering         | Sidebar filters by price                                               | Pass          | Prices filter correctly                |
+
+### Product Detail Page
+
+| Feature Tested          | Expected Outcome                                                          | Actual Result  | Notes                                   |
+|-------------------------|---------------------------------------------------------------------------|----------------|-----------------------------------------|
+| Product Detail Display  | Product name, image, description, and price are shown                     | Pass           |                                         |
+| Add to Cart Button      | Button to add product to cart is visible                                  | Pass           |                                         |
+| Related Products        | Section displays additional/related products                              | Pass           | Related products shown beneath main     |
+| Responsive Layout       | Page displays correctly across screen sizes                               | Pass           | Tested on desktop and mobile            |
+
+### Add to Cart Functionality
+
+| Feature Tested     | Expected Outcome                                                   | Actual Result  | Notes                        |
+|--------------------|--------------------------------------------------------------------|----------------|------------------------------|
+| Add to Cart Button | Clicking "Add to Cart" adds the product to the cart                | Pass           | Product added successfully   |
+| Cart Updates       | Cart icon or count updates to reflect number of items              | Pass           | Visible update confirmed     |
+| Cart Page Display  | Product appears in cart with correct name, quantity, and subtotal  | Pass           | Quantity set to 1 by default |
+
+### Update Cart Quantity
+
+| Feature Tested        | Expected Outcome                                                                    | Actual Result  | Notes                                      |
+|-----------------------|-------------------------------------------------------------------------------------|----------------|--------------------------------------------|
+| Increase Quantity     | Quantity increases and total updates correctly                                      | Pass           |                                            |
+| Decrease Quantity     | Quantity decreases and total updates correctly                                      | Pass           |                                            |
+| Set Quantity to Zero  | Displays error or prevents submission; does not allow quantity less than 1          | Pass           | Shows validation message for minimum value |
+| Invalid Input         | Letters/symbols not accepted in quantity field                                      | Pass           | Validated and restricted to numbers only   |
+| Remove from Cart      | User can remove items from cart completely                                          | Pass           |                                            |
+
+### Checkout Process with Stripe
+
+| Feature Tested            | Expected Outcome                                                              | Actual Result | Notes |
+|---------------------------|-------------------------------------------------------------------------------|---------------|-------|
+| View Cart Page            | Cart shows correct items, quantities, and totals                              | Pass          |       |
+| Access Checkout Page      | Checkout form loads with pre-filled user profile info                         | Pass          |       |
+| Form Submission           | User completes required fields and continues to payment                       | Pass          |       |
+| Stripe Checkout Redirect  | User is taken to Stripe checkout with correct order total                     | Pass          |       |
+| Stripe Payment Completion | Payment is processed and user is redirected to success page on live domain    | Pass          |       |
+| Order Creation            | Order is saved and visible in admin dashboard and user profile order history  | Pass          |       |
+
+### Order Confirmation Page
+
+| Feature Tested         | Expected Outcome                                                                | Actual Result | Notes |
+|------------------------|---------------------------------------------------------------------------------|---------------|-------|
+| Payment Completion     | After successful Stripe payment, user is redirected to confirmation page        | Pass          |       |
+| Order Summary Display  | Page shows order number, product(s), quantity, prices, and grand total          | Pass          |       |
 
 
 ## Bugs Encountered
