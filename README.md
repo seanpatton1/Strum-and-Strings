@@ -2,59 +2,60 @@
 
 ![Website responsive image](static/images/responsive_collage.png)
 
-Welcome to Strum & Strings – Your Ultimate Guitar Destination
+Welcome to **Strum & Strings** – Your Ultimate Guitar Destination
 
-Strum & Strings is a full-stack Django-based e-commerce platform offering a seamless online shopping experience for guitar enthusiasts.  
-Customers can browse a curated selection of premium guitars and accessories add them to their shopping basket, and complete secure purchases through Stripe integration.
+Strum & Strings is a full-stack Django-based e-commerce platform built to deliver a seamless online shopping experience for guitar enthusiasts.  
+Customers can explore a curated range of premium guitars and accessories, add items to their basket, and complete secure purchases through Stripe integration.
 
-With a responsive, intuitive, and mobile-first design, Strum & Strings ensures a smooth shopping journey across all devices.  
-From browsing products to checkout, the site provides a clean, elegant interface that mirrors the passion of true guitar lovers.
+With a responsive, intuitive, and mobile-first design, Strum & Strings ensures a smooth and enjoyable shopping experience on all devices.  
+From product discovery to checkout, the site offers a clean, elegant interface that reflects the passion of true guitar lovers.
 
 Your perfect sound is just a few clicks away!
 
-Visit the deployed website [here](https://strum-and-strings-e5017bc28566.herokuapp.com//)
+Visit the live website [here](https://strum-and-strings-e5017bc28566.herokuapp.com/)
+
+---
 
 ## Table of Contents
 
-## Table of Contents
-
-1. [User Experience (UX)](#user-experience-ux)
-    1. [Project Goals](#project-goals)
-    2. [Implementation](#implementation)
-    3. [Color Scheme](#color-scheme)
-    4. [Typography](#typography)
-    5. [Database Model](#database-model)
-    6. [Wireframes](#wireframes)
-2. [Features](#features)
-    1. [Home Page](#home-page)
-    2. [About Us](#about-us)
-    3. [Product Listings](#product-listings)
-    4. [Product Details](#product-details)
-    5. [Cart and Checkout](#cart-and-checkout)
-    6. [Profile Management](#profile-management)
-    7. [Newsletter Signup](#newsletter-signup)
-    8. [Admin Panel](#admin-panel)
-3. [Technologies Used](#technologies-used)
-4. [Testing](#testing)
-5. [Finished Product](#finished-product)
-6. [Deployment](#deployment)
-7. [Marketing Strategies](#marketing-strategies)
-8. [Credits](#credits)
+1. [User Experience (UX)](#user-experience-ux)  
+    1. [Project Goals](#project-goals)  
+    2. [Implementation](#implementation)  
+    3. [Color Scheme](#color-scheme)  
+    4. [Typography](#typography)  
+    5. [Database Model](#database-model)  
+    6. [Wireframes](#wireframes)  
+2. [Features](#features)  
+    1. [Home Page](#home-page)  
+    2. [About Us](#about-us)  
+    3. [Product Listings](#product-listings)  
+    4. [Product Details](#product-details)  
+    5. [Cart and Checkout](#cart-and-checkout)  
+    6. [Profile Management](#profile-management)  
+    7. [Newsletter Signup](#newsletter-signup)  
+    8. [Admin Panel](#admin-panel)  
+3. [Technologies Used](#technologies-used)  
+4. [Testing](#testing)  
+5. [Finished Product](#finished-product)  
+6. [Deployment](#deployment)  
+7. [Marketing Strategies](#marketing-strategies)  
+8. [Credits](#credits)  
 9. [Acknowledgements](#acknowledgements)
+
 
 # Business Model
 
 ## Business Overview
 
-Strum & Strings is an e-commerce platform specializing in the sale of guitars and related accessories. The website caters to a diverse audience, including individual musicians, hobbyists, students, and educational institutions.
+**Strum & Strings** is an e-commerce platform specializing in the sale of guitars and related accessories. The site caters to a diverse audience, including individual musicians, hobbyists, students, and educational institutions.
 
 ---
 
 ## Target Audience
 
-- **Musicians**: Hobbyists, professionals, and performers seeking high-quality guitars and accessories.
-- **Students**: Aspiring musicians and beginners in need of affordable starter kits or beginner-friendly bundles.
-- **Educational Institutions**: Schools, colleges, and universities seeking bulk orders or specialized packages for music programs.
+- **Musicians**: Hobbyists, professionals, and performers looking for high-quality guitars and accessories.
+- **Students**: Aspiring musicians and beginners seeking affordable starter kits or beginner-friendly bundles.
+- **Educational Institutions**: Schools, colleges, and universities needing bulk orders or tailored packages for music programs.
 
 ---
 
@@ -62,139 +63,161 @@ Strum & Strings is an e-commerce platform specializing in the sale of guitars an
 
 - **Individual Products**:
   - Guitars: Acoustic, electric, bass, classical, and specialty guitars.
-  - Accessories: Strings, picks, amplifiers, tuners, straps, cases, cleaning kits.
+  - Accessories: Strings, picks, amplifiers, tuners, straps, cases, and cleaning kits.
 
 - **Bundles**:
-  - Starter Kits: Beginner packages with a guitar, strap, tuner, and strings.
-  - Advanced Kits: Professional bundles including a high-end guitar, amplifier, and accessories.
-  - Institutional Packages: Customized bulk packages designed for educational institutions.
+  - **Starter Kits**: Beginner packages that include a guitar, strap, tuner, and spare strings.
+  - **Advanced Kits**: Professional bundles featuring a high-end guitar, amplifier, and essential accessories.
+  - **Institutional Packages**: Customized bulk packages designed for educational settings.
 
 ---
 
 ## Revenue Model
 
-- **Product Sales**:
-  - Competitive pricing on individual products and bundle deals.
-- **Upselling and Cross-Selling**:
-  - Complementary products suggested at checkout (e.g., picks, straps, tuners).
-- **Institutional Discounts**:
-  - Bulk pricing for schools and colleges.
-- **Subscription Add-On (Future Expansion)**:
-  - Optional premium subscription for tutorials, guitar maintenance guides, and exclusive previews.
+- **Product Sales**:  
+  Competitive pricing on individual items and bundled deals.
+
+- **Upselling & Cross-Selling**:  
+  Complementary items (e.g., picks, straps, tuners) suggested at checkout to increase average order value.
+
+- **Institutional Discounts**:  
+  Special pricing for schools and colleges ordering in bulk.
+
+- **Subscription Add-On (Planned)**:  
+  A future premium subscription offering exclusive content like tutorials, maintenance guides, and early access to new products.
 
 ---
 
 ## Unique Selling Points
 
-- **Specialization**: Focus solely on guitars and accessories for expert curation.
-- **Customization**: Tailored bundles for students and institutions.
-- **Educational Focus**: Collaborations with schools to enhance music learning experiences.
-- **Convenience**: A streamlined online shopping experience with intuitive navigation.
+- **Specialization**:  
+  Focused exclusively on guitars and accessories to ensure curated quality.
+
+- **Customization**:  
+  Tailored bundles for individuals, students, and institutions.
+
+- **Educational Focus**:  
+  Potential collaborations with music educators and institutions to support music learning.
+
+- **Convenience**:  
+  A clean, intuitive online shopping experience optimized for all devices.
 
 ---
 
 ## Marketing Strategies
 
-- **Digital Advertising**: Targeted ads on Facebook, Instagram, and Google.
-- **Social Media Engagement**: Content creation (tips, tutorials, success stories) to build community.
-- **Email Campaigns**: Regular newsletters with promotions and new product announcements.
-- **Affiliate Partnerships**: Collaborations with music influencers, teachers, and institutions.
+- **Digital Advertising**:  
+  Targeted ad campaigns on Facebook, Instagram, and Google to reach niche audiences.
+
+- **Social Media Engagement**:  
+  Regular posts including tips, tutorials, and customer stories to build community.
+
+- **Email Campaigns**:  
+  Newsletters featuring promotions, product launches, and helpful guitar content.
+
+- **Affiliate Partnerships**:  
+  Collaborations with music influencers, educators, and content creators to expand reach and credibility.
+
 
 # User Experience (UX)
 
 ## Project Goals
 
-- Create a clean and responsive online store focused on guitars and accessories.
-- Allow users to browse, search, and filter products easily.
-- Enable users to add products to a shopping cart, checkout securely, and track their orders.
-- Provide an easy-to-use profile area for managing personal details and order history.
-- Allow users to subscribe to a newsletter for product updates and promotions.
-- Ensure the website is mobile-friendly and fast across all devices.
-- Build trust with users through professional design, clear calls to action, and simple navigation.
+- Deliver a clean, responsive online store focused on guitars and accessories.
+- Allow users to browse, search, and filter products with ease.
+- Enable secure checkout through a seamless shopping cart system.
+- Provide a user-friendly profile area to manage personal details and track orders.
+- Offer newsletter signup for product updates, promotions, and brand engagement.
+- Ensure full mobile responsiveness and fast performance on all device types.
+- Build user trust through professional design, clear CTAs, and intuitive navigation.
 
 ---
 
 ## Implementation
 
-- The website is built using Django, leveraging powerful models for products, orders, and user profiles.
-- Bootstrap 5 is used to ensure responsive layouts across mobile, tablet, and desktop.
-- Cloudinary is used for external image hosting to optimize media delivery.
-- Stripe integration allows secure checkout with real payment gateway support.
-- Django-Allauth is used for authentication, including secure signup and login functionality.
-- Marketing features like a Mailchimp newsletter signup are integrated to engage users.
+- Built with the **Django** framework using structured models for products, orders, and user profiles.
+- **Bootstrap 5** ensures responsive, mobile-first layouts across desktop, tablet, and mobile.
+- **Cloudinary** handles external image hosting for faster load times and reliable media delivery.
+- **Stripe** is integrated to provide secure, real-time payment processing.
+- **Django-Allauth** powers user authentication, enabling secure signup, login, and profile access.
+- **Mailchimp** integration enables newsletter signup and future email marketing campaigns.
 
 ---
 
 ## Color Scheme
 
-- The color scheme reflects an earthy and natural tone, matching the feel of traditional and modern guitars.
-- Primary Color: Deep brown (#4B3621) — used for headers, navbar, and footer.
-- Accent Color: Soft tan (#D4A373) — used for buttons and highlights.
-- Background Color: Warm off-white (#FAF7F2) — for the main page background.
-- Forms and modals are displayed with white backgrounds for contrast and accessibility.
+The color palette is inspired by natural and wooden tones to reflect the aesthetic of traditional and modern guitars:
+
+- **Primary**: Deep brown `#4B3621` — used for the navbar, headers, and footer.
+- **Accent**: Soft tan `#D4A373` — used for buttons, highlights, and subtle accents.
+- **Background**: Warm off-white `#FAF7F2` — creates a neutral canvas for content.
+- **Forms**: Clean white backgrounds to ensure contrast and accessibility.
 
 ---
 
 ## Typography
 
-- Font Family: Open Sans and Arial (sans-serif fallback).
-- Headings use bold Open Sans for clarity.
-- Body text uses standard sans-serif for easy readability across devices.
+- **Font Family**: Open Sans with Arial as a sans-serif fallback.
+- **Headings**: Bold Open Sans for emphasis and readability.
+- **Body Text**: Clean, modern sans-serif font optimized for readability on all screen sizes.
+
 
 ---
 
 ## Database Models
 
-The site uses PostgreSQL for the production database. Key Django models:
+The site uses **PostgreSQL** as the production database. Below are the core Django models used to manage application data:
 
-- **Product**: Name, brand, category, model, image, image URL (Cloudinary), description, price.
-- **Category**: Guitar type categories (Acoustic, Electric, Bass, etc.).
-- **Order**: Customer order with status tracking.
-- **CartItem**: Temporary cart items tied to users.
-- **UserProfile**: Extended user info (address, etc.).
-- **NewsletterSignup**: Email subscription form tied to Mailchimp API.
+- **Product**: Stores details such as name, brand (FK), category (FK), model, image, Cloudinary URL, description, and price.
+- **Category**: Represents product categories (e.g., Acoustic, Electric, Bass).
+- **Order**: Stores customer orders, including status tracking and associated order items.
+- **CartItem**: Represents individual items in a user's temporary shopping cart.
+- **UserProfile**: Extends the default user model with additional fields such as address, city, country, and postal code.
+- **NewsletterSubscriber**: Captures email subscriptions and optionally links to a registered user; integrates with Mailchimp.
 
 ---
 
 ## Wireframes
 
-Wireframes were designed using Balsamiq to plan layouts for desktop and mobile views:
+Wireframes were created using **Balsamiq** to map out the site structure and user interface across desktop and mobile views.
 
-- **Home Page Wireframe**: Hero section with featured products.
-- **Shop Page Wireframe**: Product listings with filters and search.
-- **Product Detail Wireframe**: Image gallery and add-to-cart form.
-- **Cart and Checkout Wireframes**: Clean step-by-step purchase flow.
-- **Profile and Order History Wireframe**: User dashboard for order management.
+### Planned Wireframes:
+
+- **Home Page**: Features a hero section and quick access to product categories.
+- **Shop Page**: Displays product listings with integrated search and filtering options.
+- **Product Detail Page**: Showcases product images, details, and an add-to-cart function.
+- **Cart & Checkout Pages**: Provide a clean, step-by-step flow from cart review to Stripe payment.
+- **Profile & Order History Page**: Allows users to manage their personal information and view past orders.
 
 ---
 
 ### Wireframe Images
 
-- **Home Page Wireframe**
+- **Home Page**
 
   ![Home Page Wireframe](static/images/Landing-Page.png)
 
-- **Shop Page Wireframe**
+- **Shop Page**
 
   ![Shop Page Wireframe](static/images/All-Products.png)
 
-- **Categories Wireframe**
+- **Categories Page**
 
-  ![Product Detail Wireframe](static/images/Categories.png)
+  ![Categories Wireframe](static/images/Categories.png)
 
-- **Cart Page Wireframe**
+- **Cart Page**
 
-  ![Cart Page Wireframe](static/images/cart.png)
+  ![Cart Page Wireframe](static/images/cart_page.png)
 
-- **Log-In Wireframe**
+- **Login Page**
 
-  ![Checkout Page Wireframe](static/images/login.png)
+  ![Login Wireframe](static/images/login.png)
 
-- **Signup Wireframe**
+- **Signup Page**
 
-  ![Profile Wireframe](static/images/sign-up.png)
+  ![Signup Wireframe](static/images/sign-up.png)
 
-- **Profile Wireframe**
+- **Profile Page**
 
   ![Profile Wireframe](static/images/Profile.png)
 
@@ -202,17 +225,17 @@ Wireframes were designed using Balsamiq to plan layouts for desktop and mobile v
 
 ### Wireframe Evolution
 
-The wireframes served as the initial visual guide for the project's structure and core user flows.  
-However, as development progressed, additional design improvements were made to enhance user experience and align more closely with the brand identity of Strum & Strings.
+These wireframes served as the foundational layout for key user flows during the planning phase.  
+As development progressed, several enhancements were made to elevate the user experience and reflect the brand identity of **Strum & Strings**.
 
-These improvements included:
+#### Key Improvements:
+- Enhanced styling using **Bootstrap 5** components for consistency and accessibility.
+- Improved spacing, font usage, and responsive behavior across all screen sizes.
+- Refined product detail layout to better highlight visuals and pricing.
+- Streamlined checkout process for faster user completion and improved flow.
+- The admin dashboard includes front-end CRUD functionality, allowing admins to edit products, view and manage orders, and access newsletter subscriber information.
 
-- Enhanced visual styling using Bootstrap 5 components.
-- Better spacing, typography, and mobile responsiveness adjustments.
-- Refinement of the product detail layout to showcase guitars more clearly.
-- Streamlining of the checkout flow for a faster, simpler purchasing experience.
-
-While the final website closely follows the original wireframes in structure, certain stylistic and functional improvements were intentionally made during development to deliver a more polished, user-friendly platform.
+While the final implementation stays true to the core wireframe structure, adjustments were made to deliver a more polished, professional, and user-centric interface.
 
 ---
 
@@ -220,59 +243,64 @@ While the final website closely follows the original wireframes in structure, ce
 
 ## Home Page
 
-- Displays a clean hero banner introducing the brand.
-- Includes a clear navigation menu with links to shop, profile, cart, and newsletter signup.
+- Features a clean hero banner introducing the brand and its mission.
+- Includes a responsive navigation menu with links to Shop, Profile, Cart, and Newsletter Signup.
 
 ## Shop Page
 
-- Displays all available guitars and accessories in a grid layout.
-- Users can filter products by category (Acoustic, Electric, etc.).
-- Responsive search functionality to find products easily.
+- Displays all available guitars and accessories in a responsive grid layout.
+- Users can filter products by category (e.g., Acoustic, Electric, Bass).
+- Includes real-time search functionality to help users quickly find products.
 
 ## Categories Page
 
-- Displays all 3 categories to give the user the option to search by type.
-- Users can filter products by category (Acoustic, Electric, etc.).
-- Responsive search functionality to find products easily.
+- Showcases the two primary guitar categories along with accessories, enabling intuitive browsing by product type.
+- Category filtering and search functionality mirror those of the main shop page for consistency.
 
 ## Product Detail Page
 
-- Displays detailed information for each product:
-  - Name, brand, model, price, description.
-  - Product images served securely through Cloudinary.
-- Includes an “Add to Cart” button and quantity selector.
-- Displays related products
+- Provides detailed information for each product, including:
+  - Name, brand, model, price, and full description.
+  - High-quality product images served via **Cloudinary**.
+- Includes an "Add to Cart" button with a quantity selector.
+- Displays a section of related products to encourage further browsing.
 
 ## Cart and Checkout
 
 - **Cart Page**:
-  - Users can view, edit, or remove products in their shopping cart.
-  - Displays a running total and delivery costs.
+  - Users can view all items added to their cart.
+  - Options to edit quantities or remove products.
+  - Displays dynamic total cost including delivery fees.
+
 - **Checkout Page**:
-  - Secure Stripe payment redirect
-  - Users enter delivery details and complete purchase.
-  - Form validation ensures all required fields are correctly completed.
-  - Order confirmation page shows the order summary after successful payment.
+  - Users securely complete purchases via **Stripe Checkout**.
+  - Delivery information form with real-time validation.
+  - Redirect to a confirmation page upon successful payment, displaying full order details.
 
 ## Profile and Order History
 
-- Registered users have access to a Profile page.
-- Users can:
-  - View past orders.
-  - Update saved shipping details.
+- Logged-in users can access their profile dashboard.
+- Features include:
+  - Viewing and managing personal details.
+  - Accessing full order history with individual order summaries.
 
 ## Newsletter Signup
 
-- User can signup for newsletter with email confirmation.
-- Users can submit their email address to receive newsletters about new products and promotions.
-- Confirmation message shown after successful signup.
+- Users can subscribe to a newsletter for updates, offers, and product announcements.
+- Frontend form validates email input and prevents duplicate signups.
+- Confirmation message shown upon successful submission and redirect to Mailchimp.
 
 ## Admin Panel
 
-- Django Admin interface customized for efficient management:
-  - Products, categories, orders, and newsletter subscriptions can be added, edited, or deleted.
-- Admins can view all customer orders and manage order statuses.
-- Cloudinary images can be edited directly via product admin forms.
+- Custom Django Admin interface for efficient backend management:
+  - Products, categories, orders, and newsletter subscribers can be added, edited, or deleted.
+  - Orders are viewable with detailed customer and product info.
+  - Cloudinary image URLs can be edited directly within product admin forms.
+- Admin dashboard includes frontend CRUD functionality to:
+  - Manage products via a custom catalog interface.
+  - View and update order status.
+  - Access a list of newsletter subscribers.
+
 
 ---
 
@@ -280,45 +308,45 @@ While the final website closely follows the original wireframes in structure, ce
 
 ## Languages
 
-- [HTML5](https://en.wikipedia.org/wiki/HTML5) – For structuring content.
-- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) – For styling and layout.
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) – For dynamic frontend behaviors.
-- [Python 3](https://www.python.org/) – For backend development with Django.
-- [SQL (PostgreSQL)](https://www.postgresql.org/) – For the relational database in production.
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) – Used to structure the website content.
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) – Provides layout, visual styling, and responsiveness.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) – Powers interactive elements and dynamic front-end behaviors.
+- [Python 3](https://www.python.org/) – Used for server-side logic and Django application development.
+- [SQL (PostgreSQL)](https://www.postgresql.org/) – Relational database used in production via Heroku.
 
 ---
 
 ## Frameworks and Platforms
 
-- [Django](https://www.djangoproject.com/) – Backend web framework.
-- [Bootstrap 5](https://getbootstrap.com/) – Frontend framework for responsive design.
-- [Django-Allauth](https://django-allauth.readthedocs.io/en/latest/) – For user authentication and account management.
-- [Gunicorn](https://gunicorn.org/) – WSGI HTTP server for deployment.
+- [Django](https://www.djangoproject.com/) – Full-stack Python web framework used for backend architecture and database management.
+- [Bootstrap 5](https://getbootstrap.com/) – Frontend framework used for responsive, mobile-first design.
+- [Django-Allauth](https://django-allauth.readthedocs.io/en/latest/) – Handles user registration, login, and account management.
+- [Gunicorn](https://gunicorn.org/) – WSGI server used for deploying Django apps to Heroku.
 
 ---
 
 ## Libraries and Tools
 
-- [Stripe](https://stripe.com/) – For secure online payments.
-- [Cloudinary](https://cloudinary.com/) – For hosting product images externally.
-- [Mailchimp](https://mailchimp.com/) – For newsletter email marketing integration.
-- [Balsamiq](https://balsamiq.com/) – For wireframe creation.
-- [Git](https://git-scm.com/) – For version control.
-- [GitHub](https://github.com/) – For repository hosting and collaboration.
-- [Heroku](https://www.heroku.com/) – For live deployment of the Django project.
-- [Crispy Forms (Bootstrap5)](https://django-crispy-forms.readthedocs.io/en/latest/) – To improve form styling.
-- [Whitenoise](http://whitenoise.evans.io/en/stable/) – To serve static files on Heroku.
+- [Stripe](https://stripe.com/) – Enables secure online payments through hosted checkout and webhook integration.
+- [Cloudinary](https://cloudinary.com/) – Handles media storage and delivery of product images.
+- [Mailchimp](https://mailchimp.com/) – Integrated for newsletter subscription and email marketing.
+- [Balsamiq](https://balsamiq.com/) – Used to create low-fidelity wireframes during the design phase.
+- [Git](https://git-scm.com/) – Version control system used throughout the development process.
+- [GitHub](https://github.com/) – Hosts the codebase and manages collaboration and version history.
+- [Heroku](https://www.heroku.com/) – Platform-as-a-service used for live deployment of the project.
+- [Crispy Forms (Bootstrap 5)](https://django-crispy-forms.readthedocs.io/en/latest/) – Enhances Django form presentation using Bootstrap 5 styling.
+- [Whitenoise](http://whitenoise.evans.io/en/stable/) – Serves static files efficiently in production on Heroku.
 
 ---
 
 ## Development Tools
 
-- [VS Code](https://code.visualstudio.com/) – Code editor.
-- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) – Browser tools for debugging.
-- [W3C Markup Validator](https://validator.w3.org/) – HTML validation.
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) – CSS validation.
-- [JSHint](https://jshint.com/) – JavaScript validation.
-- [CI Python Linter](https://pep8ci.herokuapp.com/) – Python code validation.
+- [Visual Studio Code](https://code.visualstudio.com/) – Primary code editor with extensions for Python and Django.
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) – Used to inspect elements, debug JavaScript, and test responsive behavior.
+- [W3C Markup Validator](https://validator.w3.org/) – Ensures HTML5 compliance.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) – Validates CSS for syntax and accessibility.
+- [JSHint](https://jshint.com/) – Identifies potential issues in JavaScript code.
+- [CI Python Linter](https://pep8ci.herokuapp.com/) – Checks Python code against PEP8 standards.
 
 ---
 
@@ -672,119 +700,122 @@ Responsiveness was tested across all major pages and screen sizes to ensure a co
 
 ## Bugs Encountered
 
-- **Media Storage During Deployment**:  
-  - Issue: Images did not appear after deployment to Heroku initially.  
-  - Fix: Implemented Cloudinary storage for all media files.
+- **Media Storage During Deployment**  
+  - *Issue*: Product images were not displaying after deployment to Heroku.  
+  - *Fix*: Integrated **Cloudinary** for external media storage, ensuring images load correctly in production.
 
-- **Cart Quantity Updating**:  
-  - Issue: Minor bug with cart quantities not updating immediately on small screens.  
-  - Fix: Adjusted JavaScript event listeners and now updates instantly.
+- **Cart Quantity Updating**  
+  - *Issue*: On smaller screens, cart quantities were not updating immediately.  
+  - *Fix*: Refined JavaScript event listeners to ensure quantities update in real time across all devices.
 
-- **Stripe Webhook Connection**:  
-  - Issue: Stripe webhook was not connecting properly in local testing.  
-  - Fix: Configured Stripe CLI to forward events to localhost and corrected webhook handler.
+- **Stripe Webhook Connection**  
+  - *Issue*: Stripe webhooks failed during local testing due to connection issues.  
+  - *Fix*: Configured **Stripe CLI** to forward events to localhost and adjusted the webhook handler logic.
 
 ---
 
 ## Overall Testing Results
 
-- Every feature and flow was manually tested.
-- Validation errors were corrected during development.
-- Final deployed site behaves as expected across different screen sizes and devices.
+- All major features and user flows were manually tested.
+- Identified validation issues were resolved during development.
+- The final deployed site operates smoothly across different devices, browsers, and screen sizes.
+
+---
 
 # Deployment
 
-This project was deployed using **Heroku** with the following process:
+This project was deployed using **Heroku**, following the steps outlined below.
 
 ---
 
 ## Initial Setup
 
 - The codebase was pushed to [GitHub](https://github.com/).
-- The project uses a PostgreSQL database in production, configured through Heroku add-ons.
-- Static files are managed using **Whitenoise**.
-- Media files (product images) are managed and delivered through **Cloudinary**.
+- The live application uses a **PostgreSQL** database provisioned via Heroku add-ons.
+- Static files are served with **Whitenoise**.
+- Media files (such as product images) are stored externally using **Cloudinary**.
 
 ---
 
 ## Deployment Steps
 
-1. Created a new app on [Heroku](https://dashboard.heroku.com/).
-2. Set up environment variables on Heroku:
-    - `DATABASE_URL` (Heroku Postgres)
+1. Created a new Heroku app from the [Heroku Dashboard](https://dashboard.heroku.com/).
+2. Configured environment variables in the Heroku dashboard:
+    - `DATABASE_URL`
     - `SECRET_KEY`
     - `CLOUDINARY_URL`
     - `STRIPE_PUBLIC_KEY`
     - `STRIPE_SECRET_KEY`
     - `STRIPE_WH_SECRET`
-3. Added required Buildpacks:
+3. Added necessary buildpacks:
     - Python
-    - NodeJS
-4. Connected the GitHub repository to the Heroku app.
+    - Node.js
+4. Connected the Heroku app to the GitHub repository.
 5. Enabled **automatic deployments** from the `main` branch.
-6. Pushed the code to GitHub, triggering the first deployment build on Heroku.
-7. Ran the following commands:
-    - `python manage.py collectstatic`
+6. Pushed code to GitHub, triggering the initial Heroku build.
+7. Ran deployment setup commands:
     - `python manage.py migrate`
-8. Verified static and media files were properly collected and accessible.
-9. Performed a full end-to-end functionality test on the live Heroku URL.
+    - `python manage.py collectstatic`
+8. Verified that static and media assets were properly loaded on the deployed site.
+9. Performed a full end-to-end test on the live Heroku application URL.
 
 ---
 
 ## Cloudinary Integration
 
-- Set up a free Cloudinary account.
-- Uploaded all product images manually.
-- Updated product records in the Django Admin panel with Cloudinary URLs.
-- Integrated Cloudinary storage into Django settings for secure media hosting.
+- Created a free **Cloudinary** account for media storage.
+- Manually uploaded product images to the platform.
+- Updated product entries in Django Admin to use Cloudinary image URLs.
+- Configured Django to use Cloudinary as the default media storage backend.
 
 ---
 
 ## Stripe Payment Integration
 
-- Configured Stripe account settings.
-- Created a webhook endpoint to listen for payment confirmation events.
-- Used **Stripe CLI** during local testing to simulate webhook events.
-- Confirmed through CLI local testing however no real payments processed due to test card not being functional.
+- Configured a Stripe developer account and set up API keys.
+- Created a webhook endpoint to handle Stripe payment confirmations.
+- Used the **Stripe CLI** to test webhook events locally.
+- Confirmed successful order creation and payment handling in test mode (no live transactions processed).
 
 ---
 
 ## Final Live Application
 
-- The website is live and fully functional at:  
-  [Strum & Strings Heroku Deployment](https://strum-and-strings-e5017bc28566.herokuapp.com//)
+The website is deployed and fully functional at:  
+[Strum & Strings – Heroku Deployment](https://strum-and-strings-e5017bc28566.herokuapp.com/)
+
+---
 
 ## Marketing Strategies
 
 ### Facebook Business Page
 
-To strengthen brand visibility and engage directly with the target audience, I created a dedicated **Facebook Business Page** for **Strum & Strings**.  
+To boost brand visibility and connect with the target audience, a dedicated **Facebook Business Page** was created for **Strum & Strings**.  
 This page is used to:
 
-- Promote new products, bundle deals, and seasonal sales.
-- Share guitar-related tips, tutorials, and engaging content.
+- Promote new products, bundle offers, and seasonal sales.
+- Share engaging content such as guitar tips, tutorials, and customer stories.
 - Build a community of musicians, students, and institutions.
-- Enhance credibility and increase organic brand reach via social media.
+- Improve credibility and expand organic reach through social engagement.
 
-The Facebook page also provides a direct channel for customer inquiries, helping to improve the overall user experience and support service.  
-This step fulfills the project’s marketing requirement of establishing a real-world online presence for the business.
+The Facebook page also provides a direct communication channel for customer support and inquiries, improving overall user experience.  
+This initiative fulfills the marketing requirement by establishing a real-world online presence for the brand.
 
+![Strum and Strings Facebook Page](static/images/FB_business_page.jpg)
 
-![Strum and strings FB business page](static/images/FB_business_page.jpg)
 ---
 
 ### Newsletter Integration
 
-To further enhance customer engagement and brand loyalty, I integrated a **newsletter signup form** on the website using **Mailchimp**.  
-This signup form allows visitors to:
+To further increase user engagement and brand loyalty, a **newsletter signup form** was integrated using **Mailchimp**.  
+Visitors can:
 
-- Subscribe for exclusive offers, product updates, and musical tips.
-- Stay informed about new arrivals, limited-time bundles, and promotions.
+- Subscribe to receive exclusive offers, product announcements, and guitar-related tips.
+- Stay updated on new arrivals, limited-time bundles, and promotional campaigns.
 
-The newsletter strategy is designed to build a growing customer mailing list, supporting future email marketing campaigns and personalized offers.
+This newsletter strategy helps grow a mailing list that supports ongoing email marketing and personalized customer outreach.
 
-Both the Facebook page and the newsletter system work together to maximize reach, engagement, and retention of the Strum & Strings customer base.
-
+Together, the Facebook page and newsletter system form a multi-channel marketing approach designed to maximize visibility, drive engagement, and retain customers.
 
 # Credits
 
