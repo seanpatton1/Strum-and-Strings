@@ -450,7 +450,7 @@ Responsiveness was tested across all major pages and screen sizes to ensure a co
 
 ### Product Listing Page
 
-| Feature Tested          | Expected Outcome                                                      | Actual Result | Notes                                |
+| Feature Tested          | Expected Outcome                                                       | Actual Result | Notes                                  |
 |-------------------------|------------------------------------------------------------------------|---------------|----------------------------------------|
 | Product Grid            | Products are displayed in a clean, readable grid layout                | Pass          | Grid layout is responsive              |
 | Product Details Preview | Each product shows name, price, image, and short description           | Pass          | "View Details" button present          |
@@ -510,6 +510,47 @@ Responsiveness was tested across all major pages and screen sizes to ensure a co
 | Invalid Email Submission   | Form does not submit and shows a validation error                                | Pass          | Validation blocks malformed emails       |
 | Valid Email Submission     | Email is sent to user for confirmation                                           | Pass          | Tested using temporary email address     |
 | Email Confirmation Flow    | Clicking confirmation link redirects user back to homepage                       | Pass          | Confirms subscription and redirects user |
+
+### Newsletter Signup Functionality
+
+| Feature Tested                       | Expected Outcome                                                                 | Actual Result | Notes                                     |
+|--------------------------------------|----------------------------------------------------------------------------------|----------------|--------------------------------------------|
+| Valid Email Input                    | User enters a valid email and is redirected to Mailchimp for confirmation        | Pass           | JS validation in place                     |
+| Invalid Email Format                 | User enters an invalid email and is blocked from submitting                      | Pass           | Custom validity message shown              |
+| Duplicate Email Check (Existing)     | If email is already in database, user is shown a message and not redirected      | Pass           | No duplicate stored                        |
+| New Email Submission                 | New emails are stored in the database and passed to Mailchimp                    | Pass           | Data stored via `/save-email/` endpoint    |
+| Email Confirmation Link              | After subscribing via Mailchimp, user receives a confirmation email              | Pass           | Tested with temp email                     |
+| Confirmation Redirect                | After clicking Mailchimp confirmation, user is returned to the success page      | Pass           | Link redirects to `newsletter_success.html`|
+| Success Page Styling                 | Page matches site design and thanks the user                                     | Pass           | Custom CSS implemented                     |
+
+### Contact Us Form Functionality
+
+| Step | Action                          | Expected Outcome                                                                 | Result |
+|------|---------------------------------|----------------------------------------------------------------------------------|--------|
+| 1    | Navigate to the Contact Us page | Page loads with styled form and fields for name, email, subject, and message     | Pass   |
+| 2    | Submit empty form               | Validation errors appear; form is not submitted                                  | Pass   |
+| 3    | Submit form with invalid email  | Validation error shown for email field                                           | Pass   |
+| 4    | Submit form with valid data     | Form submits, user sees confirmation message that message has been sent          | Pass   |
+
+### Contact Message Admin View Test
+
+| Step | Action                                  | Expected Outcome                                                                 | Result |
+|------|-----------------------------------------|----------------------------------------------------------------------------------|--------|
+| 1    | Log in to the Django admin panel        | Admin dashboard loads successfully                                               | Pass   |
+| 2    | Navigate to the "Contact messages" tab  | List of all submitted contact messages is visible with names, email, etc.        | Pass   |
+| 3    | Click on a message to view details      | Full details (name, email, subject, message, timestamp) are displayed clearly    | Pass   |
+| 4    | Confirm no duplicate entries            | Each message appears only once                                                   | Pass   |
+
+### Admin Access Control Test
+
+| Step | Action                                                             | Expected Outcome                                                     | Result |
+|------|--------------------------------------------------------------------|----------------------------------------------------------------------|--------|
+| 1    | Log in as a non-staff user                                         | Redirected to Django admin login page when accessing restricted URLs | Pass   |
+| 2    | Log in as a staff/admin user                                       | Can access all admin-specific sections of the site                   | Pass   |
+| 3    | Try accessing `/accounts/admin-dashboard/` as non-staff            | Redirected to Django admin login page                                | Pass   |
+| 4    | Try accessing `/accounts/admin-dashboard/newsletter/` as non-staff | Redirected to Django admin login page                                | Pass   |
+| 5    | Try accessing `/admin/` as staff                                   | Admin panel loads successfully                                       | Pass   |
+
 
 ## Bugs Encountered
 
