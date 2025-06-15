@@ -1,0 +1,13 @@
+.btn-gold {
+  background-color: #c99b3b;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #b58932;
+  color: #fff;
+}
