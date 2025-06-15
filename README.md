@@ -503,6 +503,13 @@ Responsiveness was tested across all major pages and screen sizes to ensure a co
 | Payment Completion     | After successful Stripe payment, user is redirected to confirmation page        | Pass          |       |
 | Order Summary Display  | Page shows order number, product(s), quantity, prices, and grand total          | Pass          |       |
 
+### Newsletter Signup – Email Validation & Confirmation
+
+| Feature Tested             | Expected Outcome                                                                 | Actual Result | Notes                                    |
+|----------------------------|----------------------------------------------------------------------------------|---------------|------------------------------------------|
+| Invalid Email Submission   | Form does not submit and shows a validation error                                | Pass          | Validation blocks malformed emails       |
+| Valid Email Submission     | Email is sent to user for confirmation                                           | Pass          | Tested using temporary email address     |
+| Email Confirmation Flow    | Clicking confirmation link redirects user back to homepage                       | Pass          | Confirms subscription and redirects user |
 
 ## Bugs Encountered
 

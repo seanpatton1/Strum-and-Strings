@@ -24,5 +24,6 @@ urlpatterns = [
     path('admin-dashboard/newsletter/', views.newsletter_list, name='newsletter_list'),
     path('admin-dashboard/newsletter/<int:subscriber_id>/edit/', views.newsletter_update, name='newsletter_update'),
     path('newsletter/success/', views.newsletter_success, name='newsletter_success'),
+    path('newsletter/check-email/', views.check_newsletter_email, name='check_newsletter_email'),
     path('admin-dashboard/newsletter/<int:subscriber_id>/delete/', views.newsletter_delete, name='newsletter_delete')
 ]

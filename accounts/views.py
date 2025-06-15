@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.http import JsonResponse
 from django.core.paginator import Paginator
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
@@ -229,3 +230,12 @@ def newsletter_delete(request, subscriber_id):
 def newsletter_success(request):
     return render(request, 'accounts/newsletter_success.html')
 
+
+@require_POST
+@csrf_exempt
+def check_newsletter_email(request):
+    email = request.POST.get('email')
+    if email:
+        exists = NewsletterSubscriber.objects.filter(email=email).exists()
+        return JsonResponse({'subscribed': exists})
+    return JsonResponse({'error': 'No email provided'}, status=400)
