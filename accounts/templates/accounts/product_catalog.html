@@ -12,7 +12,7 @@
 
 {% block content %}
 <div>
-    <!-- Breadcrumb Navigation -->
+  <!-- Breadcrumb Navigation -->
   <nav aria-label="breadcrumb" id="breadcrumb-main">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="{% url 'home' %}">Admin Dashboard</a></li>
@@ -20,71 +20,94 @@
     </ol>
   </nav>
 </div>
+
 <div class="container mt-4">
-    <h2 class="text-center fw-bold mb-5 section-heading">Manage Product Catalog</h2>
+  <h2 class="text-center fw-bold mb-5 section-heading">Manage Product Catalog</h2>
 
-    {% for category in categories %}
-        <h4 class="mb-3 text-center text-dark">{{ category }} Products</h4>
+  {% for category in categories %}
+    <h4 class="mb-3 text-center text-dark">{{ category }} Products</h4>
 
-        <div class="table-responsive shadow-sm rounded mb-4">
-            <table class="table align-middle text-center product-table">
-                <thead class="custom-table-header text-light">
-                    <tr>
-                        <th>Name</th>
-                        <th>Brand</th>
-                        <th>Category</th>
-                        <th>Price</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% with page_obj=paginated_products|get_item:category %}
-                        {% for product in page_obj %}
-                            <tr>
-                                <td>{{ product.name }}</td>
-                                <td>{{ product.brand }}</td>
-                                <td>{{ product.category }}</td>
-                                <td>£{{ product.price }}</td>
-                                <td>
-                                    <a href="{% url 'accounts:edit_product' product.id %}" class="btn btn-sm btn-gold text-dark fw-bold me-2">Edit</a>
-                                    <a href="{% url 'accounts:delete_product' product.id %}" class="btn btn-sm btn-danger text-light fw-bold">Delete</a>
-                                </td>
-                            </tr>
-                        {% empty %}
-                            <tr>
-                                <td colspan="5" class="text-muted">No products in this category.</td>
-                            </tr>
-                        {% endfor %}
-                    {% endwith %}
-                </tbody>
-            </table>
-        </div>
+    <!-- Desktop Table View -->
+    <div class="table-responsive d-none d-md-block shadow-sm rounded mb-4">
+      <table class="table align-middle text-center product-table">
+        <thead class="custom-table-header text-light">
+          <tr>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% with page_obj=paginated_products|get_item:category %}
+            {% for product in page_obj %}
+              <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.brand }}</td>
+                <td>{{ product.category }}</td>
+                <td>£{{ product.price }}</td>
+                <td>
+                  <a href="{% url 'accounts:edit_product' product.id %}" class="btn btn-sm btn-gold text-dark fw-bold me-2">Edit</a>
+                  <a href="{% url 'accounts:delete_product' product.id %}" class="btn btn-sm btn-danger text-light fw-bold">Delete</a>
+                </td>
+              </tr>
+            {% empty %}
+              <tr>
+                <td colspan="5" class="text-muted">No products in this category.</td>
+              </tr>
+            {% endfor %}
+          {% endwith %}
+        </tbody>
+      </table>
+    </div>
 
-        {% with page_obj=paginated_products|get_item:category %}
-            {% if page_obj.has_other_pages %}
-            <nav class="d-flex justify-content-center mb-5">
-                <ul class="pagination">
-                    {% if page_obj.has_previous %}
-                        <li class="page-item">
-                            <a class="page-link" href="?page_{{ category }}={{ page_obj.previous_page_number }}">Previous</a>
-                        </li>
-                    {% endif %}
+    <!-- Mobile Card View -->
+    <div class="d-md-none">
+      {% with page_obj=paginated_products|get_item:category %}
+        {% for product in page_obj %}
+          <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">{{ product.name }}</h5>
+              <p class="mb-1"><strong>Brand:</strong> {{ product.brand }}</p>
+              <p class="mb-1"><strong>Category:</strong> {{ product.category }}</p>
+              <p class="mb-2"><strong>Price:</strong> £{{ product.price }}</p>
+              <a href="{% url 'accounts:edit_product' product.id %}" class="btn btn-sm btn-gold text-dark fw-bold me-2 mb-1">Edit</a>
+              <a href="{% url 'accounts:delete_product' product.id %}" class="btn btn-sm btn-danger text-light fw-bold mb-1">Delete</a>
+            </div>
+          </div>
+        {% empty %}
+          <p class="text-muted">No products in this category.</p>
+        {% endfor %}
+      {% endwith %}
+    </div>
 
-                    <li class="page-item disabled">
-                        <span class="page-link">
-                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
-                        </span>
-                    </li>
+    <!-- Pagination -->
+    {% with page_obj=paginated_products|get_item:category %}
+      {% if page_obj.has_other_pages %}
+      <nav class="d-flex justify-content-center mb-5">
+        <ul class="pagination">
+          {% if page_obj.has_previous %}
+            <li class="page-item">
+              <a class="page-link" href="?page_{{ category }}={{ page_obj.previous_page_number }}">Previous</a>
+            </li>
+          {% endif %}
 
-                    {% if page_obj.has_next %}
-                        <li class="page-item">
-                            <a class="page-link" href="?page_{{ category }}={{ page_obj.next_page_number }}">Next</a>
-                        </li>
-                    {% endif %}
-                </ul>
-            </nav>
-            {% endif %}
-        {% endwith %}
-    {% endfor %}
+          <li class="page-item disabled">
+            <span class="page-link">
+              Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+          </li>
+
+          {% if page_obj.has_next %}
+            <li class="page-item">
+              <a class="page-link" href="?page_{{ category }}={{ page_obj.next_page_number }}">Next</a>
+            </li>
+          {% endif %}
+        </ul>
+      </nav>
+      {% endif %}
+    {% endwith %}
+  {% endfor %}
 </div>
 {% endblock %}
