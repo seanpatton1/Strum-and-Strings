@@ -2,6 +2,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Explore guitars and accessories in the {{ category.name }} category at Strum & Strings.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="{{ category.name }}, guitar category, shop guitars, music gear, Strum & Strings">
+{% endblock %}
+
+
 {% block extra_css %}
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'categories/css/categories.css' %}">

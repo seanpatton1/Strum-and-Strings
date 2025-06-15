@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Access the Strum & Strings admin dashboard to manage products, orders, and subscribers.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="admin dashboard, manage orders, manage products, newsletter admin, Strum & Strings">
+{% endblock %}
+
+
 {% block extra_css %}
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'accounts/css/admin-dashboard.css' %}">

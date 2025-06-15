@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Securely complete your purchase with Strum & Strings. Enter your details and proceed to payment.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="checkout, secure payment, guitar purchase, Strum & Strings">
+{% endblock %}
+
+
 {% block extra_css %}
 {{ block.super }}
   <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">

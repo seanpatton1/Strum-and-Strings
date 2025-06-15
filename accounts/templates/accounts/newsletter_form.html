@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Edit or add a newsletter subscriber to the Strum & Strings mailing list. Admin functionality.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="newsletter form, add subscriber, edit newsletter email, admin tools, Strum & Strings">
+{% endblock %}
+
+
 {% block extra_css %}
 {{ block.super }}
   <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">

@@ -2,6 +2,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Browse our full catalog of guitars and accessories. Find the perfect instrument for your sound.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="all guitars, guitar shop, acoustic, electric, music accessories, instruments for sale">
+{% endblock %}
+
+
 {% block extra_css %}
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'products/products_list.css' %}">

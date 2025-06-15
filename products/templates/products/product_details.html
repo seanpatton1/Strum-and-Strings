@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Explore full details of this product including specifications, price, and availability.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="guitar details, product specs, electric guitar, acoustic guitar, music gear">
+{% endblock %}
+
+
 {% block extra_css %}
 {{ block.super }}
 <link rel="stylesheet" href="{% static 'products/products.css' %}">

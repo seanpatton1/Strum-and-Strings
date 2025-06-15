@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Edit product details including name, price, image, and description. Admin access required.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="edit product, admin edit, update product info, Strum & Strings catalog">
+{% endblock %}
+
+
 {% block extra_css %}
 {{ block.super }}
   <link rel="stylesheet" href="{% static 'accounts/css/edit_product.css' %}">

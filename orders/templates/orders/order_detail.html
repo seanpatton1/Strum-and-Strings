@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="View the details of your order including products, quantities, and delivery information.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="order details, purchase summary, guitar order, Strum & Strings orders">
+{% endblock %}
+
+
 {% block extra_css %}
 {{ block.super }}
 <link rel="stylesheet" href="{% static 'orders/css/orders.css' %}">

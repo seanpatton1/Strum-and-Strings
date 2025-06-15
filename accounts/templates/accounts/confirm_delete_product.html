@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Confirm deletion of a product from the Strum & Strings catalog. Only admin users can perform this action.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="delete product, admin, remove item, Strum & Strings catalog">
+{% endblock %}
+
+
 {% block extra_css %}
 {{ block.super }}
   <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">

@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Admin view of all customer orders placed on Strum & Strings. Track order history and statuses.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="admin orders, customer orders, order history, order management, Strum & Strings admin">
+{% endblock %}
+
+
 {% block extra_css %}
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'accounts/css/order_list.css' %}">

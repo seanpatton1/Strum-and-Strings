@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Sign up for the Strum & Strings newsletter to receive updates, offers, and news.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="newsletter signup, email updates, guitar deals, Strum & Strings news">
+{% endblock %}
+
+
 {% block extra_css %}
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'accounts/css/profile.css' %}">

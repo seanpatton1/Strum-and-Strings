@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Edit and update customer order details, including shipping and payment status.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="edit order, update order details, admin orders, Strum & Strings">
+{% endblock %}
+
+
 {% block extra_css %}
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'accounts/css/admin_order_detail.css' %}">

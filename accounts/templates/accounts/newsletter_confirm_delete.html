@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Confirm deletion of a newsletter subscriber from the Strum & Strings mailing list. Admin only.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="delete subscriber, newsletter admin, remove email, Strum & Strings newsletter">
+{% endblock %}
+
+
 {% block extra_css %}
 {{ block.super }}
   <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">

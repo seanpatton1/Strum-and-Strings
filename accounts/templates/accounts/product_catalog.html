@@ -2,6 +2,15 @@
 {% load static %}
 {% load custom_filters %}
 
+{% block meta_description %}
+  <meta name="description" content="Manage the full product catalog for Strum & Strings, including guitars and accessories.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="admin catalog, edit products, manage guitars, product inventory, Strum & Strings admin">
+{% endblock %}
+
+
 {% block extra_css %}
 {{ block.super }}
 <link rel="stylesheet" href="{% static 'accounts/css/product_catalog.css' %}">

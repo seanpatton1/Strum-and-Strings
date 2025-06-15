@@ -1,5 +1,15 @@
 {% extends 'base.html' %} 
-{% load static %} 
+{% load static %}
+
+{% block meta_description %}
+  <meta name="description" content="View the items in your cart before proceeding to checkout. Modify quantities or remove products as needed.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="shopping cart, guitar cart, checkout, Strum & Strings">
+{% endblock %}
+
+
 {% block extra_css %} {{ block.super}}
 <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}" />
 {% endblock %} 

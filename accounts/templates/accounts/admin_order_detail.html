@@ -1,5 +1,15 @@
 {% extends 'base.html' %} 
 {% load static %} 
+
+{% block meta_description %}
+  <meta name="description" content="View detailed information for a specific customer order including items, quantities, and delivery status.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="order details, customer order, admin order view, Strum & Strings">
+{% endblock %}
+
+
 {% block extra_css %} 
 {{ block.super }}
 <link

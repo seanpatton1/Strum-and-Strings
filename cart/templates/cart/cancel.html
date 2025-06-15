@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Your payment has been cancelled. Return to Strum & Strings to continue shopping or try again.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="payment cancelled, checkout failed, try again, Strum & Strings">
+{% endblock %}
+
+
 {% block extra_css %}
 {{ block.super }}
   <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">

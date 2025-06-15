@@ -383,7 +383,6 @@ The table below outlines key user flows and whether they performed as expected d
 | System/UX       | Responsive Design                       | Site is fully responsive on mobile, tablet, and desktop                         | Pass   |
 | System/UX       | 404 Error Page                          | Invalid URL shows friendly custom 404 page                                      | Pass   |
 | System/UX       | SEO Tags                                | Meta descriptions and titles set for all pages                                  | Pass   |
-| System/UX       | robots.txt and sitemap.xml              | Both files exist and are valid                                                  | Pass   |
 | System/UX       | Site Loads on All Major Browsers        | Tested successfully on Chrome, Firefox, Safari, Edge                            | Pass   |
 
 ### Responsive Design Testing
@@ -550,6 +549,125 @@ Responsiveness was tested across all major pages and screen sizes to ensure a co
 | 3    | Try accessing `/accounts/admin-dashboard/` as non-staff            | Redirected to Django admin login page                                | Pass   |
 | 4    | Try accessing `/accounts/admin-dashboard/newsletter/` as non-staff | Redirected to Django admin login page                                | Pass   |
 | 5    | Try accessing `/admin/` as staff                                   | Admin panel loads successfully                                       | Pass   |
+
+### 404 Error Page Handling Test
+
+| Step | Action                                                                      | Expected Outcome                                                        | Result |
+|------|-----------------------------------------------------------------------------|-------------------------------------------------------------------------|--------|
+| 1    | Manually visit a non-existent URL (e.g., `/nonexistent-page/`)              | A custom-styled 404 error page is displayed                             | Pass   |
+| 2    | Check that the page includes a friendly message and a "Back to Home" button | The page shows the custom message and has a working redirect button     | Pass   |
+| 3    | Confirm styling matches the rest of the site                                | Fonts, spacing, and layout are consistent with site branding            | Pass   |
+| 4    | Click the "Back to Home" button                                             | Redirects to the home page (`/`)                                        | Pass   |
+
+### Newsletter Subscriber Admin View Test
+
+| Step | Action                                                        | Expected Outcome                                                                 | Result |
+|------|---------------------------------------------------------------|----------------------------------------------------------------------------------|--------|
+| 1    | Log in to the Django admin panel as a staff user              | Admin dashboard loads successfully                                               | Pass   |
+| 2    | Navigate to the **Newsletter Subscribers** section            | A list of all newsletter subscribers is visible                                  | Pass   |
+| 3    | Click on a subscriber entry                                   | Details like email, user (if any), and subscription date are displayed           | Pass   |
+| 4    | Try editing a subscriber’s email or user association          | Form loads correctly and updates are saved successfully                          | Pass   |
+| 5    | Try deleting a subscriber                                     | Confirmation prompt appears and subscriber is removed upon confirmation          | Pass   |
+| 6    | Confirm that deleted subscriber no longer appears in the list | Subscriber is removed from the database and list view                            | Pass   |
+
+### Admin – Manage Products Test
+
+| Step | Action                                                              | Expected Outcome                                                     | Result |
+|------|---------------------------------------------------------------------|----------------------------------------------------------------------|--------|
+| 1    | Log into the Django admin panel                                     | Admin dashboard is accessible                                        | Pass   |
+| 2    | Navigate to “Products” model in Django admin                        | List of products is visible with add/edit/delete options             | Pass   |
+| 3    | Add a new product via Django admin                                  | Product is created successfully and visible on front-end             | Pass   |
+| 4    | Edit an existing product via Django admin                           | Changes are saved and reflected on front-end                         | Pass   |
+| 5    | Delete a product from Django admin                                  | Product is removed from both admin and site                          | Pass   |
+
+### Admin – Add New Product
+
+| Step | Action                                                                | Expected Outcome                                                               | Result |
+|------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|--------|
+| 1    | Log in as a staff/admin user                                          | Admin dashboard is accessible                                                  | Pass   |
+| 2    | Click “Add Product” from admin dashboard                              | Add product form loads with all required fields visible                        | Pass   |
+| 3    | Enter valid data for name, brand, category, model, description, price | Fields accept input, form remains valid                                        | Pass   |
+| 4    | Upload an image                                                       | Image file is accepted and ready for Cloudinary upload                         | Pass   |
+| 5    | Submit the form                                                       | Product is saved, success message is shown, and form resets                    | Pass   |
+| 6    | View shop or product list                                             | Newly added product appears in shop view with correct details                  | Pass   |
+
+### Admin – Manage Product Catalog (Edit & Delete)
+
+| Step | Action                                                | Expected Outcome                                                                 | Result |
+|------|-------------------------------------------------------|----------------------------------------------------------------------------------|--------|
+| 1    | Log in as a staff/admin user                          | Admin dashboard is accessible                                                   | Pass   |
+| 2    | Go to "Manage Product Catalog"                        | Product tables are displayed, grouped by category with Edit/Delete actions      | Pass   |
+| 3    | Click “Edit” next to a product                        | Edit form loads with pre-filled product details                                 | Pass   |
+| 4    | Update fields and submit the form                     | Product is updated, success message appears, and new data shows in catalog      | Pass   |
+| 5    | Click “Delete” next to a product                      | Confirmation page appears asking to confirm deletion                            | Pass   |
+| 6    | Confirm deletion                                      | Product is deleted, success message appears, and it no longer appears in table  | Pass   |
+| 7    | Try deleting a product and cancel                     | Product is not deleted, and user is redirected back to catalog safely           | Pass   |
+
+### Admin – View Order List
+
+| Step | Action                           | Expected Outcome                                                               | Result |
+|------|----------------------------------|--------------------------------------------------------------------------------|--------|
+| 1    | Log in as staff/admin user       | Go to admin dashboard                                                          | Pass   |
+| 2    | Click on "View Order List"       | Admin order list page loads with a table of all customer orders                | Pass   |
+| 3    | Verify column headers            | Columns display Order ID, User, Products (Qty), Status, Date, and View Details | Pass   |
+| 4    | Confirm product & status display | Products are grouped by order, with correct quantities and current status      | Pass   |
+| 5    | Click "View Details" on any row  | Redirects to detailed view of the selected order with user and product details | Pass   |
+
+### Admin - View and Edit Order Test
+
+| Step | Action                                     | Expected Outcome                                                                 | Result |
+|------|--------------------------------------------|----------------------------------------------------------------------------------|--------|
+| 1    | Log in as staff/admin user                 | Go to the admin dashboard                                                        | Pass   |
+| 2    | Click on “View Details” from order list    | Redirected to full order details page showing user, address, order items, etc.   | Pass   |
+| 3    | Click "Edit Order" on details page         | Redirected to edit form pre-populated with order/user details                    | Pass   |
+| 4    | Change user email and status, then save    | Changes are saved and reflected on order detail page                             | Pass   |
+| 5    | Try saving invalid data (e.g. blank email) | Form prevents submission and displays error                                      | Pass   |
+
+### Admin: Manage Newsletter Subscribers
+
+| Step | Action                                                      | Expected Outcome                                                     | Result |
+|------|-------------------------------------------------------------|----------------------------------------------------------------------|--------|
+| 1    | Navigate to Admin Dashboard → Newsletter Subscribers        | List of all subscribed emails is displayed                           | Pass   |
+| 2    | Click on a subscriber → Edit email                          | Admin can update and save subscriber info successfully               | Pass   |
+| 3    | Click delete on a subscriber                                | Confirmation page appears and, once confirmed, subscriber is removed | Pass   |
+
+### System/UX: Responsive Design Test
+
+| Step | Action                                                   | Expected Outcome                                                              | Result |
+|------|----------------------------------------------------------|-------------------------------------------------------------------------------|--------|
+| 1    | Open the site on a desktop browser                       | Full layout with header, footer, navigation, and product display visible      | Pass   |
+| 2    | Open the site on a tablet (e.g., iPad or dev tools)      | Adjusted layout, stacked content, navigation adapts to smaller screen width   | Pass   |
+| 3    | Open the site on a mobile device                         | Hamburger menu activates, content is centered and readable                    | Pass   |
+| 4    | Test responsiveness on product, cart, and checkout pages | All pages adjust layout and inputs for smaller screens without breaking       | Pass   |
+
+### System/UX: 404 Error Page Test
+
+| Step | Action                                               | Expected Outcome                                                                 | Result |
+|------|------------------------------------------------------|----------------------------------------------------------------------------------|--------|
+| 1    | Visit a non-existent URL (e.g., `/nonexistent-page`) | Custom 404 page is displayed with friendly message and "Back to Home" button     | Pass   |
+| 3    | Click "Back to Home"                                 | User is redirected to the homepage successfully                                  | Pass   |
+
+### SEO Meta Tags Test
+
+| Step | Action                                           | Expected Outcome                                                                  | Result |
+|------|--------------------------------------------------|-----------------------------------------------------------------------------------|--------|
+| 1    | Open homepage and inspect page source            | `<meta name="description">` and `<meta name="keywords">` are specific to homepage | Pass   |
+| 2    | Visit product listing page and view page source  | Unique meta tags for product listing are present and correct                      | Pass   |
+| 3    | Navigate to an individual product detail page    | Page contains meta tags describing the product accurately                         | Pass   |
+| 4    | Check contact page source                        | Meta tags reflect purpose of the contact page                                     | Pass   |
+| 5    | Go to cart, checkout, and success pages          | Each page has meta tags relevant to its function (e.g., purchase, confirmation)   | Pass   |
+| 6    | Open admin-related pages (e.g., add/edit product)| Meta tags match admin functionality description                                   | Pass   |
+| 7    | Confirm `<title>` tag changes per page           | Browser tab title reflects the current page’s purpose                             | Pass   |
+
+### Cross-Browser Compatibility Test
+
+| Step | Action                           | Expected Outcome                                                | Result |
+|------|----------------------------------|-----------------------------------------------------------------|--------|
+| 1    | Open the site in Chrome          | Site loads correctly with full styling and functionality        | Pass   |
+| 2    | Open the site in Firefox         | Site loads correctly with full styling and functionality        | Pass   |
+| 3    | Open the site in Safari (Mac/iOS)| Site loads correctly with full styling and functionality        | Pass   |
+| 4    | Open the site in Microsoft Edge  | Site loads correctly with full styling and functionality        | Pass   |
+
 
 
 ## Bugs Encountered

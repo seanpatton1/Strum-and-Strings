@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Your order has been placed successfully. Thank you for shopping at Strum & Strings!">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="order confirmation, successful checkout, thank you, Strum & Strings">
+{% endblock %}
+
+
 {% block extra_css %}
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">

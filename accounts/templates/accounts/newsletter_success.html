@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Thank you for subscribing to Strum & Strings! Stay tuned for updates and offers.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="newsletter confirmation, subscription success, thank you, Strum & Strings">
+{% endblock %}
+
+
 {% block extra_css %}
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'accounts/css/newsletter_success.css' %}">

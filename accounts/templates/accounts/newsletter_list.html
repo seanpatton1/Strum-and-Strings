@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="View and manage all newsletter subscribers for Strum & Strings.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="newsletter list, admin subscribers, email marketing, Strum & Strings newsletter">
+{% endblock %}
+
+
 {% block extra_css %}
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'accounts/css/newsletter_list.css' %}">

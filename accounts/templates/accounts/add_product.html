@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+  <meta name="description" content="Add new guitars, accessories, and instruments to the Strum & Strings catalog.">
+{% endblock %}
+
+{% block meta_keywords %}
+  <meta name="keywords" content="admin add product, guitar inventory, manage store items, guitar shop admin">
+{% endblock %}
+
+
 {% block extra_css %}
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'accounts/css/add_product.css' %}">
