@@ -36,29 +36,34 @@
   </head>
   <body>
     <div class="wrapper d-flex flex-column">
-  <!-- Header -->
-  <header class="fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark container-fluid">
-      <div class="navbar-brand-container">
-        <a class="navbar-brand" href="{% url 'home' %}">Strum & Strings</a>
-      </div>
+<!-- Header -->
+<header class="fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark container-fluid">
+    <!-- Brand -->
+    <div class="navbar-brand-container">
+      <a class="navbar-brand" href="{% url 'home' %}">Strum & Strings</a>
+    </div>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        style="margin-left: 25px"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Burger Menu -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      style="margin-left: 25px"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Nav Links -->
-        <ul class="navbar-nav ms-auto text-center w-100 mb-2 mb-lg-0">
+    <!-- Navigation Content -->
+    <div class="collapse navbar-collapse w-100" id="navbarNav">
+      <div class="d-flex justify-content-between align-items-center w-100 flex-wrap flex-lg-nowrap">
+
+        <!-- Nav Links (Right Side) -->
+        <ul class="navbar-nav order-2 order-lg-3 ms-auto mb-2 mb-lg-0 text-center">
           <li class="nav-item">
             <a class="nav-link" href="{% url 'products:products_list' %}">Shop</a>
           </li>
@@ -97,10 +102,10 @@
           </li>
         </ul>
 
-        <!-- Search Form -->
-        <form class="d-flex mt-lg-0 w-100" method="get" action="{% url 'products:products_list' %}">
+        <!-- Search (Center) -->
+        <form class="d-flex mx-auto order-1 order-lg-2 search-bar" method="get" action="{% url 'products:products_list' %}">
           <input
-            class="form-control me-2 w-100"
+            class="form-control me-2"
             type="search"
             name="q"
             placeholder="Search"
@@ -110,8 +115,9 @@
           <button class="btn btn-custom-search" type="submit">Search</button>
         </form>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
 
       <main class="{% block main_class %}flex-grow-1{% endblock %}">

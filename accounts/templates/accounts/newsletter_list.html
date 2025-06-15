@@ -10,6 +10,15 @@
 {% block main_class %}container py-5 mt-5{% endblock %}
 
 {% block content %}
+<div>
+    <!-- Breadcrumb Navigation -->
+  <nav aria-label="breadcrumb" id="breadcrumb-main">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'accounts:admin_dashboard' %}">Admin Dashboard</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Newsletter Subscribers</li>
+    </ol>
+  </nav>
+</div>
 <div class="container mt-4">
   <h2 class="text-center fw-bold mb-4 section-heading">Newsletter Subscribers</h2>
 
