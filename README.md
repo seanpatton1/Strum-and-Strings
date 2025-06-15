@@ -393,20 +393,54 @@ The table below outlines key user flows and whether they performed as expected d
 Responsiveness was tested across all major pages and screen sizes to ensure a consistent and accessible user experience.
 
 | Device Type | Screen Size (px) | Tested Pages     | Expected Behavior                                               | Result |
-|-------------|------------------|------------------|------------------------------------------------------------------|--------|
+|-------------|------------------|------------------|-----------------------------------------------------------------|--------|
 | Mobile      | 375×667          | All key pages    | Elements stack vertically, navigation collapses, forms readable | Pass   |
 | Tablet      | 768×1024         | All key pages    | Grid layout maintained, cards and inputs scale correctly        | Pass   |
 | Desktop     | 1440×900+        | All key pages    | Full layout displays, navigation, carousels and tables align    | Pass   |
 
 ### User Registration
 
-| Feature Tested       | Expected Outcome                                          | Actual Result | Notes                         |
-|----------------------|-----------------------------------------------------------|----------------|-------------------------------|
+| Feature Tested       | Expected Outcome                                          | Actual Result  | Notes                        |
+|----------------------|-----------------------------------------------------------|----------------|------------------------------|
 | Registration Page    | Registration page loads correctly                         | Pass           |                              |
 | Form Submission      | User can register with valid data                         | Pass           |                              |
 | Redirect             | User is redirected to email confirmation page             | Pass           |                              |
 | Email Confirmation   | Confirmation email is received                            | Pass           |                              |
 | Account Activation   | Clicking the confirmation link activates the account      | Pass           | Tested with test email inbox |
+
+### Login Functionality
+
+| Feature Tested         | Expected Outcome                             | Actual Result | Notes |
+|------------------------|----------------------------------------------|----------------|-------|
+| Login Page             | Login form is displayed                      | Pass           |       |
+| Form Submission        | User is logged in with valid credentials     | Pass           |       |
+| Redirect After Login   | User is redirected to homepage               | Pass           |       |
+
+### Logout Functionality
+
+| Feature Tested          | Expected Outcome                                              | Actual Result  | Notes |
+|-------------------------|---------------------------------------------------------------|----------------|-------|
+| Logout Action           | User is logged out and redirected to homepage                 | Pass           |       |
+| Access to Protected Page| User cannot view previous pages open to logged in users       | Pass           |       |
+
+
+### View Product Catalog
+
+| Feature Tested         | Expected Outcome                                                        | Actual Result  | Notes |
+|------------------------|-------------------------------------------------------------------------|----------------|-------|
+| Shop Button            | Redirects user to All Products page                                     | Pass           |       |
+| Product Listings       | All products are displayed and accessible                               | Pass           |       |
+| View Details Button    | Clicking shows full product details on a dedicated product page         | Pass           |       |
+
+### Profile View
+
+| Feature Tested     | Expected Outcome                                                      | Actual Result  | Notes                                       |
+|--------------------|-----------------------------------------------------------------------|----------------|---------------------------------------------|
+| Access Profile Page| Logged-in user can access the profile page                            | Pass           |                                             |
+| View Info          | User sees basic info (name, address, email, etc.)                     | Pass           |                                             |
+| View Past Orders   | User can view a list of all previous orders                           | Pass           |                                             |
+| View Order Details | User can view detailed info for each past order                       | Pass           | Includes product info, prices, and status   |
+| Cancel Order       | User can cancel an order directly from the detail view                | Pass           | Status updates accordingly                  |
 
 
 ## Bugs Encountered
