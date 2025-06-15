@@ -16,15 +16,14 @@
   <div class="container">
     <div class="text-center mb-5">
       <h1 class="display-5 fw-bold">Order #{{ order.pk }}</h1>
-      <p class="text-muted">
-        Placed by <strong>{{ order.user.username }}</strong> on {{
-        order.created_at|date:"F j, Y, g:i a" }}
-      </p>
+        <p class="text-muted">
+          Placed by <strong>{{ order.user.username }}</strong> on <strong>{{ order.created_at|date:"F j, Y, g:i a" }}</strong>
+        </p>
     </div>
 
     <div class="card shadow-sm p-4 mb-4">
       <h4 class="mb-3">Customer Information</h4>
-      <p><strong>Name:</strong> {{ order.full_name }}</p>
+      <p><strong>Name:</strong> {{ order.first_name }} {{ order.last_name }}</p>
       <p><strong>Email:</strong> {{ order.email }}</p>
       <p><strong>Phone:</strong> {{ order.phone }}</p>
       <p>
@@ -71,20 +70,14 @@
             {{ form.status.label_tag }}
             {{ form.status }}
         </div>
-        <button type="submit" class="btn btn-primary">Update Status</button>
+        <button type="submit" class="btn btn-gold">Update Status</button>
         </form>
         </div>
     </div>
 
     <div class="text-center mt-4 d-flex justify-content-center gap-3 flex-wrap">
-      <a href="{% url 'accounts:admin_order_list' %}" class="btn btn-secondary"
-        >Back to Orders</a
-      >
-      <a
-        href="{% url 'accounts:admin_edit_order' order.id %}"
-        class="btn btn-warning"
-        >Edit Order</a
-      >
+      <a href="{% url 'accounts:admin_order_list' %}" class="btn btn-gold">Back to Orders</a>
+      <a href="{% url 'accounts:admin_edit_order' order.id %}" class="btn btn-gold">Edit Order</a>
     </div>
   </div>
 </section>

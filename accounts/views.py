@@ -6,10 +6,11 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
 from .models import UserProfile, NewsletterSubscriber
-from .forms import ProfileForm, NewsletterSignupForm, OrderStatusForm
+from .forms import ProfileForm, NewsletterSignupForm
 from orders.models import Order
 from products.models import Product
 from products.forms import ProductForm
+from accounts.forms import AdminOrderForm
 
 
 @staff_member_required
@@ -22,12 +23,12 @@ def admin_edit_order(request, order_id):
     order = get_object_or_404(Order, pk=order_id)
 
     if request.method == 'POST':
-        form = OrderStatusForm(request.POST, instance=order)
+        form = AdminOrderForm(request.POST, instance=order)
         if form.is_valid():
             form.save()
             return redirect('accounts:admin_order_detail', order_id=order.id)
     else:
-        form = OrderStatusForm(instance=order)
+        form = AdminOrderForm(instance=order)
 
     return render(request, 'accounts/admin_edit_order.html', {
         'form': form,
@@ -82,7 +83,7 @@ def product_catalog(request):
 @staff_member_required
 def admin_order_detail(request, order_id):
     order = get_object_or_404(Order, id=order_id)
-    form = OrderStatusForm(request.POST or None, instance=order)
+    form = AdminOrderForm(request.POST or None, instance=order)
 
     if request.method == 'POST' and form.is_valid():
         form.save()

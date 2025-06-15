@@ -71,10 +71,23 @@ class NewsletterSignupForm(forms.ModelForm):
         }
 
 
-class OrderStatusForm(forms.ModelForm):
+class AdminOrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ['status']
+        fields = [
+            'first_name', 'last_name', 'email', 'phone',
+            'street_address1', 'street_address2', 'town_or_city',
+            'postal_code', 'country', 'status',
+        ]
         widgets = {
-            'status': forms.Select(attrs={'class': 'form-control'})
+            'status': forms.Select(attrs={'class': 'form-control'}),
+            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control'}),
+            'phone': forms.TextInput(attrs={'class': 'form-control'}),
+            'street_address1': forms.TextInput(attrs={'class': 'form-control'}),
+            'street_address2': forms.TextInput(attrs={'class': 'form-control'}),
+            'town_or_city': forms.TextInput(attrs={'class': 'form-control'}),
+            'postal_code': forms.TextInput(attrs={'class': 'form-control'}),
+            'country': forms.TextInput(attrs={'class': 'form-control'}),
         }
