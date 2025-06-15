@@ -341,27 +341,73 @@ While the final website closely follows the original wireframes in structure, ce
 
 ---
 
-## Manual Testing
+## Testing Strategy
 
-Below is a summary of manual testing carried out across the site:
+This section outlines the comprehensive testing approach used for the Strum & Strings e-commerce site. The goal was to ensure all core functionality works as expected across multiple scenarios and devices. Testing includes:
 
-| Feature                          | Expected Outcome                                            | Result  |
-| --------------------------------- | ----------------------------------------------------------- | ------- |
-| Site loads on all major browsers | Website loads correctly on Chrome, Firefox, Safari, Edge    | Pass |
-| Responsive Design                | Site adapts well on desktop, tablet, and mobile devices      | Pass |
-| User Registration                | Users can register accounts and log in/out successfully      | Pass |
-| Product Browsing                 | Products are listed, filterable, and searchable              | Pass |
-| Product Detail View              | Full product info visible and Add to Cart works              | Pass |
-| Shopping Cart                    | Cart updates correctly with quantities and prices           | Pass |
-| Checkout Process                 | Stripe payment completes successfully, order confirmed       | Pass |
-| Profile Page                     | Users can view past orders and edit profile info             | Pass |
-| Admin Access                     | Admins can manage products, orders, and user profiles        | Pass |
-| Newsletter Signup                | Email subscription form submits and shows confirmation      | Pass |
-| 404 Error Handling               | 404 page displays friendly error page for bad URLs           | Pass |
-| SEO Basics (Meta Descriptions)    | Meta descriptions added for all pages                       | Pass |
-| Robots.txt and Sitemap.xml       | Robots.txt and sitemap.xml files exist and are valid         | Pass |
+- **Manual Testing**: Performed throughout the development process to verify user flows, business logic, and design responsiveness.
+- **Form Validation Testing**: Ensures all forms handle valid and invalid input correctly, including field-level and model-level validation.
+- **Authentication Testing**: Covers registration, login/logout, and profile management.
+- **Checkout & Payment Testing**: Simulates full order flow using Stripe in test mode.
+- **Admin Panel Testing**: Verifies functionality for managing products, orders, and users.
+- **Error Handling**: Confirms that friendly 404 pages and validation errors are properly handled.
+- **Browser & Device Compatibility Testing**: Ensures the app is usable and responsive on major browsers and screen sizes.
 
----
+Each testing section below contains specific cases and results.
+
+### Manual Testing Summary
+
+The table below outlines key user flows and whether they performed as expected during testing.
+
+| Category        | Feature                                 | Expected Outcome                                                                | Result |
+|-----------------|-----------------------------------------|---------------------------------------------------------------------------------|--------|
+| User            | Homepage loads                          | Homepage displays shop now button and background image                          | Pass   |
+| User            | User Registration                       | New user can register with valid info and is redirected confirmation page       | Pass   |
+| User            | Login/Logout                            | Users can log in and log out successfully                                       | Pass   |
+| User            | Profile View                            | Logged-in users can view their details and past orders                          | Pass   |
+| User            | Profile Edit                            | Users can update basic details like name and email                              | Pass   |
+| User            | Product Listing                         | Products display with image, title, price, and sorting/filtering works          | Pass   |
+| User            | Product Detail View                     | Clicking a product shows full detail with image, price, and add-to-cart button  | Pass   |
+| User            | Add to Cart                             | Cart updates and displays product, quantity, and total correctly                | Pass   |
+| User            | Update Cart Quantity                    | User can adjust quantity in cart and total updates accordingly                  | Pass   |
+| User            | Remove from Cart                        | Items can be removed from cart                                                  | Pass   |
+| User            | Checkout Process                        | Stripe checkout redirects, payment completes, order is saved                    | Pass   |
+| User            | Order Confirmation                      | Confirmation page displays summary after payment                                | Pass   |
+| User            | Newsletter Signup                       | Email is submitted, and confirmation message is shown                           | Pass   |
+
+| Admin           | Admin Login                             | Admins can access the Django admin panel using correct credentials              | Pass   |
+| Admin           | Access Django Admin Panel               | Full admin panel is visible with models for products, orders, users, etc.       | Pass   |
+| Admin           | Manage Products                         | Admins can add, edit, or delete products from both the admin and custom panel   | Pass   |
+| Admin           | View Order List                         | Admin dashboard lists all orders with product, quantity, and status             | Pass   |
+| Admin           | Edit Order Info                         | Admin can update user details and status of individual orders                   | Pass   |
+| Admin           | Manage Newsletter Subscribers           | Admin can view and manage newsletter email signups in the admin panel           | Pass   |
+
+| System/UX       | Responsive Design                       | Site is fully responsive on mobile, tablet, and desktop                         | Pass   |
+| System/UX       | 404 Error Page                          | Invalid URL shows friendly custom 404 page                                      | Pass   |
+| System/UX       | SEO Tags                                | Meta descriptions and titles set for all pages                                  | Pass   |
+| System/UX       | robots.txt and sitemap.xml              | Both files exist and are valid                                                  | Pass   |
+| System/UX       | Site Loads on All Major Browsers        | Tested successfully on Chrome, Firefox, Safari, Edge                            | Pass   |
+
+### Responsive Design Testing
+
+Responsiveness was tested across all major pages and screen sizes to ensure a consistent and accessible user experience.
+
+| Device Type | Screen Size (px) | Tested Pages     | Expected Behavior                                               | Result |
+|-------------|------------------|------------------|------------------------------------------------------------------|--------|
+| Mobile      | 375×667          | All key pages    | Elements stack vertically, navigation collapses, forms readable | Pass   |
+| Tablet      | 768×1024         | All key pages    | Grid layout maintained, cards and inputs scale correctly        | Pass   |
+| Desktop     | 1440×900+        | All key pages    | Full layout displays, navigation, carousels and tables align    | Pass   |
+
+### User Registration
+
+| Feature Tested       | Expected Outcome                                          | Actual Result | Notes                         |
+|----------------------|-----------------------------------------------------------|----------------|-------------------------------|
+| Registration Page    | Registration page loads correctly                         | Pass           |                              |
+| Form Submission      | User can register with valid data                         | Pass           |                              |
+| Redirect             | User is redirected to email confirmation page             | Pass           |                              |
+| Email Confirmation   | Confirmation email is received                            | Pass           |                              |
+| Account Activation   | Clicking the confirmation link activates the account      | Pass           | Tested with test email inbox |
+
 
 ## Bugs Encountered
 
