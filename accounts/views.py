@@ -224,3 +224,8 @@ def newsletter_delete(request, subscriber_id):
     return render(request, 'accounts/newsletter_confirm_delete.html', {
         'subscriber': subscriber
     })
+
+
+def newsletter_success(request):
+    return render(request, 'accounts/newsletter_success.html')
+

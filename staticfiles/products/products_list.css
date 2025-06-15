@@ -88,29 +88,40 @@ h1 {
 
 /* ----------------- Responsive Adjustments ----------------- */
 
-/* Hide sidebar on mobile */
-@media (max-width: 767.98px) {
+/* Desktop: Sidebar Sticky Filter Styling */
+@media (min-width: 768px) {
   .sidebar {
-      display: none;
+    display: block;
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+
+  #filterCollapse {
+    display: block !important;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
   }
 }
 
-/* Desktop: Sidebar Sticky Filter Styling */
-@media (min-width: 768px) {
-  /* Sticky filter area inside collapse */
-  #filterCollapse {
-      max-height: calc(100vh - 120px);
-      overflow-y: auto;
-  }
-
+/* Mobile: Collapsible Filter Panel */
+@media (max-width: 767.98px) {
   .sidebar {
-      position: sticky;
-      top: 100px;
-      max-height: calc(100vh - 15px);
-      overflow-y: auto;
+    display: block;
+    position: relative;
+    top: 0;
+    z-index: 0;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   }
 
-  #filterCollapse {
-      display: block !important;
+  #filterCollapse.collapse:not(.show) {
+    display: none !important;
+  }
+
+  #filterCollapse.collapse.show {
+    display: block !important;
   }
 }

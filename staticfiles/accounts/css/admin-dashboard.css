@@ -1,0 +1,17 @@
+.section-heading {
+  font-size: 2.25rem;
+  color: #4B3832;
+  letter-spacing: 0.5px;
+}
+
+/* Admin dashboard card links */
+.admin-dashboard-section .list-group-item a {
+  color: #4B3832;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.admin-dashboard-section .list-group-item a:hover {
+  color: #D6A84F;
+  text-decoration: underline;
+}

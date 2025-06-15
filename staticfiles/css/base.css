@@ -162,11 +162,9 @@ header .navbar-nav .nav-link:hover,
 
 /* Search Bar Styling */
 .search-bar {
-    width: 50%;
-}
-
-.search-bar input {
-    width: 600px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .search-bar button {
@@ -329,21 +327,29 @@ footer a:hover {
 
     #navbarNav form {
         margin-top: 10px;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 
     #navbarNav ul.navbar-nav {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch; /* stretch instead of center */
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 
     #navbarNav ul.navbar-nav li.nav-item {
         border: 1px solid;
         border-radius: 5px;
         padding: 10px;
-        margin-bottom: 10px;
+        margin: 5px 0;
         width: 100%;
+        max-width: 100%;
         text-align: center;
+        box-sizing: border-box;
     }
 
     #navbarNav ul.navbar-nav li.nav-item a.nav-link {
@@ -352,6 +358,11 @@ footer a:hover {
 
     #nav-links-one {
         margin-top: 10px;
+    }
+
+    /* Make sure navbar-collapse stretches fully */
+    .navbar-collapse {
+        width: 100% !important;
     }
 
     /* Mobile Home Hero Adjustments */

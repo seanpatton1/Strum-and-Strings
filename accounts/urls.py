@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin-dashboard/products/<int:product_id>/delete/', views.delete_product, name='delete_product'),
     path('admin-dashboard/newsletter/', views.newsletter_list, name='newsletter_list'),
     path('admin-dashboard/newsletter/<int:subscriber_id>/edit/', views.newsletter_update, name='newsletter_update'),
+    path('newsletter/success/', views.newsletter_success, name='newsletter_success'),
     path('admin-dashboard/newsletter/<int:subscriber_id>/delete/', views.newsletter_delete, name='newsletter_delete')
 ]

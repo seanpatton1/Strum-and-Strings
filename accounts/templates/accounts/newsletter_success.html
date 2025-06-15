@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'accounts/css/newsletter_success.css' %}">
+{% endblock %}
+
+{% block title %}Subscription Confirmed – Strum & Strings{% endblock %}
+{% block main_class %}container py-5 mt-5{% endblock %}
+
+{% block content %}
+<section class="newsletter-success-section py-5 text-center">
+  <div class="container">
+    <div class="card shadow-sm p-5 mx-auto" style="max-width: 700px;">
+      <h1 class="display-5 fw-bold mb-4 text-dark">Thank You for Subscribing!</h1>
+      <p class="lead">You're now part of the <strong>Strum & Strings</strong> community.</p>
+      <p class="mb-4 text-muted">We’ll keep you updated with the latest gear, offers, and exclusive content.</p>
+
+      <a href="{% url 'products:products_list' %}" class="btn btn-gold mt-3 px-4 py-2 text-uppercase fw-bold">
+        Browse Products
+      </a>
+
+      <hr class="my-5">
+
+      <p class="text-muted small">
+        If you ever wish to unsubscribe or have your email removed from our mailing list, feel free to
+        <a href="{% url 'contact:contact' %}">contact us</a>.
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -43,6 +43,8 @@ urlpatterns = [
         {'sitemaps': sitemaps},
         name='django.contrib.sitemaps.views.sitemap'
     ),
+    path('contact/', include('contact.urls', namespace='contact')),
+
 ]
 
 

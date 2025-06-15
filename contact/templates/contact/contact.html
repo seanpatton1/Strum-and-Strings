@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us – Strum & Strings{% endblock %}
+{% block main_class %}container py-5 mt-5{% endblock %}
+
+{% block extra_css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="contact-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bold section-heading">Contact Us</h1>
+      <p class="lead text-muted">Got a question, request, or suggestion? We’d love to hear from you!</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card p-4 shadow-sm contact-card">
+
+          {% if messages %}
+            <div class="alert alert-success" role="alert">
+              {% for message in messages %}
+                {{ message }}
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          <form method="post" novalidate>
+            {% csrf_token %}
+            {% for field in form %}
+              <div class="form-group mb-3 text-start">
+                {{ field.label_tag }}
+                {{ field }}
+                {% if field.errors %}
+                  <div class="text-danger small">{{ field.errors }}</div>
+                {% endif %}
+              </div>
+            {% endfor %}
+            <div class="text-center mt-4">
+              <button type="submit" class="btn btn-gold px-4">Send Message</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

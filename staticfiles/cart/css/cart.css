@@ -476,3 +476,14 @@ p.text-center {
     width: 100%;
   }
 }
+
+/* ----------------- Order Cancel Page Styling ----------------- */
+
+.cancel-wrapper {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}

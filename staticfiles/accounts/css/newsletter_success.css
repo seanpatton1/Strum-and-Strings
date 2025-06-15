@@ -1,0 +1,33 @@
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+h1, p {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+  color: #2c2c2c;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.btn-gold {
+  background-color: #c99b3b;
+  color: white;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #b58932;
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,46 @@
+.contact-section h1,
+.contact-section .section-heading {
+  color: #5a4231;
+}
+
+.contact-card {
+  background-color: #fffaf3;
+  border-radius: 12px;
+  border: none;
+}
+
+.btn-gold {
+  background-color: #c99b3b;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.btn-gold:hover {
+  background-color: #b58932;
+}
+
+.form-control {
+  border-radius: 6px;
+}
+
+
+.contact-section h1 {
+  color: #5a4231;
+}
+
+.contact-section .card {
+  border-radius: 10px;
+  background-color: #f4ebd03b;
+}
+
+.btn-gold {
+  background-color: #c99b3b;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.btn-gold:hover {
+  background-color: #b58932;
+}
