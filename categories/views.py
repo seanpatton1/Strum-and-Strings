@@ -61,7 +61,9 @@ def category_detail(request, pk):
         .order_by('model')
     )
 
-    brands = Brand.objects.filter(products__in=all_products).distinct().order_by("name")
+    brands = Brand.objects.filter(
+        products__in=all_products
+    ).distinct().order_by("name")
 
     context = {
         'category':     category,

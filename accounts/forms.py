@@ -85,8 +85,12 @@ class AdminOrderForm(forms.ModelForm):
             'last_name': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'phone': forms.TextInput(attrs={'class': 'form-control'}),
-            'street_address1': forms.TextInput(attrs={'class': 'form-control'}),
-            'street_address2': forms.TextInput(attrs={'class': 'form-control'}),
+            'street_address1': forms.TextInput(
+                attrs={'class': 'form-control'}
+            ),
+            'street_address2': forms.TextInput(
+                attrs={'class': 'form-control'}
+            ),
             'town_or_city': forms.TextInput(attrs={'class': 'form-control'}),
             'postal_code': forms.TextInput(attrs={'class': 'form-control'}),
             'country': forms.TextInput(attrs={'class': 'form-control'}),

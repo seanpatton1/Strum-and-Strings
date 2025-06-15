@@ -194,7 +194,11 @@ def save_newsletter_email(request):
 @staff_member_required
 def newsletter_list(request):
     subscribers = NewsletterSubscriber.objects.all()
-    return render(request, 'accounts/newsletter_list.html', {'subscribers': subscribers})
+    return render(
+        request,
+        'accounts/newsletter_list.html',
+        {'subscribers': subscribers}
+    )
 
 
 @staff_member_required

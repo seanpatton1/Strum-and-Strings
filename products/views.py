@@ -64,7 +64,9 @@ def products_list(request):
 
     # Sidebar choices
     categories = Category.objects.all()
-    brands = Brand.objects.filter(products__in=products).distinct().order_by("name")
+    brands = Brand.objects.filter(
+        products__in=products
+    ).distinct().order_by("name")
 
     return render(request, 'products/products_list.html', {
         'products':          products,

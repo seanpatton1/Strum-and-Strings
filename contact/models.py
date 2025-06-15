@@ -10,4 +10,7 @@ class ContactMessage(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'Message from {self.first_name} {self.last_name} - {self.subject}'
+        return (
+            f"Message from {self.first_name} "
+            f"{self.last_name} - {self.subject}"
+        )
