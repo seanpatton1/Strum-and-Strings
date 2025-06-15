@@ -211,11 +211,11 @@ Wireframes were created using **Balsamiq** to map out the site structure and use
 
 - **Login Page**
 
-  ![Login Wireframe](static/images/login.png)
+  ![Login Wireframe](static/images/Login.png)
 
 - **Signup Page**
 
-  ![Signup Wireframe](static/images/sign-up.png)
+  ![Signup Wireframe](static/images/Sign-Up.png)
 
 - **Profile Page**
 
